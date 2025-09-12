@@ -7,3 +7,6 @@ https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
 https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u
 https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt
 https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt
+https://iptv-org.github.io/iptv/countries/mm.m3u
+https://iptv-org.github.io/iptv/categories/sport.m3u
+# 如手动下载iptvcat的myanmar源m3u，也可填本地地址
