@@ -54,7 +54,6 @@ beIN SPORTS,http://23.237.104.106:8080/USA_BEIN/index.m3u8
 ESPNU,http://23.237.104.106:8080/USA_ESPNU/index.m3u8
 Golf Channel,http://23.237.104.106:8080/USA_GOLF/index.m3u8
 MSG,http://23.237.104.106:8080/USA_MSG/index.m3u8
-NBA TV,http://23.237.104.106:8080/USA_NBA/index.m3u8
 NFL Network,http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8
 SEC Network,http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 Spectrum SportsNet Los Angeles,http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/74683.ts
