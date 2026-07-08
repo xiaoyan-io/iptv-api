@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-07-08 08:45:26,http://198.204.228.26/live/cctv5p.m3u8
+2026-07-08 10:51:01,http://198.204.228.26/live/cctv5p.m3u8
 
 ⚽ Sports,#genre#
 CCTV-5,http://198.204.228.26/live/cctv5p.m3u8
@@ -381,6 +381,7 @@ ESPNU (720p),http://23.237.104.106:8080/USA_ESPNU/index.m3u8
 FOX Sports (1080p),https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8
 FOX Sports (1080p) [Geo-blocked],https://amg02855-foxsports-amg02855c1-xumo-us-1755.playouts.now.amagi.tv/Fox-Sports-AmazonNews/playlist.m3u8
 Fox Sports (720p),https://live-manifest.production-public.tubi.io/live/6035c7fd-efff-4ec7-93dc-aa0c7a58ba47/playlist.m3u8
+Fox Sports (720p),http://45.6.4.35/FOX_SPORT/index.m3u8
 fubo Sports Network (1080p),https://dnf08l6u6uxnz.cloudfront.net/master.m3u8
 Golf Channel,https://dash4.antik.sk/live/test_golf_channel/playlist.m3u8
 Golf Channel,http://23.237.104.106:8080/USA_GOLF/index.m3u8
@@ -6257,6 +6258,7 @@ Angel TV Spanish (720p),https://janya-digimix.akamaized.net/vglive-sk-351398/spa
 Anger Management Channel (1080p),https://amg00353-lionsgatestudio-angermgmt-samsungau-o9jg9.amagi.tv/playlist/amg00353-lionsgatestudio-angermgmt-samsungau/playlist.m3u8
 Angers Tele (180p),https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/angerstele.m3u8
 Ani (576p),http://31.148.48.15/Ani/index.m3u8
+Ani (576p),http://46.32.176.50/anitv/index.m3u8
 Ani-Blast (720p),https://amg19223-amg19223c9-amgplt0019.playout.now3.amagi.tv/playlist/amg19223-amg19223c9-amgplt0019/playlist.m3u8
 ANIMAL KINGDOM (720p),https://cdn6.goprimetime.info/feed/202306140918/LC18/index.m3u8
 Animax Asia India (1080p) [Geo-blocked],https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
@@ -7521,6 +7523,7 @@ Fun Radio,https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/p
 Fun Vision,https://funradiovisionhd.vedge.infomaniak.com/livecast/ik:funradiovisionhd/manifest.m3u8
 FX (1080p) [Geo-blocked],https://saran-live.ercdn.net/fx/index.m3u8
 FYI (720p),http://185.246.209.113/FYIHD/index.m3u8
+FYI (720p),http://206.212.244.63/78/index.m3u8
 Galactica TV,https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 Galveston County TV (720p) [Not 24/7],https://edge-f.swagit.com/live/galvestontx/smil:hd-16x9-1-a/playlist.m3u8
 Gamavisión (720p) [Not 24/7],https://stream.esradioecuador.com/hls/stream.m3u8
@@ -13139,6 +13142,21 @@ Venevision (720p),http://177.234.249.178:8888/VENEVISION/index.m3u8
 Viva Nicaragua Canal 13 (720p),http://45.171.108.253:8888/VIVA/index.m3u8
 Volver (720p),http://45.6.4.35/VOLVER/index.m3u8
 WNJU 47.1 (720p),http://134.195.157.227:1234/stream/test/tm/master.m3u8
+Alerta Bogota (720p) [Geo-blocked],https://mdstrm.com/live-stream-playlist/69b2cdf98815b9b6c48c2532.m3u8
+Argentina/12 (1080p),http://45.6.4.35/IP_NOTICIAS/index.m3u8
+AZA TV HD (1080p),https://tv.webmedialive.com/azatvhn/live/playlist.m3u8
+BBC News Latin America (720p),http://138.121.15.230:9002/BBC-NEWS/index.m3u8
+beIN Sports Haber (720p),https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+Canal Congreso (1080p),http://138.121.15.230:9002/CANAL-CONGRESO/index.m3u8
+Combate (720p),http://143.14.134.107:80/167/index.m3u8
+CongressTV (1080p),https://stitch.teletarget.ru/api/v1/hls/504/158/index.m3u8
+Golf Channel (1080p),http://23.237.104.106:8080/USA_GOLF/index.m3u8
+ITV Brazil (720p),https://video24.mais.uol.com.br/live/6146.m3u8
+La Nacion + (1080p),http://45.6.4.35/LA_NACION/index.m3u8
+National Geographic (1080p),http://138.121.15.230:9002/NAT-GEO/index.m3u8
+Premiere Clubes (720p),http://45.162.231.38:7779/Premiere_Clubes/index.m3u8
+Telefe Buenos Aires (1080p),http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
+TVO Canal 23,http://45.167.2.101:8000/play/a0qo/index.m3u8
 
 🈳无结果频道,#genre#
 LaLiga Hypermotion,url
@@ -14629,7 +14647,7 @@ Reuters,url
 Billiard TV,url
 Strongman Champions League,url
 ION Television,url
+Umm TV,url
 绍兴交通广播,url
 绍兴之声,url
 福州左海之声,url
-Umm TV,url

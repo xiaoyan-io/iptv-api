@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-07-08 08:45:28,https://0472.org/hls/cgtne.m3u8
+2026-07-08 10:51:03,https://0472.org/hls/cgtne.m3u8
 
 ⚽ Sports,#genre#
 
@@ -14714,9 +14714,6 @@ like Gecko) Chrome/124.0.0.0 Safari/537.36" group-title="Music",M1 (720p),url
 「中」陈瑞-心中的牵挂,url
 「中」陈瑞-鱼和水的故事,url
 30A Music,url
-绍兴交通广播,url
-绍兴之声,url
-福州左海之声,url
 A&E Latin America Brazil (720p),url
 A&E Latin America South (1080p),url
 AgroCanal (720p),url
@@ -14835,3 +14832,21 @@ Venevision (720p),url
 Viva Nicaragua Canal 13 (720p),url
 Volver (720p),url
 WNJU 47.1 (720p),url
+绍兴交通广播,url
+绍兴之声,url
+福州左海之声,url
+Alerta Bogota (720p) [Geo-blocked],url
+Argentina/12 (1080p),url
+AZA TV HD (1080p),url
+BBC News Latin America (720p),url
+beIN Sports Haber (720p),url
+Canal Congreso (1080p),url
+Combate (720p),url
+CongressTV (1080p),url
+Golf Channel (1080p),url
+ITV Brazil (720p),url
+La Nacion + (1080p),url
+National Geographic (1080p),url
+Premiere Clubes (720p),url
+Telefe Buenos Aires (1080p),url
+TVO Canal 23,url
