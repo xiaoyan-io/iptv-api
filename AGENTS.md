@@ -1,8 +1,13 @@
-# AGENTS.md - 项目规则与边界
+# AGENTS.md - 项目规则与边界（AI 请严格遵循）
 
-## 🔴 核心代码（不可修改）
+> 你是 AI 助手，你的职责是辅助，不是重构。
+> **如果你不确定能不能改，就不要改。先问用户。**
 
-这些文件是框架本身，修改会破坏功能或导致更新失败：
+---
+
+## 🔴 禁止触碰（绝不可修改）
+
+这些文件是框架本身。**修改任何一行都会破坏项目，导致不可用。**
 
 | 路径 | 说明 |
 |------|------|
@@ -10,70 +15,83 @@
 | `utils/` | 工具模块（constants.py、tools.py、config.py 等） |
 | `updates/` | 更新逻辑（订阅源获取、EPG 处理、测速） |
 | `service/` | Web 服务 |
-| `venv/` | Python 虚拟环境（不要手动修改） |
+| `venv/` | Python 虚拟环境 |
 | `Pipfile` / `Pipfile.lock` | Python 依赖声明 |
 | `Dockerfile` / `docker-compose.yml` | Docker 部署配置 |
 | `nginx.conf` | Nginx 反向代理配置 |
 | `static/` / `locales/` | 前端静态资源和国际化 |
+| `config/config.ini` | 默认配置（参考用，不要改） |
+| `.github/` | CI/CD 工作流 |
 
-> **例外**: `utils/constants.py` 中的 `output_dir` 变量已被改为 `user_output`，如需改回可修改此项。
+**即使你觉得"这行代码没用"、"这个看起来像 bug"、"我想优化一下"——也不准改。** 除非用户明确要求。
+
+> 唯一例外：`utils/constants.py` 中的 `output_dir` 变量已被改为 `user_output`，如需改回可修改此项。
 
 ---
 
-## 🟡 配置文件（可以修改）
+## 🟡 可以修改的文件
 
-这些是项目的配置和数据，按需编辑：
+只改这些文件，其他都不准动：
 
 ### 频道管理
 
-| 文件 | 说明 |
-|------|------|
-| `config/myanmar_sports.txt` | **频道模板** - 增删频道、调整分类 |
-| `config/alias.txt` | **频道别名** - 将源中不同名称映射到模板频道名，提高匹配率 |
+| 文件 | 说明 | 允许操作 |
+|------|------|----------|
+| `config/myanmar_sports.txt` | **频道模板** | 增删频道、改分类名、调整频道顺序 |
+| `config/alias.txt` | **频道别名** | 添加/修改频道名称映射（提高匹配率） |
 
 ### 订阅源管理
 
-| 文件 | 说明 |
-|------|------|
-| `config/subscribe.txt` | **订阅源列表** - 添加/删除 IPTV m3u 源。每行一个 URL。加 `#` 注释可停用 |
-| `config/epg.txt` | **EPG 源列表** - 添加/删除节目预告 XML 源 |
+| 文件 | 说明 | 允许操作 |
+|------|------|----------|
+| `config/subscribe.txt` | **订阅源列表** | 添加/删除/注释 m3u 源 |
+| `config/epg.txt` | **EPG 源列表** | 添加/删除节目预告 XML 源 |
 
 ### 配置参数
 
-| 文件 | 说明 |
-|------|------|
-| `config/user_config.ini` | **用户配置** - 覆盖 config.ini 的默认值，主要在此修改 |
-| `config/config.ini` | **默认配置** - 所有配置项的完整参考，一般不改 |
+| 文件 | 说明 | 允许操作 |
+|------|------|----------|
+| `config/user_config.ini` | **用户配置** | 覆盖默认配置（测速开关、并发数等） |
 
 ### 过滤规则
 
-| 文件 | 说明 |
-|------|------|
-| `config/blacklist.txt` | 黑名单 - 屏蔽特定接口 URL |
-| `config/whitelist.txt` | 白名单 - 强制保留的接口（不参与测速过滤） |
-| `config/local.txt` | 本地源 - 手动添加的固定直播链接 |
+| 文件 | 说明 | 允许操作 |
+|------|------|----------|
+| `config/blacklist.txt` | **黑名单** | 添加要屏蔽的接口 URL |
+| `config/whitelist.txt` | **白名单** | 添加强制保留的接口 |
+| `config/local.txt` | **本地源** | 添加手动固定的直播链接 |
 
 ---
 
-## 🟢 生成文件（由程序自动生成，可删除重新生成）
+## 🟢 生成文件（程序自动生成，不要手动编辑）
 
 | 路径 | 说明 |
 |------|------|
-| `user_output/myanmar_sports_result.txt` | **结果 TXT** - 导入播放器 |
-| `user_output/myanmar_sports_result.m3u` | **结果 M3U** - 导入播放器（带台标和 EPG） |
-| `user_output/epg/` | EPG 缓存 |
-| `user_output/log/` | 运行日志 |
-| `output/` | 旧版输出目录（root 权限，不建议使用） |
+| `user_output/` | 所有生成结果、日志、EPG 缓存 |
+| `output/` | 旧版输出目录（root 权限，不可写） |
 
 ---
 
-## ⚠️ 重要规则
+## ⚠️ 硬性规则
 
-1. **运行命令**: 必须在 `/home/pi5/iptv-api` 目录下，使用 `venv/bin/python main.py`
-2. **虚拟环境**: 不要用系统 Python，必须用 `/home/pi5/iptv-api/venv/bin/python`
-3. **输出目录**: `output/` 目录文件为 root 所有，不可写；所有结果在 `user_output/`
-4. **更新耗时**: 约 30-50 分钟，取决于网络和测速并发数
-5. **频道名称匹配**: 模板中的频道名必须与源中的频道名**完全一致**才能匹配。如不匹配，可：
-   - 在 `alias.txt` 中添加别名映射
-   - 或修改模板频道名与源一致
-6. **付费源**: beIN Sports、Sky Sports 等付费频道在免费源中不存在，需要添加付费订阅源
+1. **不要修改框架代码** — 任何 `main.py`、`utils/`、`updates/`、`service/` 下的文件都不准动
+2. **运行命令**：必须在 `/home/pi5/iptv-api` 下，用 `venv/bin/python main.py`
+3. **不要用系统 Python**，必须用 `venv/bin/python`
+4. **结果路径**：`user_output/`，不是 `output/`
+5. **更新耗时**：30-50 分钟（测速开启后可能更久）
+6. **频道名称必须精确匹配** 源中的频道名才能被识别，不匹配时去 `alias.txt` 加映射
+7. **如果用户问"你觉得呢"、"你的建议是"** — 先分析利弊，把选项列出来，让用户决定，不要擅自改
+8. **每次改完配置，必须同步到容器**：`docker cp` + `docker restart iptv-api`
+9. **改完要 `git add`、`git commit`、`git push`** 到对应的分支
+10. **不要删除已有的分类或频道**，除非用户明确说"删掉"
+11. **添加新频道时**，命名要和在源中出现的一致，否则匹配不上
+
+---
+
+## 📌 项目定位
+
+- 本项目是 **运行在 Raspberry Pi 5 上的 IPTV 聚合服务**
+- 服务的用户位于 **缅甸**，网络延迟较高
+- 所有产出通过 **Docker + Nginx + Cloudflare Tunnel** 对外提供
+- 网页展示靠 GitHub Pages（`gh-pages` 分支），不在此仓库中
+- 核心目标：**稳定 > 数量**，优先保证亚洲地区可用的节点
