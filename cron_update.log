@@ -1,0 +1,135 @@
+⚡️ IPTV-API 版本: 2.0.7 (构建时间: 2026-04-01 11:35:00)
+🛜 正在检查当前网络是否支持IPv6...
+⚠️ 当前网络不支持IPv6，别担心，IPv6的结果会被保存下来
+✅ 黑名单接口规则数量：2
+✅ 本地台标数量：21
+✅ 订阅源数量：5，订阅白名单数量：0，停用地址数量：13，有效总数量：5
+🔍 正在进行获取订阅源:   0%|          | 0/5 [00:00<?, ?it/s]🔍 正在进行获取订阅源:  20%|██        | 1/5 [00:01<00:05,  1.38s/it]🔍 正在进行获取订阅源:  40%|████      | 2/5 [00:01<00:01,  1.66it/s]🔍 正在进行获取订阅源:  60%|██████    | 3/5 [00:01<00:00,  2.63it/s]🔍 正在进行获取订阅源:  80%|████████  | 4/5 [00:04<00:01,  1.46s/it]🔍 正在进行获取订阅源: 100%|██████████| 5/5 [00:06<00:00,  1.67s/it]🔍 正在进行获取订阅源: 100%|██████████| 5/5 [00:06<00:00,  1.35s/it]
+🆗 订阅源: ✅ 有效地址数量：5，⛔ 停用地址数量：0
+✅ EPG源数量：1，EPG白名单数量：0，停用地址数量：1，有效总数量：1
+🔍 正在进行获取EPG源:   0%|          | 0/1 [00:00<?, ?it/s]🔍 正在进行获取EPG源: 100%|██████████| 1/1 [00:03<00:00,  3.31s/it]🔍 正在进行获取EPG源: 100%|██████████| 1/1 [00:03<00:00,  3.32s/it]
+🆗 EPG源: ✅ 有效地址数量：1，⛔ 停用地址数量：0
+CCTV-5: 历史源: 2, 订阅源: 0, IPv4: 2, IPv6: 0, 总数: 2
+CCTV-5+: 历史源: 1, 订阅源: 0, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-16: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-8K: 历史源: 2, 订阅源: 2, IPv4: 2, IPv6: 0, 总数: 2
+CCTV-4K: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-Storm Football: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-Golf & Tennis: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-Billiards: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+FIFA+: 历史源: 2, 订阅源: 9, IPv4: 2, IPv6: 0, 总数: 2
+LaLiga TV: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+LaLiga Hypermotion: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Alkass One: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Alkass Two: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Alkass Three: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Premier Sports 1: 订阅源: 2, IPv4: 0, IPv6: 0, 总数: 0
+Premier Sports 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+beIN Sports USA: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+beIN SPORTS XTRA: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+CBS Sports HQ: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+CBS Sports Golazo Network: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+NBA TV: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+NFL Network: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+MLB Channel: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Fox Sports 1: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+Sony Sports Ten 1: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Sony Sports Ten 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Sony Sports Ten 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Sony Sports Ten 5: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Willow Sports: 历史源: 2, 订阅源: 2, IPv4: 0, IPv6: 0, 总数: 0
+Win Sports: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+GolfPass: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+Tennis Channel 2: 订阅源: 2, IPv4: 0, IPv6: 0, 总数: 0
+Real Madrid TV: 订阅源: 6, IPv4: 0, IPv6: 0, 总数: 0
+Women's Sports Network: 历史源: 2, 订阅源: 1, IPv4: 2, IPv6: 0, 总数: 2
+World of Freesports: 历史源: 2, 订阅源: 2, IPv4: 2, IPv6: 0, 总数: 2
+Astro Supersport 1: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 4: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 5: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 6: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 7: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 8: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 9: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 10: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Supersport 4K: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Arena: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Astro Arena 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 1: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 4: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 5: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 6: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Sport 7: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 1: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 4: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 5: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 6: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+True Premier Football 7: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+PPTV HD 36: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Sport Plus: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Mono 29: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 1: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 2: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 4: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 5: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 6: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 7: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 8: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 9: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+M Plus 10: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Thairath TV: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+Channel 8: 历史源: 2, 订阅源: 1, IPv4: 2, IPv6: 0, 总数: 2
+Channel 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Channel 7: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+One 31: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+GMM 25: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Workpoint 23: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Thai PBS 3: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+NBT 2HD: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+MCOT HD: 历史源: 2, 订阅源: 2, IPv4: 2, IPv6: 0, 总数: 2
+T Sports 7: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+Mono Max: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+MYNK Rajavithi: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Sky Sports News: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+ESPN News: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CCTV-13: 历史源: 2, 订阅源: 3, IPv4: 2, IPv6: 0, 总数: 2
+Al Jazeera: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+BBC World News: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CNN: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+France 24: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CGTN: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CGTN Documentary: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+NHK World-Japan: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+Arirang TV: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Channel NewsAsia: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+Bloomberg TV: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CNBC: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+UFC: 订阅源: 6, IPv4: 0, IPv6: 0, 总数: 0
+WWE Superstar Central: 历史源: 2, 订阅源: 1, IPv4: 2, IPv6: 0, 总数: 2
+TNA Wrestling: 历史源: 1, 订阅源: 3, IPv4: 0, IPv6: 0, 总数: 0
+GLORY Kickboxing: 订阅源: 1, IPv4: 0, IPv6: 0, 总数: 0
+DAZN Combat: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+Boxing: 订阅源: 0, IPv4: 0, IPv6: 0, 总数: 0
+CCTV-1: 历史源: 5, 订阅源: 4, IPv4: 5, IPv6: 0, 总数: 5
+CCTV-2: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-3: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-4: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-6: 历史源: 2, 订阅源: 2, IPv4: 2, IPv6: 0, 总数: 2
+CCTV-7: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-8: 历史源: 2, 订阅源: 1, IPv4: 2, IPv6: 0, 总数: 2
+CCTV-9: 历史源: 2, 订阅源: 1, IPv4: 2, IPv6: 0, 总数: 2
+CCTV-10: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-11: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-12: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-14: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-15: 历史源: 1, 订阅源: 2, IPv4: 1, IPv6: 0, 总数: 1
+CCTV-17: 历史源: 1, 订阅源: 1, IPv4: 1, IPv6: 0, 总数: 1
+🥳 更新完成！总耗时：00:17
+🕒 下次更新时间: 2026-07-09 06:00:24
