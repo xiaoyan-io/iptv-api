@@ -133,3 +133,35 @@ NewTV中国功夫,NEWTV中国功夫,中国功夫
 
 四川卫视,四川卫视4K,四川卫视4K25,四川卫视4K50
 湖南卫视,湖南卫视4K,湖南卫视4K25,湖南卫视4K50
+
+; ========== Myanmar Sports Aliases ==========
+CCTV-Storm Football,re:(?i)^CCTV[-\s]*Storm\s*Football[\s\S]*$
+CCTV-Golf & Tennis,re:(?i)^CCTV[-\s]*(?:Golf\s*[&＆]\s*Tennis|高尔夫[·网球]?)[\s\S]*$
+CCTV-Billiards,re:(?i)^CCTV[-\s]*(?:Billiards|台球|央视台球)[\s\S]*$
+FIFA+,re:(?i)^FIFA\+[\s\S]*$
+LaLiga TV,re:(?i)^LaLiga\s*TV[\s\S]*$
+LaLiga Hypermotion,re:(?i)^LaLiga\s*Hypermotion[\s\S]*$
+Alkass One,re:(?i)^Alkass\s*(?:One|1)[\s\S]*$
+Alkass Two,re:(?i)^Alkass\s*(?:Two|2)[\s\S]*$
+Alkass Three,re:(?i)^Alkass\s*(?:Three|3)[\s\S]*$
+Premier Sports 1,re:(?i)^Premier\s*Sports[\s\S]*(?:1|One)[\s\S]*$
+Premier Sports 2,re:(?i)^Premier\s*Sports[\s\S]*(?:2|Two)[\s\S]*$
+beIN Sports USA,re:(?i)^beIN\s*Sports?\s*USA[\s\S]*$
+beIN SPORTS XTRA,re:(?i)^beIN\s*SPORTS?\s*XTRA[\s\S]*$
+CBS Sports HQ,re:(?i)^CBS\s*Sports\s*HQ[\s\S]*$
+CBS Sports Golazo Network,re:(?i)^CBS\s*Sports\s*Golazo[\s\S]*$
+NBA TV,re:(?i)^NBA\s*TV[\s\S]*$
+NFL Network,re:(?i)^NFL\s*(?:Network|Channel)[\s\S]*$
+MLB Channel,re:(?i)^MLB[\s\S]*Channel[\s\S]*$
+Fox Sports 1,re:(?i)^Fox\s*Sports\s*1[\s\S]*$
+Willow Sports,re:(?i)^Willow\s*Sports?[\s\S]*$
+Win Sports,re:(?i)^Win\s*Sports?[\s\S]*$
+GolfPass,re:(?i)^GolfPass[\s\S]*$
+Tennis Channel 2,re:(?i)^Tennis\s*Channel\s*2[\s\S]*$
+Real Madrid TV,re:(?i)^Real\s*Madrid[\s\S]*TV[\s\S]*$
+Women's Sports Network,re:(?i)^Women['’]?s?\s*Sports\s*Network[\s\S]*$
+World of Freesports,re:(?i)^World\s*of\s*Freesports[\s\S]*$
+WWE Superstar Central,re:(?i)^WWE\s*Superstar\s*Central[\s\S]*$
+TNA Wrestling,re:(?i)^TNA\s*Wrestling[\s\S]*$
+GLORY Kickboxing,re:(?i)^GLORY\s*Kickboxing[\s\S]*$
+DAZN Combat,re:(?i)^DAZN\s*Combat[\s\S]*$

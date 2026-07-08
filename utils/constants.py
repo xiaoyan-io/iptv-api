@@ -5,7 +5,7 @@ from utils.i18n import t
 
 config_dir = "config"
 
-output_dir = "output"
+output_dir = "user_output"
 
 hls_path = os.path.join(config_dir, "hls")
 

@@ -1,6 +1,10 @@
+import json
 import os
+import re
 import sys
 import time
+from collections import defaultdict
+from datetime import datetime, timezone
 
 sys.path.append(os.path.dirname(sys.path[0]))
 from flask import Flask, send_from_directory, make_response, request, jsonify, Response
@@ -18,6 +22,156 @@ import mimetypes
 app = Flask(__name__)
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
+
+SPORTS_RESULT_FILE = "user_output/myanmar_sports_result.txt"
+SPORTS_TEMPLATE_FILE = "config/myanmar_sports.txt"
+
+
+def _parse_result_file(filepath: str) -> dict:
+    """Parse a txt-format result file into categories and channels.
+
+    Returns:
+        {"updated_at": str, "channel_count": int, "groups": {group_name: [(channel_name, url), ...]}}
+    """
+    groups = defaultdict(list)
+    total_channels = 0
+    updated_at = ""
+    current_group = ""
+    path = resource_path(filepath)
+
+    if not os.path.exists(path):
+        return {"updated_at": "", "channel_count": 0, "groups": {}}
+
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            if ",#genre#" in line:
+                current_group = line.split(",#genre#")[0].strip()
+                if current_group.startswith("🕘"):
+                    updated_at = current_group.replace("🕘️", "").replace("🕘", "").strip()
+                continue
+            if "," in line and current_group and current_group not in ("更新时间", "Update time"):
+                parts = line.split(",", 1)
+                name = parts[0].strip()
+                url = parts[1].strip() if len(parts) > 1 else ""
+                if url and not url.startswith("#"):
+                    groups[current_group].append((name, url))
+                    total_channels += 1
+
+    return {
+        "updated_at": updated_at,
+        "channel_count": total_channels,
+        "groups": dict(groups),
+    }
+
+
+def _get_sports_output_paths() -> dict:
+    """Get all output paths for the sports configuration."""
+    base = get_public_url()
+    return {
+        "txt": f"{base}/sports/txt",
+        "m3u": f"{base}/sports/m3u",
+        "epg": f"{base}/epg/epg.gz",
+        "ipv4_txt": f"{base}/sports/ipv4/txt",
+        "ipv4_m3u": f"{base}/sports/ipv4/m3u",
+        "hls": f"{base}/sports/hls",
+        "hls_txt": f"{base}/sports/hls/txt",
+    }
+
+
+# -------- Static Files --------
+@app.route("/static/<path:filename>")
+def serve_static(filename):
+    safe_name = filename.replace("/", "").replace("\\", "")
+    if not safe_name:
+        return jsonify({"error": "filename required"}), 400
+    static_dir = resource_path("static")
+    return send_from_directory(static_dir, safe_name)
+
+
+# -------- Sports UI --------
+@app.route("/sports")
+def sports_page():
+    return send_from_directory(resource_path("static"), "sports.html")
+
+
+@app.route("/sports/txt")
+def sports_txt():
+    return get_result_file_content(path=SPORTS_RESULT_FILE, file_type="txt")
+
+
+@app.route("/sports/m3u")
+def sports_m3u():
+    return get_result_file_content(path=SPORTS_RESULT_FILE, file_type="m3u")
+
+
+@app.route("/sports/ipv4/txt")
+def sports_ipv4_txt():
+    path = SPORTS_RESULT_FILE.replace("result.txt", "ipv4/result.txt")
+    return get_result_file_content(path=path, file_type="txt")
+
+
+@app.route("/sports/ipv4/m3u")
+def sports_ipv4_m3u():
+    path = SPORTS_RESULT_FILE.replace("result.txt", "ipv4/result.txt")
+    return get_result_file_content(path=path, file_type="m3u")
+
+
+@app.route("/sports/hls")
+def sports_hls():
+    path = SPORTS_RESULT_FILE.replace("result.txt", "hls.txt")
+    return get_result_file_content(path=path, file_type="m3u" if config.open_m3u_result else "txt")
+
+
+@app.route("/sports/hls/txt")
+def sports_hls_txt():
+    path = SPORTS_RESULT_FILE.replace("result.txt", "hls.txt")
+    return get_result_file_content(path=path, file_type="txt")
+
+
+# -------- Sports API --------
+@app.route("/api/sports/status")
+def api_sports_status():
+    data = _parse_result_file(SPORTS_RESULT_FILE)
+    paths = _get_sports_output_paths()
+    return jsonify({
+        "updated_at": data["updated_at"],
+        "total_channels": data["channel_count"],
+        "total_groups": len(data["groups"]),
+        "txt_url": paths["txt"],
+        "m3u_url": paths["m3u"],
+        "epg_url": paths["epg"],
+        "ipv4_txt_url": paths["ipv4_txt"],
+        "ipv4_m3u_url": paths["ipv4_m3u"],
+    })
+
+
+@app.route("/api/sports/channels")
+def api_sports_channels():
+    data = _parse_result_file(SPORTS_RESULT_FILE)
+    paths = _get_sports_output_paths()
+    groups_list = []
+    all_channels = []
+
+    for group_name, channels in data["groups"].items():
+        ch_list = []
+        for ch_name, ch_url in channels:
+            ch_list.append({"name": ch_name, "url": ch_url})
+            all_channels.append({"group": group_name, "name": ch_name, "url": ch_url})
+        groups_list.append({"group": group_name, "channels": ch_list})
+
+    return jsonify({
+        "updated_at": data["updated_at"],
+        "total_channels": data["channel_count"],
+        "total_groups": len(data["groups"]),
+        "txt_url": paths["txt"],
+        "m3u_url": paths["m3u"],
+        "epg_url": paths["epg"],
+        "groups": groups_list,
+        "channels": all_channels,
+    })
 
 
 @app.route("/")

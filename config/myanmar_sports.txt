@@ -1,0 +1,136 @@
+⚽ Sports,#genre#
+CCTV-5
+CCTV-5+
+CCTV-16
+CCTV-8K
+CCTV-4K
+CCTV-Storm Football
+CCTV-Golf & Tennis
+CCTV-Billiards
+
+🏆 Football,#genre#
+FIFA+
+LaLiga TV
+LaLiga Hypermotion
+Alkass One
+Alkass Two
+Alkass Three
+Premier Sports 1
+Premier Sports 2
+
+📺 International Sports,#genre#
+beIN Sports USA
+beIN SPORTS XTRA
+CBS Sports HQ
+CBS Sports Golazo Network
+NBA TV
+NFL Network
+MLB Channel
+Fox Sports 1
+Sony Sports Ten 1
+Sony Sports Ten 2
+Sony Sports Ten 3
+Sony Sports Ten 5
+Willow Sports
+Win Sports
+GolfPass
+Tennis Channel 2
+Real Madrid TV
+Women's Sports Network
+World of Freesports
+
+🌏 Asian Sports,#genre#
+Astro Supersport 1
+Astro Supersport 2
+Astro Supersport 3
+Astro Supersport 4
+Astro Supersport 5
+Astro Supersport 6
+Astro Supersport 7
+Astro Supersport 8
+Astro Supersport 9
+Astro Supersport 10
+Astro Supersport 4K
+Astro Arena
+Astro Arena 2
+True Sport 1
+True Sport 2
+True Sport 3
+True Sport 4
+True Sport 5
+True Sport 6
+True Sport 7
+True Premier Football 1
+True Premier Football 2
+True Premier Football 3
+True Premier Football 4
+True Premier Football 5
+True Premier Football 6
+True Premier Football 7
+PPTV HD 36
+Sport Plus
+Mono 29
+M Plus 1
+M Plus 2
+M Plus 3
+M Plus 4
+M Plus 5
+M Plus 6
+M Plus 7
+M Plus 8
+M Plus 9
+M Plus 10
+Thairath TV
+Channel 8
+Channel 3
+Channel 7
+One 31
+GMM 25
+Workpoint 23
+Thai PBS 3
+NBT 2HD
+MCOT HD
+T Sports 7
+Mono Max
+Mono 29
+MYNK Rajavithi
+
+📺 Sports News,#genre#
+Sky Sports News
+ESPN News
+CCTV-13
+Al Jazeera
+BBC World News
+CNN
+France 24
+CGTN
+CGTN Documentary
+NHK World-Japan
+Arirang TV
+Channel NewsAsia
+Bloomberg TV
+CNBC
+
+💪 Fighting & Wrestling,#genre#
+UFC
+WWE Superstar Central
+TNA Wrestling
+GLORY Kickboxing
+DAZN Combat
+Boxing
+
+📺 Chinese TV,#genre#
+CCTV-1
+CCTV-2
+CCTV-3
+CCTV-4
+CCTV-6
+CCTV-7
+CCTV-8
+CCTV-9
+CCTV-10
+CCTV-11
+CCTV-12
+CCTV-14
+CCTV-15
+CCTV-17
