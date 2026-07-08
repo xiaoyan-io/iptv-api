@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>IPTV-API 使用手册</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0f1a;--card:#1a1a2e;--accent:#e94560;--accent2:#0f3460;--text:#eee;--text2:#aaa;--border:#2a2a4a;--success:#2ecc71;--warn:#f39c12;--radius:10px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);padding:0;min-height:100vh;font-size:14px;line-height:1.7}
+.container{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin-bottom:4px}
+h2{font-size:18px;color:var(--accent);margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+h3{font-size:15px;color:var(--text);margin:20px 0 8px}
+p{color:var(--text2);margin:8px 0}
+a{color:#5dade2;text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--card);padding:2px 6px;border-radius:4px;font-size:13px;color:var(--accent)}
+pre{background:var(--card);padding:14px;border-radius:var(--radius);overflow-x:auto;font-size:13px;border:1px solid var(--border);margin:10px 0;line-height:1.5}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--card);color:var(--accent);font-weight:600}
+tr:hover{background:rgba(255,255,255,.03)}
+.tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.tag.green{background:rgba(46,204,113,.2);color:var(--success)}
+.tag.blue{background:rgba(93,173,226,.2);color:#5dade2}
+.tag.red{background:rgba(233,69,96,.2);color:var(--accent)}
+.tag.yellow{background:rgba(243,156,18,.2);color:var(--warn)}
+.header{background:linear-gradient(135deg,var(--accent2),var(--bg));padding:24px 16px;text-align:center;border-bottom:2px solid var(--accent)}
+.header h1{font-size:22px;letter-spacing:1px}
+.header .subtitle{font-size:13px;color:var(--text2);margin-top:4px}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+.nav a{background:var(--card);padding:8px 14px;border-radius:8px;font-size:13px;border:1px solid var(--border);transition:.2s;color:var(--text)}
+.nav a:hover{background:var(--accent2);border-color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin:12px 0}
+.card-title{font-size:15px;font-weight:600;margin-bottom:8px;color:var(--accent)}
+ul,ol{padding-left:20px;color:var(--text2);margin:8px 0}
+li{margin:4px 0}
+.url-block{background:#0a0a18;border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-family:monospace;font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0}
+.url-block .url{color:#5dade2;word-break:break-all}
+.copy-btn{background:var(--accent2);border:none;color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;transition:.2s}
+.copy-btn:active{transform:scale(.95)}
+.copy-btn.copied{background:var(--success)}
+.step{display:flex;gap:12px;margin:12px 0;align-items:flex-start}
+.step-num{background:var(--accent);color:#fff;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+.step-content{flex:1}
+.step-content p{margin:2px 0}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📺 IPTV-API 使用手册</h1>
+  <div class="subtitle">频道聚合服务 — 团队内部文档</div>
+</div>
+
+<div class="container">
+
+<!-- 导航 -->
+<div class="nav">
+  <a href="#urls">访问地址</a>
+  <a href="#channels">频道列表</a>
+  <a href="#usage">使用方法</a>
+  <a href="#arch">架构说明</a>
+  <a href="#config">配置指南</a>
+  <a href="#update">更新流程</a>
+  <a href="#faq">常见问题</a>
+</div>
+
+<!-- 访问地址 -->
+<h2 id="urls">🌐 访问地址</h2>
+
+<div class="card">
+  <div class="card-title">公网访问（Cloudflare Tunnel）</div>
+  <div class="url-block">
+    <span class="url">https://iptv.diynets.xyz/txt</span>
+    <button class="copy-btn" onclick="copy(this,'https://iptv.diynets.xyz/txt')">复制</button>
+  </div>
+  <div class="url-block">
+    <span class="url">https://iptv.diynets.xyz/m3u</span>
+    <button class="copy-btn" onclick="copy(this,'https://iptv.diynets.xyz/m3u')">复制</button>
+  </div>
+  <div class="url-block">
+    <span class="url">https://iptv.diynets.xyz/epg/epg.xml</span>
+    <button class="copy-btn" onclick="copy(this,'https://iptv.diynets.xyz/epg/epg.xml')">复制</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">内网访问（本地网络）</div>
+  <div class="url-block">
+    <span class="url">http://192.168.88.16:5180/txt</span>
+    <button class="copy-btn" onclick="copy(this,'http://192.168.88.16:5180/txt')">复制</button>
+  </div>
+  <div class="url-block">
+    <span class="url">http://192.168.88.16:5180/m3u</span>
+    <button class="copy-btn" onclick="copy(this,'http://192.168.88.16:5180/m3u')">复制</button>
+  </div>
+</div>
+
+<!-- 频道列表 -->
+<h2 id="channels">📡 频道列表</h2>
+
+<table>
+  <tr><th>分组</th><th>频道</th></tr>
+  <tr><td rowspan="14">📺 中文电视</td><td>CCTV-1 综合</td></tr>
+  <tr><td>CCTV-2 财经</td></tr>
+  <tr><td>CCTV-3 综艺</td></tr>
+  <tr><td>CCTV-4 国际</td></tr>
+  <tr><td>CCTV-5 体育</td></tr>
+  <tr><td>CCTV-6 电影</td></tr>
+  <tr><td>CCTV-7 军事</td></tr>
+  <tr><td>CCTV-8 电视剧</td></tr>
+  <tr><td>CCTV-9 纪录</td></tr>
+  <tr><td>CCTV-10 科教</td></tr>
+  <tr><td>CCTV-11 戏曲</td></tr>
+  <tr><td>CCTV-12 社会与法</td></tr>
+  <tr><td>CCTV-14 少儿</td></tr>
+  <tr><td>CCTV-15 音乐</td></tr>
+  <tr><td>⚽ 体育</td><td>CCTV-5+, CCTV-16, CCTV-8K, CCTV-4K, 风暴足球, 高尔夫网球, 台球</td></tr>
+  <tr><td>🏆 足球</td><td>FIFA+, LaLiga, 英超, 阿尔卡斯</td></tr>
+  <tr><td>🌍 国际体育</td><td>beIN Sports, NBA TV, NFL, Fox Sports, Willow</td></tr>
+  <tr><td>📰 体育新闻</td><td>CCTV-13, Sky Sports News, CNN, BBC World</td></tr>
+  <tr><td>💪 格斗</td><td>WWE, TNA, DAZN Combat</td></tr>
+</table>
+
+<!-- 使用方法 -->
+<h2 id="usage">📱 使用方法</h2>
+
+<h3>PotPlayer / VLC 播放器</h3>
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <p>打开播放器，选择 <strong>打开链接（Ctrl+U）</strong></p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <p>粘贴 M3U 地址：<br>
+    <code>https://iptv.diynets.xyz/m3u</code></p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <p>播放器自动加载频道列表，选择想看的频道</p>
+  </div>
+</div>
+
+<h3>IPTV 客户端（TiviMate / IPTV Smarters）</h3>
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <p>添加播放列表，选择 <strong>M3U URL</strong> 方式</p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <p>输入 TXT 地址：<br>
+    <code>https://iptv.diynets.xyz/txt</code></p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <p>EPG 地址（可选，用于节目预告）：<br>
+    <code>https://iptv.diynets.xyz/epg/epg.xml</code></p>
+  </div>
+</div>
+
+<!-- 架构 -->
+<h2 id="arch">🏗️ 架构说明</h2>
+
+<div class="card">
+  <div class="card-title">部署架构</div>
+  <pre>
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  用户/团队    │────▶│ Cloudflare   │────▶│  树莓派 5    │
+│  (浏览器/播放器)│     │   Tunnel    │     │ (Docker)     │
+└──────────────┘     └──────────────┘     │  iptv-api    │
+                                          │  端口 5180   │
+                                          │  main.py     │
+                                          └──────┬───────┘
+                                                 │
+                                          ┌──────▼───────┐
+                                          │    Docker    │
+                                          │  Hub/GHCR    │
+                                          └──────────────┘
+</pre>
+</div>
+
+<table>
+  <tr><th>组件</th><th>说明</th></tr>
+  <tr><td>树莓派 5</td><td>物理服务器，运行 Docker 容器</td></tr>
+  <tr><td>iptv-api (Docker)</td><td>频道聚合 + Web 服务，端口 5180</td></tr>
+  <tr><td>Cloudflare Tunnel</td><td>公网穿透，绑定 iptv.diynets.xyz</td></tr>
+  <tr><td>GitHub Actions</td><td>代码推送后自动构建 Docker 镜像</td></tr>
+  <tr><td>Docker Hub</td><td>镜像仓库（networkio/iptv-api）</td></tr>
+</table>
+
+<!-- 配置 -->
+<h2 id="config">⚙️ 配置指南</h2>
+
+<h3>频道管理</h3>
+<p>编辑 <code>config/myanmar_sports.txt</code>，按分类添加频道：</p>
+<pre>
+⚽ Sports,#genre#
+CCTV-5
+CCTV-5+
+CCTV-16
+
+📺 Chinese TV,#genre#
+CCTV-1
+CCTV-2
+</pre>
+
+<h3>频道别名</h3>
+<p>编辑 <code>config/alias.txt</code>，将源中的不同名称映射到模板名：</p>
+<pre>
+CCTV-1 = CCTV-1综合,CCTV1综合,中央一套
+CCTV-5 = CCTV-5体育,CCTV5体育,中央五套
+</pre>
+
+<h3>订阅源管理</h3>
+<p>编辑 <code>config/subscribe.txt</code>，每行一个 IPTV 源 URL：</p>
+<pre>
+https://iptv-org.github.io/iptv/index.m3u
+https://raw.githubusercontent.com/xxx/xxx/main/list.m3u
+</pre>
+
+<!-- 更新 -->
+<h2 id="update">🔄 更新流程</h2>
+
+<h3>手动更新频道路径</h3>
+<pre>
+git pull
+docker pull networkio/iptv-api:latest
+docker stop iptv-api && docker rm iptv-api
+docker run -d --name iptv-api --restart unless-stopped -p 5180:8080 \
+  -v /home/pi5/iptv-api/config:/iptv-api/config \
+  -v /home/pi5/iptv-api/user_output:/iptv-api/output \
+  -e PUBLIC_DOMAIN=iptv.diynets.xyz -e PUBLIC_PORT=5180 \
+  networkio/iptv-api:latest
+</pre>
+
+<h3>GitHub Actions 自动构建</h3>
+<p>每次推送 <code>feature/myanmar-sports-ui</code> 分支时自动触发：</p>
+<ol>
+  <li>代码推送到 GitHub</li>
+  <li>Actions 自动构建 Docker 镜像</li>
+  <li>推送到 Docker Hub（networkio/iptv-api:latest）</li>
+  <li>树莓派上执行 <code>docker pull && docker restart</code></li>
+</ol>
+
+<!-- FAQ -->
+<h2 id="faq">❓ 常见问题</h2>
+
+<div class="card">
+  <div class="card-title">Q: 频道播放不出来怎么办？</div>
+  <p>免费源可能不稳定，可以尝试：</p>
+  <ul>
+    <li>重新运行更新（GitHub Actions → Update schedule → Run workflow）</li>
+    <li>切到另一个源（同一个频道有多个备用接口）</li>
+    <li>在 <code>subscribe.txt</code> 中添加更多稳定源</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="card-title">Q: 如何添加新频道？</div>
+  <p>编辑 <code>config/myanmar_sports.txt</code>，在对应分类下添加频道名。如果源中的频道名不同，再在 <code>alias.txt</code> 中添加别名映射。</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Q: 更新需要多长时间？</div>
+  <p>约 30-50 分钟，取决于订阅源数量和网络状况。测速已关闭，主要耗时在获取源和匹配频道。</p>
+</div>
+
+<div class="card">
+  <div class="card-title">Q: 如何查看运行日志？</div>
+  <p>网页访问：<a href="https://iptv.diynets.xyz/log/result" target="_blank">https://iptv.diynets.xyz/log/result</a></p>
+  <p>或命令行：<code>docker logs iptv-api</code></p>
+</div>
+
+<br>
+<p style="text-align:center;color:var(--text2);font-size:12px;padding:20px 0">IPTV-API 使用手册 · 2026</p>
+
+</div>
+
+<script>
+function copy(btn,text){
+  if(btn.classList.contains('copied'))return
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='已复制'
+    btn.classList.add('copied')
+    setTimeout(()=>{
+      btn.textContent='复制'
+      btn.classList.remove('copied')
+    },1500)
+  })
+}
+</script>
+</body>
+</html>
