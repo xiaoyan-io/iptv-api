@@ -2,11 +2,12 @@
 CCTV-5
 CCTV-5+
 CCTV-16
-CCTV-8K
 CCTV-4K
 CCTV-Storm Football
-CCTV-Golf & Tennis
-CCTV-Billiards
+CCTV-13
+BBC World News
+CNN
+Al Jazeera
 
 📺 International Sports Alan公益,#genre#
 beIN Sports USA
@@ -15,42 +16,15 @@ CBS Sports HQ
 CBS Sports Golazo Network
 NBA TV
 NFL Network
-MLB Channel
 Fox Sports 1
 Sony Sports Ten 1
 Sony Sports Ten 2
 Sony Sports Ten 3
 Sony Sports Ten 5
-Willow Sports
-Win Sports
-GolfPass
-Tennis Channel 2
-Real Madrid TV
-Women's Sports Network
-World of Freesports
-
-📺 Sports News Alan公益,#genre#
-Sky Sports News
-ESPN News
-CCTV-13
-Al Jazeera
-BBC World News
-CNN
-France 24
-CGTN
-CGTN Documentary
-NHK World-Japan
-Arirang TV
-Channel NewsAsia
-Bloomberg TV
-CNBC
 
 💪 Fighting & Wrestling Alan公益,#genre#
 UFC
 WWE Superstar Central
-TNA Wrestling
-GLORY Kickboxing
-DAZN Combat
 Boxing
 
 📺 Chinese TV Alan公益,#genre#
