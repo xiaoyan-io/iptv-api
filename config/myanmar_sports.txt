@@ -1,7 +1,4 @@
-Alan IPTV公益,#genre#
-Alan IPTV公益,https://iptv.diynets.xyz
-
-⚽ Sports,#genre#
+⚽ Sports Alan公益,#genre#
 CCTV-5
 CCTV-5+
 CCTV-16
@@ -11,7 +8,7 @@ CCTV-Storm Football
 CCTV-Golf & Tennis
 CCTV-Billiards
 
-📺 International Sports,#genre#
+📺 International Sports Alan公益,#genre#
 beIN Sports USA
 beIN SPORTS XTRA
 CBS Sports HQ
@@ -32,7 +29,7 @@ Real Madrid TV
 Women's Sports Network
 World of Freesports
 
-📺 Sports News,#genre#
+📺 Sports News Alan公益,#genre#
 Sky Sports News
 ESPN News
 CCTV-13
@@ -48,7 +45,7 @@ Channel NewsAsia
 Bloomberg TV
 CNBC
 
-💪 Fighting & Wrestling,#genre#
+💪 Fighting & Wrestling Alan公益,#genre#
 UFC
 WWE Superstar Central
 TNA Wrestling
@@ -56,7 +53,7 @@ GLORY Kickboxing
 DAZN Combat
 Boxing
 
-📺 Chinese TV,#genre#
+📺 Chinese TV Alan公益,#genre#
 CCTV-1
 CCTV-2
 CCTV-3
