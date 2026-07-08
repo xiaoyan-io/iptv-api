@@ -1,5 +1,5 @@
-#EXTM3U x-tvg-url="https://raw.githubusercontent.com/xiaoyan-io/iptv-api/refs/heads/feature/myanmar-sports-ui/output/epg/epg.gz"
-#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="🕘️更新时间",2026-07-08 10:51:03
+#EXTM3U x-tvg-url="http://192.168.88.16:8080/epg/epg.gz"
+#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="🕘️更新时间",2026-07-08 08:45:28
 https://0472.org/hls/cgtne.m3u8
 #EXTINF:-1 tvg-id="CGTN俄语" tvg-name="CGTN俄语" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CGTN俄语.png" group-title="♻️未匹配频道",CGTN俄语
 https://0472.org/hls/cgtne.m3u8
@@ -29393,6 +29393,12 @@ url
 url
 #EXTINF:-1 tvg-id="30A Music" tvg-name="30A Music" tvg-logo="https://www.xn--rgv465a.top/tvlogo/30A Music.png" group-title="🈳无结果频道",30A Music
 url
+#EXTINF:-1 tvg-id="绍兴交通广播" tvg-name="绍兴交通广播" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴交通广播.png" group-title="🈳无结果频道",绍兴交通广播
+url
+#EXTINF:-1 tvg-id="绍兴之声" tvg-name="绍兴之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴之声.png" group-title="🈳无结果频道",绍兴之声
+url
+#EXTINF:-1 tvg-id="福州左海之声" tvg-name="福州左海之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/福州左海之声.png" group-title="🈳无结果频道",福州左海之声
+url
 #EXTINF:-1 tvg-id="A&E Latin America Brazil (720p)" tvg-name="A&E Latin America Brazil (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/A&E Latin America Brazil (720p).png" group-title="🈳无结果频道",A&E Latin America Brazil (720p)
 url
 #EXTINF:-1 tvg-id="A&E Latin America South (1080p)" tvg-name="A&E Latin America South (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/A&E Latin America South (1080p).png" group-title="🈳无结果频道",A&E Latin America South (1080p)
@@ -29628,40 +29634,4 @@ url
 #EXTINF:-1 tvg-id="Volver (720p)" tvg-name="Volver (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Volver (720p).png" group-title="🈳无结果频道",Volver (720p)
 url
 #EXTINF:-1 tvg-id="WNJU 47.1 (720p)" tvg-name="WNJU 47.1 (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/WNJU 47.1 (720p).png" group-title="🈳无结果频道",WNJU 47.1 (720p)
-url
-#EXTINF:-1 tvg-id="绍兴交通广播" tvg-name="绍兴交通广播" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴交通广播.png" group-title="🈳无结果频道",绍兴交通广播
-url
-#EXTINF:-1 tvg-id="绍兴之声" tvg-name="绍兴之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴之声.png" group-title="🈳无结果频道",绍兴之声
-url
-#EXTINF:-1 tvg-id="福州左海之声" tvg-name="福州左海之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/福州左海之声.png" group-title="🈳无结果频道",福州左海之声
-url
-#EXTINF:-1 tvg-id="Alerta Bogota (720p) [Geo-blocked]" tvg-name="Alerta Bogota (720p) [Geo-blocked]" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Alerta Bogota (720p) [Geo-blocked].png" group-title="🈳无结果频道",Alerta Bogota (720p) [Geo-blocked]
-url
-#EXTINF:-1 tvg-id="Argentina/12 (1080p)" tvg-name="Argentina/12 (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Argentina/12 (1080p).png" group-title="🈳无结果频道",Argentina/12 (1080p)
-url
-#EXTINF:-1 tvg-id="AZA TV HD (1080p)" tvg-name="AZA TV HD (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/AZA TV HD (1080p).png" group-title="🈳无结果频道",AZA TV HD (1080p)
-url
-#EXTINF:-1 tvg-id="BBC News Latin America (720p)" tvg-name="BBC News Latin America (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BBC News Latin America (720p).png" group-title="🈳无结果频道",BBC News Latin America (720p)
-url
-#EXTINF:-1 tvg-id="beIN Sports Haber (720p)" tvg-name="beIN Sports Haber (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/beIN Sports Haber (720p).png" group-title="🈳无结果频道",beIN Sports Haber (720p)
-url
-#EXTINF:-1 tvg-id="Canal Congreso (1080p)" tvg-name="Canal Congreso (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Canal Congreso (1080p).png" group-title="🈳无结果频道",Canal Congreso (1080p)
-url
-#EXTINF:-1 tvg-id="Combate (720p)" tvg-name="Combate (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Combate (720p).png" group-title="🈳无结果频道",Combate (720p)
-url
-#EXTINF:-1 tvg-id="CongressTV (1080p)" tvg-name="CongressTV (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CongressTV (1080p).png" group-title="🈳无结果频道",CongressTV (1080p)
-url
-#EXTINF:-1 tvg-id="Golf Channel (1080p)" tvg-name="Golf Channel (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Golf Channel (1080p).png" group-title="🈳无结果频道",Golf Channel (1080p)
-url
-#EXTINF:-1 tvg-id="ITV Brazil (720p)" tvg-name="ITV Brazil (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/ITV Brazil (720p).png" group-title="🈳无结果频道",ITV Brazil (720p)
-url
-#EXTINF:-1 tvg-id="La Nacion + (1080p)" tvg-name="La Nacion + (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/La Nacion + (1080p).png" group-title="🈳无结果频道",La Nacion + (1080p)
-url
-#EXTINF:-1 tvg-id="National Geographic (1080p)" tvg-name="National Geographic (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/National Geographic (1080p).png" group-title="🈳无结果频道",National Geographic (1080p)
-url
-#EXTINF:-1 tvg-id="Premiere Clubes (720p)" tvg-name="Premiere Clubes (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Premiere Clubes (720p).png" group-title="🈳无结果频道",Premiere Clubes (720p)
-url
-#EXTINF:-1 tvg-id="Telefe Buenos Aires (1080p)" tvg-name="Telefe Buenos Aires (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Telefe Buenos Aires (1080p).png" group-title="🈳无结果频道",Telefe Buenos Aires (1080p)
-url
-#EXTINF:-1 tvg-id="TVO Canal 23" tvg-name="TVO Canal 23" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVO Canal 23.png" group-title="🈳无结果频道",TVO Canal 23
 url

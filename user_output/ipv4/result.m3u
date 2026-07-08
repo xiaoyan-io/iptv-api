@@ -1,5 +1,5 @@
-#EXTM3U x-tvg-url="https://raw.githubusercontent.com/xiaoyan-io/iptv-api/refs/heads/feature/myanmar-sports-ui/output/epg/epg.gz"
-#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="🕘️更新时间",2026-07-08 10:51:02
+#EXTM3U x-tvg-url="http://192.168.88.16:8080/epg/epg.gz"
+#EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="🕘️更新时间",2026-07-08 08:45:27
 http://198.204.228.26/live/cctv5p.m3u8
 #EXTINF:-1 tvg-id="CCTV-5" tvg-name="CCTV-5" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5.png" group-title="⚽ Sports",CCTV-5
 http://198.204.228.26/live/cctv5p.m3u8
@@ -731,8 +731,6 @@ https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8
 https://amg02855-foxsports-amg02855c1-xumo-us-1755.playouts.now.amagi.tv/Fox-Sports-AmazonNews/playlist.m3u8
 #EXTINF:-1 tvg-id="Fox Sports (720p)" tvg-name="Fox Sports (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Fox Sports (720p).png" group-title="♻️未匹配频道",Fox Sports (720p)
 https://live-manifest.production-public.tubi.io/live/6035c7fd-efff-4ec7-93dc-aa0c7a58ba47/playlist.m3u8
-#EXTINF:-1 tvg-id="Fox Sports (720p)" tvg-name="Fox Sports (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Fox Sports (720p).png" group-title="♻️未匹配频道",Fox Sports (720p)
-http://45.6.4.35/FOX_SPORT/index.m3u8
 #EXTINF:-1 tvg-id="fubo Sports Network (1080p)" tvg-name="fubo Sports Network (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/fubo Sports Network (1080p).png" group-title="♻️未匹配频道",fubo Sports Network (1080p)
 https://dnf08l6u6uxnz.cloudfront.net/master.m3u8
 #EXTINF:-1 tvg-id="Golf Channel" tvg-name="Golf Channel" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Golf Channel.png" group-title="♻️未匹配频道",Golf Channel
@@ -12485,8 +12483,6 @@ https://amg00353-lionsgatestudio-angermgmt-samsungau-o9jg9.amagi.tv/playlist/amg
 https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/angerstele.m3u8
 #EXTINF:-1 tvg-id="Ani (576p)" tvg-name="Ani (576p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Ani (576p).png" group-title="♻️未匹配频道",Ani (576p)
 http://31.148.48.15/Ani/index.m3u8
-#EXTINF:-1 tvg-id="Ani (576p)" tvg-name="Ani (576p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Ani (576p).png" group-title="♻️未匹配频道",Ani (576p)
-http://46.32.176.50/anitv/index.m3u8
 #EXTINF:-1 tvg-id="Ani-Blast (720p)" tvg-name="Ani-Blast (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Ani-Blast (720p).png" group-title="♻️未匹配频道",Ani-Blast (720p)
 https://amg19223-amg19223c9-amgplt0019.playout.now3.amagi.tv/playlist/amg19223-amg19223c9-amgplt0019/playlist.m3u8
 #EXTINF:-1 tvg-id="ANIMAL KINGDOM (720p)" tvg-name="ANIMAL KINGDOM (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/ANIMAL KINGDOM (720p).png" group-title="♻️未匹配频道",ANIMAL KINGDOM (720p)
@@ -15015,8 +15011,6 @@ https://funradiovisionhd.vedge.infomaniak.com/livecast/ik:funradiovisionhd/manif
 https://saran-live.ercdn.net/fx/index.m3u8
 #EXTINF:-1 tvg-id="FYI (720p)" tvg-name="FYI (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/FYI (720p).png" group-title="♻️未匹配频道",FYI (720p)
 http://185.246.209.113/FYIHD/index.m3u8
-#EXTINF:-1 tvg-id="FYI (720p)" tvg-name="FYI (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/FYI (720p).png" group-title="♻️未匹配频道",FYI (720p)
-http://206.212.244.63/78/index.m3u8
 #EXTINF:-1 tvg-id="Galactica TV" tvg-name="Galactica TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Galactica TV.png" group-title="♻️未匹配频道",Galactica TV
 https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 #EXTINF:-1 tvg-id="Galveston County TV (720p) [Not 24/7]" tvg-name="Galveston County TV (720p) [Not 24/7]" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Galveston County TV (720p) [Not 24/7].png" group-title="♻️未匹配频道",Galveston County TV (720p) [Not 24/7]
@@ -26253,36 +26247,6 @@ http://45.171.108.253:8888/VIVA/index.m3u8
 http://45.6.4.35/VOLVER/index.m3u8
 #EXTINF:-1 tvg-id="WNJU 47.1 (720p)" tvg-name="WNJU 47.1 (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/WNJU 47.1 (720p).png" group-title="♻️未匹配频道",WNJU 47.1 (720p)
 http://134.195.157.227:1234/stream/test/tm/master.m3u8
-#EXTINF:-1 tvg-id="Alerta Bogota (720p) [Geo-blocked]" tvg-name="Alerta Bogota (720p) [Geo-blocked]" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Alerta Bogota (720p) [Geo-blocked].png" group-title="♻️未匹配频道",Alerta Bogota (720p) [Geo-blocked]
-https://mdstrm.com/live-stream-playlist/69b2cdf98815b9b6c48c2532.m3u8
-#EXTINF:-1 tvg-id="Argentina/12 (1080p)" tvg-name="Argentina/12 (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Argentina/12 (1080p).png" group-title="♻️未匹配频道",Argentina/12 (1080p)
-http://45.6.4.35/IP_NOTICIAS/index.m3u8
-#EXTINF:-1 tvg-id="AZA TV HD (1080p)" tvg-name="AZA TV HD (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/AZA TV HD (1080p).png" group-title="♻️未匹配频道",AZA TV HD (1080p)
-https://tv.webmedialive.com/azatvhn/live/playlist.m3u8
-#EXTINF:-1 tvg-id="BBC News Latin America (720p)" tvg-name="BBC News Latin America (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BBC News Latin America (720p).png" group-title="♻️未匹配频道",BBC News Latin America (720p)
-http://138.121.15.230:9002/BBC-NEWS/index.m3u8
-#EXTINF:-1 tvg-id="beIN Sports Haber (720p)" tvg-name="beIN Sports Haber (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/beIN Sports Haber (720p).png" group-title="♻️未匹配频道",beIN Sports Haber (720p)
-https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
-#EXTINF:-1 tvg-id="Canal Congreso (1080p)" tvg-name="Canal Congreso (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Canal Congreso (1080p).png" group-title="♻️未匹配频道",Canal Congreso (1080p)
-http://138.121.15.230:9002/CANAL-CONGRESO/index.m3u8
-#EXTINF:-1 tvg-id="Combate (720p)" tvg-name="Combate (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Combate (720p).png" group-title="♻️未匹配频道",Combate (720p)
-http://143.14.134.107:80/167/index.m3u8
-#EXTINF:-1 tvg-id="CongressTV (1080p)" tvg-name="CongressTV (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CongressTV (1080p).png" group-title="♻️未匹配频道",CongressTV (1080p)
-https://stitch.teletarget.ru/api/v1/hls/504/158/index.m3u8
-#EXTINF:-1 tvg-id="Golf Channel (1080p)" tvg-name="Golf Channel (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Golf Channel (1080p).png" group-title="♻️未匹配频道",Golf Channel (1080p)
-http://23.237.104.106:8080/USA_GOLF/index.m3u8
-#EXTINF:-1 tvg-id="ITV Brazil (720p)" tvg-name="ITV Brazil (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/ITV Brazil (720p).png" group-title="♻️未匹配频道",ITV Brazil (720p)
-https://video24.mais.uol.com.br/live/6146.m3u8
-#EXTINF:-1 tvg-id="La Nacion + (1080p)" tvg-name="La Nacion + (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/La Nacion + (1080p).png" group-title="♻️未匹配频道",La Nacion + (1080p)
-http://45.6.4.35/LA_NACION/index.m3u8
-#EXTINF:-1 tvg-id="National Geographic (1080p)" tvg-name="National Geographic (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/National Geographic (1080p).png" group-title="♻️未匹配频道",National Geographic (1080p)
-http://138.121.15.230:9002/NAT-GEO/index.m3u8
-#EXTINF:-1 tvg-id="Premiere Clubes (720p)" tvg-name="Premiere Clubes (720p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Premiere Clubes (720p).png" group-title="♻️未匹配频道",Premiere Clubes (720p)
-http://45.162.231.38:7779/Premiere_Clubes/index.m3u8
-#EXTINF:-1 tvg-id="Telefe Buenos Aires (1080p)" tvg-name="Telefe Buenos Aires (1080p)" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Telefe Buenos Aires (1080p).png" group-title="♻️未匹配频道",Telefe Buenos Aires (1080p)
-http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
-#EXTINF:-1 tvg-id="TVO Canal 23" tvg-name="TVO Canal 23" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVO Canal 23.png" group-title="♻️未匹配频道",TVO Canal 23
-http://45.167.2.101:8000/play/a0qo/index.m3u8
 #EXTINF:-1 tvg-id="LaLiga Hypermotion" tvg-name="LaLiga Hypermotion" tvg-logo="https://www.xn--rgv465a.top/tvlogo/LaLiga Hypermotion.png" group-title="🈳无结果频道",LaLiga Hypermotion
 url
 #EXTINF:-1 tvg-id="Alkass One" tvg-name="Alkass One" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Alkass One.png" group-title="🈳无结果频道",Alkass One
@@ -29259,11 +29223,11 @@ url
 url
 #EXTINF:-1 tvg-id="ION Television" tvg-name="ION Television" tvg-logo="https://www.xn--rgv465a.top/tvlogo/ION Television.png" group-title="🈳无结果频道",ION Television
 url
-#EXTINF:-1 tvg-id="Umm TV" tvg-name="Umm TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Umm TV.png" group-title="🈳无结果频道",Umm TV
-url
 #EXTINF:-1 tvg-id="绍兴交通广播" tvg-name="绍兴交通广播" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴交通广播.png" group-title="🈳无结果频道",绍兴交通广播
 url
 #EXTINF:-1 tvg-id="绍兴之声" tvg-name="绍兴之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/绍兴之声.png" group-title="🈳无结果频道",绍兴之声
 url
 #EXTINF:-1 tvg-id="福州左海之声" tvg-name="福州左海之声" tvg-logo="https://www.xn--rgv465a.top/tvlogo/福州左海之声.png" group-title="🈳无结果频道",福州左海之声
+url
+#EXTINF:-1 tvg-id="Umm TV" tvg-name="Umm TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/Umm TV.png" group-title="🈳无结果频道",Umm TV
 url
