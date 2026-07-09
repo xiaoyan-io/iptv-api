@@ -67,22 +67,23 @@ EOF
   echo "✓ 已创建 tools.json"
 fi
 
+# 重新生成 nginx 路由
+bash "$PROJ_DIR/scripts/gen-nginx-routes.sh"
+
+# 同步到容器
+docker cp "$PROJ_DIR/tools-routes.conf" iptv-api:/etc/nginx/tools-routes.conf
+docker cp "$PROJ_DIR/user_output/tools.json" iptv-api:/iptv-api/user_output/tools.json
+docker exec iptv-api mkdir -p "/iptv-api/user_output/$SLUG"
+docker cp "$TARGET_FILE" "iptv-api:/iptv-api/user_output/$SLUG/index.html"
+docker exec iptv-api nginx -s reload
+
 # git 自动追踪
 cd "$PROJ_DIR"
-git add "$TARGET_FILE" "$TOOLS_JSON" 2>/dev/null || true
+git add "$TARGET_FILE" "$TOOLS_JSON" tools-routes.conf 2>/dev/null || true
 
 echo ""
-echo "✅ 部署完成！还需手动完成以下步骤："
+echo "✅ 部署全部完成！已同步到容器并重载 nginx。"
 echo ""
-echo "  1. 添加 nginx 路由（新工具首次部署需要）："
-echo "     location /$SLUG/ {"
-echo "         root /iptv-api/user_output;"
-echo "     }"
-echo ""
-echo "  2. 同步容器："
-echo "     docker cp $PROJ_DIR/user_output iptv-api:/iptv-api/user_output"
-echo "     docker exec iptv-api nginx -s reload"
-echo ""
-echo "  3. 提交代码："
+echo "  提交代码："
 echo "     git commit -m \"添加 $TITLE\""
 echo "     git push"
