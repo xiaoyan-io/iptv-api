@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>DIYnets IPTV</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:420px;width:100%;text-align:center}
+.logo{font-size:2.5rem;margin-bottom:8px}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:4px}
+.sub{color:#8b949e;font-size:.85rem;margin-bottom:28px}
+.cards{display:flex;flex-direction:column;gap:12px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:14px;padding:20px;text-decoration:none;color:#e6edf3;display:flex;align-items:center;gap:16px;transition:all .2s;text-align:left}
+.card:hover{border-color:#58a6ff;background:#1c2128;transform:translateY(-2px)}
+.card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.card-icon.iptv{background:#1a3a1a;color:#3fb950}
+.card-icon.tips{background:#1a2a3a;color:#58a6ff}
+.card-icon.tools{background:#2a1a3a;color:#a371f7}
+.card-content{flex:1}
+.card-title{font-weight:600;font-size:1rem;margin-bottom:2px}
+.card-desc{font-size:.8rem;color:#8b949e}
+.status{display:flex;justify-content:center;gap:16px;margin-top:28px;font-size:.75rem;color:#8b949e}
+.status span{display:flex;align-items:center;gap:4px}
+.dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.dot.green{background:#3fb950}
+footer{margin-top:28px;font-size:.7rem;color:#484f58}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">📺</div>
+  <h1>DIYnets IPTV</h1>
+  <p class="sub">Alan IPTV公益 · 服务于缅甸用户</p>
+  <div class="cards">
+    <a class="card" href="/iptv">
+      <div class="card-icon iptv">📡</div>
+      <div class="card-content">
+        <div class="card-title">IPTV 播放列表</div>
+        <div class="card-desc">TXT / M3U 格式，导入播放器观看</div>
+      </div>
+      <span style="color:#8b949e">→</span>
+    </a>
+    <a class="card" href="/tips">
+      <div class="card-icon tips">💬</div>
+      <div class="card-content">
+        <div class="card-title">万能追问助手小贴士</div>
+        <div class="card-desc">50+ 追问技巧，让 AI 给出更好回答</div>
+      </div>
+      <span style="color:#8b949e">→</span>
+    </a>
+    <a class="card" href="/tools">
+      <div class="card-icon tools">🧰</div>
+      <div class="card-content">
+        <div class="card-title">AI 追问工具箱</div>
+        <div class="card-desc">建筑/M&E/通用 · 60+ 专业提示词</div>
+      </div>
+      <span style="color:#8b949e">→</span>
+    </a>
+  </div>
+  <div class="status">
+    <span><span class="dot green"></span> 服务正常</span>
+    <span>🕘 每日更新</span>
+    <span>🌏 缅甸优化</span>
+  </div>
+  <footer>Alan IPTV公益 · Powered by Raspberry Pi 5</footer>
+</div>
+</body>
+</html>
