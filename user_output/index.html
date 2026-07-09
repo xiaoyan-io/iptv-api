@@ -3,76 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>DIYnets IPTV</title>
+<title>DIYnets · 服务仪表盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.container{max-width:420px;width:100%;text-align:center}
-.logo{font-size:2.5rem;margin-bottom:8px}
-h1{font-size:1.5rem;font-weight:700;margin-bottom:4px}
-.sub{color:#8b949e;font-size:.85rem;margin-bottom:28px}
-.cards{display:flex;flex-direction:column;gap:12px}
-.card{background:#161b22;border:1px solid #30363d;border-radius:14px;padding:20px;text-decoration:none;color:#e6edf3;display:flex;align-items:center;gap:16px;transition:all .2s;text-align:left}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh}
+
+/* status bar */
+.status-bar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid #21262d;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;font-size:.78rem;flex-wrap:wrap;gap:6px}
+.status-bar .left{display:flex;align-items:center;gap:12px}
+.status-bar .right{display:flex;align-items:center;gap:12px;color:#8b949e}
+.status-dot{width:8px;height:8px;border-radius:50%;display:inline-block;transition:background .3s}
+.status-dot.on{background:#3fb950;box-shadow:0 0 8px rgba(63,185,80,.5)}
+.status-dot.off{background:#f85149;box-shadow:0 0 8px rgba(248,81,73,.5)}
+.status-dot.checking{background:#d29922;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.status-text{font-weight:500}
+.status-text.on{color:#3fb950}
+.status-text.off{color:#f85149}
+
+/* hero */
+.hero{padding:48px 20px 32px;text-align:center}
+.hero .logo{font-size:2.8rem;margin-bottom:10px}
+.hero h1{font-size:1.6rem;font-weight:700;letter-spacing:-.5px}
+.hero .sub{color:#8b949e;font-size:.88rem;margin-top:6px}
+.hero .badge{display:inline-block;margin-top:10px;padding:3px 12px;border-radius:999px;font-size:.72rem;background:#161b22;border:1px solid #30363d;color:#8b949e}
+
+/* tool grid */
+.grid-wrap{padding:0 20px 32px;max-width:720px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;text-decoration:none;color:#e6edf3;display:flex;flex-direction:column;gap:10px;transition:all .2s;position:relative;overflow:hidden}
 .card:hover{border-color:#58a6ff;background:#1c2128;transform:translateY(-2px)}
-.card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
-.card-icon.iptv{background:#1a3a1a;color:#3fb950}
-.card-icon.tips{background:#1a2a3a;color:#58a6ff}
-.card-icon.tools{background:#2a1a3a;color:#a371f7}
-.card-content{flex:1}
-.card-title{font-weight:600;font-size:1rem;margin-bottom:2px}
-.card-desc{font-size:.8rem;color:#8b949e}
-.status{display:flex;justify-content:center;gap:16px;margin-top:28px;font-size:.75rem;color:#8b949e}
-.status span{display:flex;align-items:center;gap:4px}
-.dot{width:6px;height:6px;border-radius:50%;display:inline-block}
-.dot.green{background:#3fb950}
-footer{margin-top:28px;font-size:.7rem;color:#484f58}
+.card .icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.card .name{font-weight:600;font-size:.92rem}
+.card .desc{font-size:.78rem;color:#8b949e;line-height:1.4}
+.card .arrow{position:absolute;right:14px;top:14px;color:#30363d;font-size:.8rem;transition:color .2s}
+.card:hover .arrow{color:#58a6ff}
+
+/* stats */
+.stats{padding:0 20px 40px;max-width:720px;margin:0 auto}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.stat-card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;text-align:center}
+.stat-card .num{font-size:1.3rem;font-weight:700;color:#58a6ff}
+.stat-card .label{font-size:.72rem;color:#8b949e;margin-top:4px}
+.stat-card .num.green{color:#3fb950}
+.stat-card .num.purple{color:#a371f7}
+
+/* add-tool placeholder */
+.add-more{grid-column:1/-1;border:1px dashed #21262d;border-radius:12px;padding:18px;text-align:center;color:#484f58;font-size:.82rem;cursor:default}
+
+/* footer */
+footer{text-align:center;padding:20px;font-size:.72rem;color:#484f58;border-top:1px solid #21262d}
+
+@media(max-width:500px){
+  .grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .status-bar .right{display:none}
+}
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="logo">📺</div>
-  <h1>DIYnets IPTV</h1>
-  <p class="sub">Alan IPTV公益 · 服务于缅甸用户</p>
-  <div class="cards">
-    <a class="card" href="/iptv">
-      <div class="card-icon iptv">📡</div>
-      <div class="card-content">
-        <div class="card-title">IPTV 播放列表</div>
-        <div class="card-desc">TXT / M3U 格式，导入播放器观看</div>
-      </div>
-      <span style="color:#8b949e">→</span>
-    </a>
-    <a class="card" href="/tips">
-      <div class="card-icon tips">💬</div>
-      <div class="card-content">
-        <div class="card-title">万能追问助手小贴士</div>
-        <div class="card-desc">50+ 追问技巧，让 AI 给出更好回答</div>
-      </div>
-      <span style="color:#8b949e">→</span>
-    </a>
-    <a class="card" href="/tools">
-      <div class="card-icon tools">🧰</div>
-      <div class="card-content">
-        <div class="card-title">AI 追问工具箱</div>
-        <div class="card-desc">建筑/M&E/通用 · 60+ 专业提示词</div>
-      </div>
-      <span style="color:#8b949e">→</span>
-    </a>
-    <a class="card" href="/extract">
-      <div class="card-icon" style="background:#1a3a2a;color:#3fb950">📄</div>
-      <div class="card-content">
-        <div class="card-title">核芯摘记 3.5</div>
-        <div class="card-desc">智能文本提取 · 关键词/观点/润色</div>
-      </div>
-      <span style="color:#8b949e">→</span>
-    </a>
+
+<div class="status-bar">
+  <div class="left">
+    <span class="status-dot checking" id="dot"></span>
+    <span class="status-text" id="statusText">检查中...</span>
   </div>
-  <div class="status">
-    <span><span class="dot green"></span> 服务正常</span>
-    <span>🕘 每日更新</span>
+  <div class="right">
+    <span id="updateTime">-</span>
     <span>🌏 缅甸优化</span>
   </div>
-  <footer>Alan IPTV公益 · Powered by Raspberry Pi 5</footer>
 </div>
+
+<div class="hero">
+  <div class="logo">📺</div>
+  <h1>DIYnets 服务仪表盘</h1>
+  <p class="sub">Alan IPTV公益 · 服务于缅甸用户</p>
+  <span class="badge" id="channelCount">📡 加载中...</span>
+</div>
+
+<div class="grid-wrap">
+  <div class="grid" id="toolGrid"></div>
+</div>
+
+<div class="stats">
+  <div class="stats-grid" id="statsGrid">
+    <div class="stat-card"><div class="num" id="statTotal">-</div><div class="label">总频道</div></div>
+    <div class="stat-card"><div class="num green" id="statCategories">-</div><div class="label">分类数</div></div>
+    <div class="stat-card"><div class="num purple" id="statUpdate">-</div><div class="label">最后更新</div></div>
+    <div class="stat-card"><div>🟢</div><div class="label" style="margin-top:2px;color:#3fb950" id="statStatus">-</div></div>
+  </div>
+</div>
+
+<footer>Alan IPTV公益 · Powered by Raspberry Pi 5 · 服务端渲染，数据不离开设备</footer>
+
+<script>
+const TOOLS = [
+  {icon:'📡', name:'IPTV 播放列表', desc:'TXT / M3U 格式，导入播放器观看', href:'/iptv', color:'#1a3a1a'},
+  {icon:'💬', name:'万能追问助手小贴士', desc:'50+ 追问技巧，让 AI 给出更好回答', href:'/tips', color:'#1a2a3a'},
+  {icon:'🧰', name:'AI 追问工具箱', desc:'建筑/M&E/通用 · 60+ 专业提示词', href:'/tools', color:'#2a1a3a'},
+  {icon:'📄', name:'核芯摘记 3.5', desc:'智能文本提取 · 关键词/观点/润色', href:'/extract', color:'#1a3a2a'},
+];
+
+const toolGrid = document.getElementById('toolGrid');
+TOOLS.forEach(t => {
+  const a = document.createElement('a');
+  a.className = 'card'; a.href = t.href;
+  a.innerHTML = `<div class="icon" style="background:${t.color}">${t.icon}</div>
+    <div><div class="name">${t.name}</div><div class="desc">${t.desc}</div></div>
+    <span class="arrow">→</span>`;
+  toolGrid.appendChild(a);
+});
+
+const addMore = document.createElement('div');
+addMore.className = 'add-more';
+addMore.textContent = '🔧 更多工具开发中...';
+toolGrid.appendChild(addMore);
+
+// status check
+const dot = document.getElementById('dot');
+const statusText = document.getElementById('statusText');
+
+async function checkHealth() {
+  try {
+    const r = await fetch('/iptv', {method:'HEAD', signal:AbortSignal.timeout(5000)});
+    if (r.ok) {
+      dot.className = 'status-dot on';
+      statusText.className = 'status-text on';
+      statusText.textContent = '服务正常运行';
+      document.getElementById('statStatus').textContent = '服务正常';
+    } else {
+      throw new Error('not ok');
+    }
+  } catch {
+    dot.className = 'status-dot off';
+    statusText.className = 'status-text off';
+    statusText.textContent = '无法连接';
+    document.getElementById('statStatus').textContent = '⚠️ 异常';
+  }
+}
+checkHealth();
+
+// parse stats from hls.txt
+async function loadStats() {
+  try {
+    const r = await fetch('/hls.txt', {signal:AbortSignal.timeout(5000)});
+    const txt = await r.text();
+    const lines = txt.split('\n').filter(l => l.trim());
+    let channels = 0, cats = new Set(), updateTime = '';
+    for (const line of lines) {
+      if (line.startsWith('🕘')) {
+        const parts = line.split(',');
+        if (parts[1]) updateTime = parts[1].trim();
+        continue;
+      }
+      if (line.includes('#genre#')) {
+        const name = line.split(',')[0].trim();
+        if (name) cats.add(name);
+        continue;
+      }
+      const parts = line.split(',');
+      if (parts.length >= 2 && parts[0].trim() && parts[1].trim() && !parts[1].includes('#genre#')) {
+        channels++;
+      }
+    }
+    document.getElementById('statTotal').textContent = channels || '?';
+    document.getElementById('statCategories').textContent = cats.size || '?';
+    document.getElementById('statUpdate').textContent = updateTime ? updateTime.slice(5,16) : '-';
+    document.getElementById('channelCount').textContent = `📡 ${channels} 个频道 · ${cats.size} 个分类`;
+    document.getElementById('updateTime').textContent = '🕘 ' + (updateTime || '-');
+  } catch {
+    // silent
+  }
+}
+loadStats();
+</script>
 </body>
 </html>
