@@ -97,30 +97,29 @@ footer{text-align:center;padding:20px;font-size:.72rem;color:#484f58;border-top:
 <footer>Alan IPTV公益 · Powered by Raspberry Pi 5 · 服务端渲染，数据不离开设备</footer>
 
 <script>
-const TOOLS = [
-  {icon:'📡', name:'IPTV 播放列表', desc:'TXT / M3U 格式，导入播放器观看', href:'/iptv', color:'#1a3a1a'},
-  {icon:'💬', name:'万能追问助手小贴士', desc:'50+ 追问技巧，让 AI 给出更好回答', href:'/tips', color:'#1a2a3a'},
-  {icon:'🧰', name:'建筑 & M&E 工具箱', desc:'排查/新手 · 建筑电气暖通给排水', href:'/M&E-toolbox', color:'#2a1a3a'},
-  {icon:'📄', name:'核芯摘记 3.5', desc:'智能文本提取 · 关键词/观点/润色', href:'/extract', color:'#1a3a2a'},
-  {icon:'📐', name:'新手平面图设计', desc:'万能词卡 · 平面图布局提示词', href:'/beginner-tips', color:'#3a2a1a'},
-  {icon:'⚡', name:'M&E 专家追问', desc:'平面图与电气 M&E 专家级提示', href:'/expert-tips', color:'#1a2a3a'},
-  {icon:'🎯', name:'万能追问卡片', desc:'新手通用小贴士 · 追问模板', href:'/universal-tips', color:'#2a1a2a'},
-];
-
 const toolGrid = document.getElementById('toolGrid');
-TOOLS.forEach(t => {
-  const a = document.createElement('a');
-  a.className = 'card'; a.href = t.href;
-  a.innerHTML = `<div class="icon" style="background:${t.color}">${t.icon}</div>
-    <div><div class="name">${t.name}</div><div class="desc">${t.desc}</div></div>
-    <span class="arrow">→</span>`;
-  toolGrid.appendChild(a);
-});
 
-const addMore = document.createElement('div');
-addMore.className = 'add-more';
-addMore.textContent = '🔧 更多工具持续上线中...';
-toolGrid.appendChild(addMore);
+async function loadTools() {
+  try {
+    const r = await fetch('/tools.json');
+    const tools = await r.json();
+    tools.forEach(t => {
+      const a = document.createElement('a');
+      a.className = 'card'; a.href = t.href;
+      a.innerHTML = `<div class="icon" style="background:${t.color}">${t.icon}</div>
+        <div><div class="name">${t.name}</div><div class="desc">${t.desc}</div></div>
+        <span class="arrow">→</span>`;
+      toolGrid.appendChild(a);
+    });
+  } catch {
+    // fallback: render nothing, placeholder shown
+  }
+  const addMore = document.createElement('div');
+  addMore.className = 'add-more';
+  addMore.textContent = '🔧 更多工具持续上线中...';
+  toolGrid.appendChild(addMore);
+}
+loadTools();
 
 // status check
 const dot = document.getElementById('dot');
