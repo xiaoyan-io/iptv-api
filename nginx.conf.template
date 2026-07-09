@@ -46,6 +46,22 @@ http {
             root /iptv-api/user_output;
         }
 
+        location /M&E-toolbox/ {
+            root /iptv-api/user_output;
+        }
+
+        location /beginner-tips/ {
+            root /iptv-api/user_output;
+        }
+
+        location /expert-tips/ {
+            root /iptv-api/user_output;
+        }
+
+        location /universal-tips/ {
+            root /iptv-api/user_output;
+        }
+
         location / {
             root /iptv-api/user_output;
         }

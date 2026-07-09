@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, maximum-scale=1.0">
+    <title>建筑 & M&E AI 工具箱 · 排查+新手</title>
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --surface: #ffffff;
+            --surface2: #f0f0f2;
+            --text: #1a1a2e;
+            --text2: #555;
+            --text3: #888;
+            --primary: #1a73e8;
+            --primary-light: #e8f0fe;
+            --accent-arch: #f97316;
+            --accent-elec: #eab308;
+            --accent-plumb: #06b6d4;
+            --accent-hvac: #3b82f6;
+            --accent-boq: #8b5cf6;
+            --accent-cost: #10b981;
+            --accent-constr: #ef4444;
+            --accent-qa: #14b8a6;
+            --border: #e0e0e4;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.10);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-xs: 8px;
+            --nav-height: 60px;
+            --header-height: 52px;
+            --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dark {
+            --bg: #12121a;
+            --surface: #1c1c28;
+            --surface2: #252535;
+            --text: #e8e8f0;
+            --text2: #b0b0bb;
+            --text3: #777788;
+            --primary: #5b9cf5;
+            --primary-light: #1e2a3d;
+            --border: #2a2a38;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+        html { font-size:15px; height:100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg); color: var(--text);
+            min-height:100vh; max-width:500px; margin:0 auto;
+            position:relative; overflow-x:hidden; line-height:1.5;
+            transition: background var(--transition), color var(--transition);
+            padding-bottom: calc(var(--nav-height) + 20px);
+            -webkit-font-smoothing: antialiased;
+            user-select: none;
+        }
+        .app-header {
+            position: sticky; top:0; z-index:100;
+            background: var(--surface); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding:10px 16px; display:flex; align-items:center; justify-content:space-between;
+            border-bottom:1px solid var(--border); height:var(--header-height);
+            transition: background var(--transition), border var(--transition);
+        }
+        .app-title { font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:8px; }
+        .theme-toggle {
+            width:38px; height:38px; border-radius:50%; border:1px solid var(--border);
+            background:var(--surface2); cursor:pointer; font-size:1.2rem;
+            display:flex; align-items:center; justify-content:center; transition:all var(--transition); color:var(--text);
+        }
+        .view { display:none; padding:12px 14px; animation:fadeSlideIn 0.25s ease; }
+        .view.active { display:block; }
+        @keyframes fadeSlideIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+        .bottom-nav {
+            position:fixed; bottom:0; left:50%; transform:translateX(-50%);
+            width:100%; max-width:500px; background:var(--surface);
+            border-top:1px solid var(--border); display:flex; align-items:center;
+            overflow-x:auto; white-space:nowrap; padding:4px 2px;
+            padding-bottom:max(4px, env(safe-area-inset-bottom));
+            height:var(--nav-height); z-index:100;
+            box-shadow:0 -2px 12px rgba(0,0,0,0.04);
+            transition: background var(--transition), border var(--transition);
+            scrollbar-width: none; -ms-overflow-style:none;
+        }
+        .bottom-nav::-webkit-scrollbar { display:none; }
+        .nav-item {
+            display:flex; flex-direction:column; align-items:center; gap:2px;
+            cursor:pointer; padding:4px 8px; border-radius:10px; font-size:0.6rem;
+            color:var(--text3); font-weight:500; min-width:44px; transition:all var(--transition);
+        }
+        .nav-item .nav-icon { font-size:1.2rem; }
+        .nav-item.active { color:var(--primary); font-weight:600; }
+        .nav-badge {
+            position:absolute; top:0; right:2px; background:#ef4444; color:#fff;
+            font-size:0.5rem; width:14px; height:14px; border-radius:50%;
+            display:flex; align-items:center; justify-content:center; font-weight:700; display:none;
+        }
+        .nav-badge.show { display:flex; }
+        .card {
+            background:var(--surface); border-radius:var(--radius); padding:16px; margin-bottom:10px;
+            box-shadow:var(--shadow); border:1px solid var(--border); transition:all var(--transition);
+            cursor:pointer; position:relative;
+        }
+        .card-header { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+        .card-icon { width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+        .card-title { font-weight:600; font-size:0.95rem; }
+        .card-subtitle { font-size:0.75rem; color:var(--text2); }
+        .btn {
+            padding:8px 14px; border-radius:20px; border:1px solid var(--border);
+            background:var(--surface2); cursor:pointer; font-size:0.75rem; font-weight:500;
+            transition:all var(--transition); display:inline-flex; align-items:center; gap:5px;
+            color:var(--text); font-family:inherit; white-space:nowrap;
+        }
+        .btn.primary { background:var(--primary); color:#fff; border:none; }
+        .btn.saved { background:#fef3c7; border-color:#f59e0b; color:#92400e; }
+        .dark .btn.saved { background:#3d2e0a; border-color:#b45309; color:#fcd34d; }
+        .btn-sm { padding:5px 10px; font-size:0.7rem; border-radius:14px; }
+        .btn-follow { background:#ede9fe; border-color:#a78bfa; color:#5b21b6; }
+        .dark .btn-follow { background:#2e1a4a; border-color:#7c3aed; color:#c4b5fd; }
+        .search-bar { display:flex; gap:8px; margin-bottom:12px; }
+        .search-input {
+            flex:1; padding:10px 16px; border-radius:24px; border:1.5px solid var(--border);
+            background:var(--surface); font-size:0.9rem; outline:none; color:var(--text);
+            transition:all var(--transition); user-select:text; -webkit-user-select:text;
+        }
+        .search-input:focus { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-light); }
+        .chip {
+            padding:6px 12px; border-radius:18px; border:1.5px solid var(--border);
+            cursor:pointer; font-size:0.7rem; font-weight:500; background:var(--surface);
+            color:var(--text2); transition:all var(--transition);
+        }
+        .chip.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+        .collapse-header {
+            display:flex; align-items:center; justify-content:space-between; padding:12px 14px;
+            background:var(--surface); border-radius:var(--radius-sm); cursor:pointer;
+            font-weight:600; font-size:0.9rem; border:1px solid var(--border); margin-bottom:4px;
+        }
+        .collapse-content { max-height:0; overflow:hidden; transition:max-height 0.35s ease; padding:0 4px; }
+        .collapse-content.open { max-height:2000px; }
+        .collapse-arrow { transition:transform 0.3s; font-size:0.8rem; color:var(--text3); }
+        .collapse-header.open .collapse-arrow { transform:rotate(180deg); }
+        .trouble-item, .newbie-step {
+            display:flex; align-items:center; gap:10px; padding:12px;
+            border-radius:var(--radius-xs); border:1px solid var(--border);
+            margin-bottom:6px; background:var(--surface); transition:all var(--transition);
+        }
+        .trouble-item label { flex:1; font-size:0.8rem; user-select:text; }
+        .toast {
+            position:fixed; bottom:100px; left:50%; transform:translateX(-50%) translateY(20px);
+            background:#1a1a2e; color:#fff; padding:10px 20px; border-radius:24px;
+            font-size:0.8rem; z-index:200; opacity:0; pointer-events:none;
+            transition:all 0.3s ease; white-space:nowrap; box-shadow:0 8px 24px rgba(0,0,0,0.3);
+        }
+        .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+        .dark .toast { background:#e8e8f0; color:#1a1a2e; }
+        .accent-arch { background:#fff7ed; color:#c2410c; } .dark .accent-arch { background:#2d1a0a; color:#fb923c; }
+        .accent-elec { background:#fefce8; color:#a16207; } .dark .accent-elec { background:#2d2506; color:#facc15; }
+        .accent-plumb { background:#ecfeff; color:#0e7490; } .dark .accent-plumb { background:#0a2025; color:#22d3ee; }
+        .accent-hvac { background:#eff6ff; color:#1d4ed8; } .dark .accent-hvac { background:#0a1628; color:#60a5fa; }
+        .accent-boq { background:#f5f3ff; color:#6d28d9; } .dark .accent-boq { background:#1a0f2e; color:#a78bfa; }
+        .accent-cost { background:#ecfdf5; color:#047857; } .dark .accent-cost { background:#0a1f18; color:#34d399; }
+        .accent-constr { background:#fef2f2; color:#b91c1c; } .dark .accent-constr { background:#2d0a0a; color:#f87171; }
+        .accent-qa { background:#f0fdfa; color:#0f766e; } .dark .accent-qa { background:#0a1f1c; color:#2dd4bf; }
+        .accent-newbie { background:#f0f9ff; color:#0369a1; } .dark .accent-newbie { background:#0c1a2b; color:#38bdf8; }
+        .accent-trouble { background:#fff1f2; color:#be123c; } .dark .accent-trouble { background:#2d0f14; color:#fb7185; }
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-title"><span class="icon">🏗️</span> M&E Toolbox</div>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
+    </header>
+    <div class="toast" id="toast"></div>
+
+    <!-- 视图容器 -->
+    <div class="view active" id="view-dashboard"></div>
+    <div class="view" id="view-categories"></div>
+    <div class="view" id="view-editor"></div>
+    <div class="view" id="view-saved"></div>
+    <div class="view" id="view-troubleshoot"></div>
+    <div class="view" id="view-newbie"></div>
+    <div class="view" id="view-settings"></div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" data-view="dashboard"><span class="nav-icon">🏠</span>首页</div>
+        <div class="nav-item" data-view="categories"><span class="nav-icon">📂</span>分类</div>
+        <div class="nav-item" data-view="editor"><span class="nav-icon">✏️</span>编辑</div>
+        <div class="nav-item" data-view="saved"><span class="nav-icon">⭐</span>收藏<span class="nav-badge" id="savedBadge">0</span></div>
+        <div class="nav-item" data-view="troubleshoot"><span class="nav-icon">🔍</span>排查</div>
+        <div class="nav-item" data-view="newbie"><span class="nav-icon">🚀</span>新手</div>
+        <div class="nav-item" data-view="settings"><span class="nav-icon">⚙️</span>设置</div>
+    </nav>
+
+    <script>
+        (function() {
+            // ────────── 数据定义 ──────────
+            const categoryMeta = {
+                arch: { name:'🏠 建筑设计', icon:'🏠', accent:'accent-arch' },
+                elec: { name:'⚡ 电气设计', icon:'⚡', accent:'accent-elec' },
+                plumb: { name:'💧 给排水', icon:'💧', accent:'accent-plumb' },
+                hvac: { name:'❄️ 空调 HVAC', icon:'❄️', accent:'accent-hvac' },
+                boq: { name:'📊 BOQ', icon:'📊', accent:'accent-boq' },
+                cost: { name:'💰 成本分析', icon:'💰', accent:'accent-cost' },
+                constr: { name:'🚧 施工 Review', icon:'🚧', accent:'accent-constr' },
+                qa: { name:'✅ Final QA', icon:'✅', accent:'accent-qa' },
+            };
+            const promptsData = {
+                arch: [
+                    { id:'arch-1', title:'空间优化分析', text:'请分析以下建筑平面图的空间利用效率，提出优化建议...' },
+                    { id:'arch-2', title:'动线分析', text:'对该建筑进行人流动线分析...' },
+                    { id:'arch-3', title:'湿区检查', text:'检查所有湿区的防水设计、坡度、排水点位...' },
+                    { id:'arch-4', title:'楼梯合规检查', text:'根据规范检查楼梯设计...' },
+                    { id:'arch-5', title:'自然通风与采光', text:'评估自然通风和采光条件...' },
+                    { id:'arch-6', title:'家具布置优化', text:'优化家具布置方案...' },
+                    { id:'arch-7', title:'无障碍设计检查', text:'全面检查无障碍设计...' },
+                ],
+                elec: [
+                    { id:'elec-1', title:'灯光设计优化', text:'优化灯光布局，包括照度计算...' },
+                    { id:'elec-2', title:'插座布局检查', text:'检查插座布局是否满足功能需求...' },
+                    { id:'elec-3', title:'DB配电箱Review', text:'审查配电箱设计...' },
+                    { id:'elec-4', title:'MCB配置检查', text:'检查MCB额定电流选型...' },
+                    { id:'elec-5', title:'RCCB漏电保护', text:'确认漏电保护配置...' },
+                    { id:'elec-6', title:'SPD防雷设计', text:'检查浪涌保护器配置...' },
+                    { id:'elec-7', title:'接地系统设计', text:'审查接地系统...' },
+                    { id:'elec-8', title:'电缆尺寸计算', text:'根据负载电流计算电缆截面...' },
+                    { id:'elec-9', title:'电压降校验', text:'校验末端回路电压降...' },
+                ],
+                plumb: [
+                    { id:'plumb-1', title:'给水管网设计', text:'审查给水管网设计...' },
+                    { id:'plumb-2', title:'排水系统检查', text:'检查排水系统坡度、通气...' },
+                    { id:'plumb-3', title:'雨水排放设计', text:'审查雨水排放系统...' },
+                ],
+                hvac: [
+                    { id:'hvac-1', title:'空调负荷计算', text:'逐项冷热负荷计算...' },
+                    { id:'hvac-2', title:'风管系统设计', text:'审查风管系统...' },
+                    { id:'hvac-3', title:'新风系统检查', text:'确认新风量满足标准...' },
+                    { id:'hvac-4', title:'排烟系统设计', text:'检查消防排烟系统...' },
+                ],
+                boq: [
+                    { id:'boq-1', title:'工程量清单审核', text:'审核BOQ完整性...' },
+                    { id:'boq-2', title:'材料规格核对', text:'核对材料规格...' },
+                ],
+                cost: [
+                    { id:'cost-1', title:'成本估算分析', text:'详细成本估算...' },
+                    { id:'cost-2', title:'Value Engineering', text:'价值工程分析...' },
+                    { id:'cost-3', title:'生命周期成本', text:'全生命周期成本...' },
+                ],
+                constr: [
+                    { id:'constr-1', title:'返工风险识别', text:'基于墨菲定律识别返工风险...' },
+                    { id:'constr-2', title:'施工可行性审查', text:'审查施工可行性...' },
+                    { id:'constr-3', title:'材料优化建议', text:'提出材料替代方案...' },
+                ],
+                qa: [
+                    { id:'qa-1', title:'综合QA检查清单', text:'生成完整工程质量检查清单...' },
+                ],
+            };
+
+            // 常见排查项目数据
+            const troubleshootData = {
+                elec: [
+                    { id:'t1', text:'总配电箱进线电压是否正常？', prompt:'请分析总配电箱电压异常的可能原因及排查步骤。' },
+                    { id:'t2', text:'各回路RCCB是否定期测试跳闸？', prompt:'如何正确测试RCCB漏电保护功能？请列出测试步骤和频率建议。' },
+                    { id:'t3', text:'电缆接头是否有过热变色痕迹？', prompt:'电缆接头过热的原因有哪些？如何通过热成像检查？' },
+                    { id:'t4', text:'插座接地是否可靠（接地电阻测试）？', prompt:'如何进行插座接地电阻测试？合格标准是多少？' },
+                    { id:'t5', text:'配电箱内是否有杂物或灰尘堆积？', prompt:'配电箱清洁维护周期及注意事项是什么？' },
+                ],
+                plumb: [
+                    { id:'t6', text:'管道接头是否有渗漏或冷凝水？', prompt:'管道渗漏的常见原因及检测方法有哪些？' },
+                    { id:'t7', text:'排水管道是否有异味或堵塞？', prompt:'排水管道堵塞的排查与疏通方案，如何预防？' },
+                    { id:'t8', text:'水压是否稳定，有无水锤现象？', prompt:'水锤现象产生的原因及解决方案，如何安装水锤消除器？' },
+                ],
+                hvac: [
+                    { id:'t9', text:'空调出风口温度是否达到设计值？', prompt:'空调制冷/制热效果不佳的排查步骤，可能的原因有哪些？' },
+                    { id:'t10', text:'风管保温是否完好，有无结露？', prompt:'风管结露的原因及解决办法，保温材料厚度如何选择？' },
+                    { id:'t11', text:'新风系统过滤网是否按时更换？', prompt:'新风过滤网更换周期建议，如何判断是否需要更换？' },
+                ],
+                constr: [
+                    { id:'t12', text:'墙面/地面是否有裂缝或空鼓？', prompt:'建筑裂缝的分类及成因，如何判断是否为结构裂缝？' },
+                    { id:'t13', text:'防水层是否破坏（如卫生间闭水试验）？', prompt:'闭水试验的标准流程及合格判定标准是什么？' },
+                    { id:'t14', text:'预埋件/预留洞位置是否准确？', prompt:'施工中如何确保预埋件位置准确？出现偏差如何处理？' },
+                ],
+            };
+
+            // 新手推荐项目数据
+            const newbieSteps = [
+                { phase:'📁 阶段1：项目资料收集', desc:'收集建筑平面图、设备清单、当地设计规范、电气标准等基础资料。', prompts:[
+                    { label:'生成资料核对清单', text:'请为我生成一份M&E项目启动所需的资料清单，包括建筑、结构、电气、给排水、暖通各专业。' },
+                ]},
+                { phase:'🔍 阶段2：初步设计检查', desc:'使用AI对设计方案进行初步审查，发现明显问题。', prompts:[
+                    { label:'检查建筑布局合理性', text:'请根据提供的建筑平面图，分析功能分区、动线、采光通风是否合理。' },
+                    { label:'电气系统初步评估', text:'请评估该项目的电气负荷估算是否合理，配电方案是否存在明显缺陷。' },
+                ]},
+                { phase:'⚠️ 阶段3：常见错误预警', desc:'新人最容易忽略的关键点，提前规避。', prompts:[
+                    { label:'遗漏检修口/管道井', text:'请列出建筑设计中容易被遗漏的检修口、管道井、电井等位置要求。' },
+                    { label:'未考虑电压降', text:'在电气设计中，电压降计算常被忽略，请说明其重要性及基本计算方法。' },
+                ]},
+            ];
+
+            const platforms = [
+                { id:'chatgpt', name:'🤖 ChatGPT' },
+                { id:'claude', name:'🧠 Claude' },
+                { id:'gemini', name:'🌟 Gemini' },
+                { id:'hermes', name:'📜 Hermes' },
+                { id:'qclaw', name:'⚖️ Qclaw' },
+                { id:'opencode', name:'💻 OpenCode' },
+                { id:'codex', name:'📝 Codex' },
+            ];
+            const qaCategories = ['Architecture','Structure','Electrical','Plumbing','HVAC','Fire','BOQ','Cost','Rendering','Construction','Final Review'];
+
+            // ────────── 状态管理 ──────────
+            let currentView = 'dashboard';
+            let savedPrompts = JSON.parse(localStorage.getItem('mep_saved')||'[]');
+            let recentPrompts = JSON.parse(localStorage.getItem('mep_recent')||'[]');
+            let darkMode = localStorage.getItem('mep_dark')==='true';
+            let selectedPlatform = 'chatgpt';
+            let projectContext = JSON.parse(localStorage.getItem('mep_context')||'{}');
+            let qaChecks = JSON.parse(localStorage.getItem('mep_qa')||'{}');
+            let troubleshootChecks = JSON.parse(localStorage.getItem('mep_trouble')||'{}');
+            let searchQuery = '';
+
+            const $views = {
+                dashboard: document.getElementById('view-dashboard'),
+                categories: document.getElementById('view-categories'),
+                editor: document.getElementById('view-editor'),
+                saved: document.getElementById('view-saved'),
+                troubleshoot: document.getElementById('view-troubleshoot'),
+                newbie: document.getElementById('view-newbie'),
+                settings: document.getElementById('view-settings'),
+            };
+            const $navItems = document.querySelectorAll('.nav-item');
+            const $themeToggle = document.getElementById('themeToggle');
+            const $toast = document.getElementById('toast');
+            const $savedBadge = document.getElementById('savedBadge');
+
+            function saveState() {
+                localStorage.setItem('mep_saved', JSON.stringify(savedPrompts));
+                localStorage.setItem('mep_recent', JSON.stringify(recentPrompts.slice(0,30)));
+                localStorage.setItem('mep_dark', darkMode);
+                localStorage.setItem('mep_context', JSON.stringify(projectContext));
+                localStorage.setItem('mep_qa', JSON.stringify(qaChecks));
+                localStorage.setItem('mep_trouble', JSON.stringify(troubleshootChecks));
+                updateBadge();
+            }
+            function updateBadge() {
+                if(savedPrompts.length>0){ $savedBadge.textContent=savedPrompts.length; $savedBadge.classList.add('show'); }
+                else $savedBadge.classList.remove('show');
+            }
+            function showToast(msg) {
+                $toast.textContent=msg; $toast.classList.add('show');
+                clearTimeout($toast._timeout); $toast._timeout=setTimeout(()=>$toast.classList.remove('show'),1800);
+            }
+            function buildFullPrompt(promptText) {
+                let ctx=''; const ctxObj=projectContext;
+                const filled=Object.entries(ctxObj).filter(([,v])=>v&&v.trim());
+                if(filled.length) ctx='\n\n【项目上下文】\n'+filled.map(([k,v])=>`- ${({projectName:'项目名称',country:'国家',buildingType:'建筑类型',floors:'层数',ceilingHeight:'层高',electricalStandard:'电气标准',voltage:'电压',dbQuantity:'配电箱数量',drawingVersion:'图纸版本'})[k]||k}: ${v}`).join('\n');
+                const platformNote = ({chatgpt:'\n\n[请以结构化方式输出，使用markdown格式]',claude:'\n\n[Please provide detailed response]',gemini:'\n\n[请提供详细技术分析]',hermes:'\n\n[Use concise technical language]',qclaw:'\n\n[Provide compliance analysis]',opencode:'\n\n[Structured code style]',codex:'\n\n[Code-oriented analysis]'})[selectedPlatform]||'';
+                return promptText+ctx+platformNote;
+            }
+            function copyToClipboard(text) {
+                const full=buildFullPrompt(text);
+                if(navigator.clipboard) navigator.clipboard.writeText(full).then(()=>showToast('✅ 已复制'));
+                else { const ta=document.createElement('textarea'); ta.value=full; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showToast('✅ 已复制'); }
+                addRecent(text);
+            }
+            function addRecent(text) { recentPrompts=recentPrompts.filter(p=>p.text!==text); recentPrompts.unshift({text,time:Date.now()}); if(recentPrompts.length>30) recentPrompts=recentPrompts.slice(0,30); saveState(); }
+            function toggleSave(promptId, data) {
+                const idx=savedPrompts.findIndex(p=>p.id===promptId);
+                if(idx>=0){ savedPrompts.splice(idx,1); showToast('已取消收藏'); }
+                else { savedPrompts.push({id:promptId,...data,savedAt:Date.now()}); showToast('⭐ 已收藏'); }
+                saveState(); refreshCurrentView();
+            }
+            function isSaved(id){ return savedPrompts.some(p=>p.id===id); }
+            function refreshCurrentView() {
+                if(currentView==='saved') renderSavedView();
+                else if(currentView==='editor') renderEditorView();
+                else if(currentView==='categories') renderCategoriesView();
+            }
+
+            // ────────── 视图切换 ──────────
+            function switchView(viewName) {
+                currentView=viewName;
+                Object.values($views).forEach(v=>v.classList.remove('active'));
+                $views[viewName].classList.add('active');
+                $navItems.forEach(n=>n.classList.remove('active'));
+                const nav=document.querySelector(`.nav-item[data-view="${viewName}"]`);
+                if(nav) nav.classList.add('active');
+                renderView(viewName);
+                window.scrollTo({top:0,behavior:'smooth'});
+            }
+            function renderView(name) {
+                if(name==='dashboard') renderDashboard();
+                else if(name==='categories') renderCategoriesView();
+                else if(name==='editor') renderEditorView();
+                else if(name==='saved') renderSavedView();
+                else if(name==='troubleshoot') renderTroubleshootView();
+                else if(name==='newbie') renderNewbieView();
+                else if(name==='settings') renderSettingsView();
+            }
+
+            // ────────── 渲染函数 ──────────
+            function renderDashboard() {
+                let html=`<div style="margin-bottom:6px;"><span style="font-weight:700;">📋 快速访问</span></div><div class="dashboard-grid">`;
+                Object.entries(categoryMeta).forEach(([key,meta])=>{
+                    html+=`<div class="dash-card" onclick="switchView('editor');window._setCategory('${key}')"><div class="dash-icon ${meta.accent}">${meta.icon}</div><div>${meta.name.replace(/[^\u4e00-\u9fa5]/g,'').trim()}</div></div>`;
+                });
+                html+=`</div>
+                <div class="card" onclick="switchView('troubleshoot')"><div class="card-header"><div class="card-icon accent-trouble">🔍</div><div><div class="card-title">常见排查项目</div><div class="card-subtitle">电气·给排水·暖通·施工常见问题</div></div></div></div>
+                <div class="card" onclick="switchView('newbie')"><div class="card-header"><div class="card-icon accent-newbie">🚀</div><div><div class="card-title">新手推荐项目</div><div class="card-subtitle">从零开始的M&E项目引导</div></div></div></div>
+                <div class="card" onclick="window._goQA()"><div class="card-header"><div class="card-icon accent-qa">✅</div><div><div class="card-title">Final QA 检查清单</div></div></div></div>`;
+                $views.dashboard.innerHTML=html;
+            }
+
+            function renderCategoriesView() {
+                let html=`<div class="search-bar"><input class="search-input" id="catSearch" placeholder="🔍 搜索提示词" value="${escapeHtml(searchQuery)}"></div>`;
+                Object.entries(categoryMeta).forEach(([key,meta])=>{
+                    const prompts=promptsData[key]||[];
+                    const filtered=searchQuery?prompts.filter(p=>p.title.includes(searchQuery)||p.text.includes(searchQuery)):prompts;
+                    if(!filtered.length && searchQuery) return;
+                    html+=`<div class="collapse-header"><span>${meta.name} (${filtered.length})</span><span class="collapse-arrow">▼</span></div>
+                    <div class="collapse-content ${searchQuery?'open':''}">${filtered.map(p=>`
+                        <div class="prompt-item"><b>${p.title}</b>
+                        <div style="font-size:0.75rem;color:var(--text2);margin:4px 0;">${p.text.substring(0,80)}...</div>
+                        <button class="btn primary btn-sm" onclick="window._copyPromptById('${p.id}')">📋复制</button>
+                        <button class="btn btn-sm ${isSaved(p.id)?'saved':''}" onclick="window._toggleSaveById('${p.id}')">${isSaved(p.id)?'⭐':'☆'}</button>
+                        </div>`).join('')}</div>`;
+                });
+                $views.categories.innerHTML=html;
+                document.getElementById('catSearch')?.addEventListener('input',function(){ searchQuery=this.value; renderCategoriesView(); });
+            }
+
+            function renderEditorView() {
+                let prompts=[]; if(window._currentCat && promptsData[window._currentCat]) prompts=promptsData[window._currentCat]; else prompts=Object.values(promptsData).flat();
+                let html=`<div class="search-bar"><input class="search-input" id="editorSearch" placeholder="🔍 搜索" value="${escapeHtml(searchQuery)}"></div>
+                <div>🤖 平台：${platforms.map(p=>`<span class="chip ${selectedPlatform===p.id?'active':''}" onclick="window._setPlatform('${p.id}')">${p.name}</span>`).join('')}</div>
+                <div style="margin:10px 0;">${prompts.map(p=>`
+                    <div class="prompt-item"><b>${p.title}</b>
+                    <div style="font-size:0.75rem;margin:4px 0;">${p.text.substring(0,80)}...</div>
+                    <button class="btn primary btn-sm" onclick="window._copyPromptById('${p.id}')">📋复制</button>
+                    <button class="btn btn-sm ${isSaved(p.id)?'saved':''}" onclick="window._toggleSaveById('${p.id}')">${isSaved(p.id)?'⭐':'☆'}</button>
+                    </div>`).join('')}</div>`;
+                $views.editor.innerHTML=html;
+                document.getElementById('editorSearch')?.addEventListener('input',function(){ searchQuery=this.value; renderEditorView(); });
+            }
+
+            function renderSavedView() {
+                let html='<h3>⭐ 收藏的提示词</h3>';
+                if(!savedPrompts.length) html+='<p style="color:var(--text3);">暂无收藏</p>';
+                else savedPrompts.slice().reverse().forEach(sp=>{
+                    html+=`<div class="prompt-item"><b>${sp.title||'无标题'}</b>
+                    <div style="font-size:0.75rem;">${(sp.text||'').substring(0,80)}...</div>
+                    <button class="btn primary btn-sm" onclick="window._copySavedText('${sp.id}')">📋复制</button>
+                    <button class="btn btn-sm saved" onclick="window._removeSaved('${sp.id}')">取消收藏</button></div>`;
+                });
+                $views.saved.innerHTML=html;
+            }
+
+            // 排查视图
+            function renderTroubleshootView() {
+                let html='<h3>🔍 常见排查项目</h3><p style="color:var(--text2);font-size:0.8rem;">勾选问题后可生成清单，点击“询问AI”获取分析</p>';
+                Object.entries(troubleshootData).forEach(([cat, items])=>{
+                    const catName = {elec:'⚡电气', plumb:'💧给排水', hvac:'❄️暖通', constr:'🚧施工'}[cat]||cat;
+                    html+=`<div class="collapse-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')"><span>${catName} (${items.length})</span><span class="collapse-arrow">▼</span></div>
+                    <div class="collapse-content">${items.map(item=>`
+                        <div class="trouble-item">
+                            <input type="checkbox" id="chk_${item.id}" ${troubleshootChecks[item.id]?'checked':''} onchange="window._toggleTroubleCheck('${item.id}')">
+                            <label for="chk_${item.id}">${item.text}</label>
+                            <button class="btn btn-sm btn-follow" onclick="window._askAIForTrouble('${item.id}')">🤖询问AI</button>
+                        </div>`).join('')}</div>`;
+                });
+                html+=`<div style="margin-top:12px;display:flex;gap:8px;"><button class="btn primary" onclick="window._copyTroubleList()">📋 复制已勾选问题清单</button><button class="btn" onclick="window._resetTrouble()">🔄 重置</button></div>`;
+                $views.troubleshoot.innerHTML=html;
+            }
+
+            // 新手视图
+            function renderNewbieView() {
+                let html='<h3>🚀 新手项目快速启动</h3><p style="color:var(--text2);font-size:0.8rem;">点击按钮生成对应提示词，复制到AI平台使用</p>';
+                newbieSteps.forEach((step, idx)=>{
+                    html+=`<div class="card" style="cursor:default;margin-bottom:8px;">
+                        <div class="card-title">${step.phase}</div>
+                        <div style="font-size:0.8rem;color:var(--text2);margin:6px 0;">${step.desc}</div>
+                        ${step.prompts.map(p=>`<button class="btn btn-sm" style="margin:2px;" onclick="window._copyNewbiePrompt('${escapeHtml(p.text).replace(/'/g,"\\'")}')">📋 ${p.label}</button>`).join('')}
+                    </div>`;
+                });
+                html+=`<div class="card" style="cursor:default;">
+                    <div class="card-title">📦 一键生成项目启动清单</div>
+                    <button class="btn primary" onclick="window._copyNewbieFullList()">📋 复制完整启动清单</button>
+                </div>`;
+                $views.newbie.innerHTML=html;
+            }
+
+            function renderSettingsView() {
+                const ctx=projectContext;
+                const fields=[ {key:'projectName',label:'项目名称'},{key:'country',label:'国家/地区'},{key:'buildingType',label:'建筑类型'},{key:'floors',label:'层数'},{key:'ceilingHeight',label:'层高(m)'},{key:'electricalStandard',label:'电气标准'},{key:'voltage',label:'电压等级'},{key:'dbQuantity',label:'配电箱数量'},{key:'drawingVersion',label:'图纸版本'} ];
+                let html=`<h3>⚙️ 设置</h3>
+                <div class="card"><button class="btn" onclick="window._toggleDark()">${darkMode?'🌙 深色':'☀️ 浅色'}</button></div>
+                <div class="card"><h4>📋 项目上下文</h4>${fields.map(f=>`<div><label>${f.label}</label><input class="search-input" value="${escapeHtml(ctx[f.key]||'')}" data-ctx="${f.key}"></div>`).join('')}
+                <button class="btn primary" onclick="window._saveContext()">💾 保存</button></div>`;
+                $views.settings.innerHTML=html;
+                document.querySelectorAll('[data-ctx]').forEach(inp=>inp.addEventListener('change',function(){ projectContext[this.dataset.ctx]=this.value; saveState(); }));
+            }
+
+            function renderQAView() {
+                let html=`<h3>✅ Final QA</h3>`;
+                qaCategories.forEach(c=>html+=`<div class="trouble-item"><input type="checkbox" ${qaChecks[c]?'checked':''} onchange="window._toggleQA('${c}')"><span>${c}</span></div>`);
+                html+=`<button class="btn primary" onclick="window._copyQASummary()">📋 复制摘要</button>`;
+                $views.dashboard.innerHTML=html; $views.dashboard.classList.add('active');
+            }
+
+            // ────────── 辅助函数 ──────────
+            function escapeHtml(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+            function findPromptById(id){
+                for(let [cat,arr] of Object.entries(promptsData)){ const f=arr.find(p=>p.id===id); if(f) return {...f, categoryKey:cat}; }
+                return savedPrompts.find(p=>p.id===id);
+            }
+
+            // ────────── 全局方法暴露 ──────────
+            window._setCategory = function(cat){ window._currentCat=cat; searchQuery=''; switchView('editor'); };
+            window._goQA = function(){ renderQAView(); };
+            window._copyPromptById = function(id){ const p=findPromptById(id); if(p) copyToClipboard(p.text); };
+            window._copySavedText = function(id){ const p=savedPrompts.find(x=>x.id===id); if(p) copyToClipboard(p.text||''); };
+            window._toggleSaveById = function(id){ const p=findPromptById(id); if(p) toggleSave(id,{title:p.title,text:p.text,categoryKey:p.categoryKey}); };
+            window._removeSaved = function(id){ savedPrompts=savedPrompts.filter(p=>p.id!==id); saveState(); renderSavedView(); };
+            window._setPlatform = function(pid){ selectedPlatform=pid; renderEditorView(); showToast('已切换至 '+platforms.find(p=>p.id===pid)?.name); };
+            window._toggleDark = function(){ darkMode=!darkMode; applyTheme(); saveState(); renderSettingsView(); };
+            window._saveContext = function(){ document.querySelectorAll('[data-ctx]').forEach(i=>projectContext[i.dataset.ctx]=i.value); saveState(); showToast('上下文已保存'); };
+            window._toggleQA = function(cat){ qaChecks[cat]=!qaChecks[cat]; saveState(); renderQAView(); };
+            window._copyQASummary = function(){ const list=qaCategories.map(c=>`${qaChecks[c]?'✅':'☐'} ${c}`).join('\n'); copyToClipboard('QA检查清单:\n'+list); };
+
+            // 排查相关
+            window._toggleTroubleCheck = function(id){ troubleshootChecks[id]=!troubleshootChecks[id]; saveState(); };
+            window._askAIForTrouble = function(id){
+                let item=null; Object.values(troubleshootData).forEach(arr=>{ const f=arr.find(x=>x.id===id); if(f) item=f; });
+                if(item) copyToClipboard(item.prompt || item.text);
+            };
+            window._copyTroubleList = function(){
+                let items=[]; Object.values(troubleshootData).flat().forEach(item=>{ if(troubleshootChecks[item.id]) items.push(item.text); });
+                if(!items.length) showToast('请先勾选问题');
+                else copyToClipboard('常见排查问题清单：\n'+items.map((t,i)=>`${i+1}. ${t}`).join('\n'));
+            };
+            window._resetTrouble = function(){ troubleshootChecks={}; saveState(); renderTroubleshootView(); };
+
+            // 新手相关
+            window._copyNewbiePrompt = function(text){ copyToClipboard(text); };
+            window._copyNewbieFullList = function(){
+                let list = '【新手项目启动清单】\n';
+                newbieSteps.forEach(step=>{ list+=`\n${step.phase}\n${step.desc}\n`; step.prompts.forEach(p=>list+=`  - ${p.label}: ${p.text}\n`); });
+                list+='\n请按顺序使用以上提示词与AI交互，逐步推进项目。';
+                copyToClipboard(list);
+            };
+
+            // 主题应用
+            function applyTheme() {
+                if(darkMode){ document.body.classList.add('dark'); $themeToggle.textContent='☀️'; }
+                else { document.body.classList.remove('dark'); $themeToggle.textContent='🌙'; }
+            }
+            applyTheme();
+            $themeToggle.addEventListener('click',()=>{ darkMode=!darkMode; applyTheme(); saveState(); });
+
+            // 底部导航事件
+            $navItems.forEach(item=>item.addEventListener('click',function(){ switchView(this.dataset.view); }));
+
+            // 初始化
+            updateBadge();
+            renderDashboard();
+            // 预渲染其他视图
+            renderCategoriesView(); renderEditorView(); renderSavedView(); renderTroubleshootView(); renderNewbieView(); renderSettingsView();
+            $views.dashboard.classList.add('active');
+        })();
+    </script>
+</body>
+</html>

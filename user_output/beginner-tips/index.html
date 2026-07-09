@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手平面图设计万能词卡</title>
+    <style>
+        :root {
+            --primary: #F3A04C;
+            --accent: #E58522;
+            --background: #F4F4F6;
+            --panel-bg: #FEFDFC;
+            --card-bg: #ffffff;
+            --tooltip-bg: #454545;
+            --success: #40B43E;
+            --warning: #EBA400;
+            --destructive: #E65C53;
+            --text-primary: rgba(0,0,0,.8);
+            --text-secondary: rgba(0,0,0,.5);
+            --intensity-6: rgba(0,0,0,.06);
+            --intensity-8: rgba(0,0,0,.08);
+            --intensity-12: rgba(0,0,0,.12);
+            --intensity-20: rgba(0,0,0,.2);
+            --input-shadow: rgba(0,0,0,.08);
+            --radius-sm: 8px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #232324;
+                --panel-bg: #332D28;
+                --card-bg: #2E2E2E;
+                --tooltip-bg: #BABABA;
+                --text-primary: rgba(255,255,255,.8);
+                --text-secondary: rgba(255,255,255,.5);
+                --intensity-6: rgba(255,255,255,.06);
+                --intensity-8: rgba(255,255,255,.08);
+                --intensity-12: rgba(255,255,255,.12);
+                --intensity-20: rgba(255,255,255,.2);
+                --input-shadow: rgba(0,0,0,.28);
+            }
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .widget-container {
+            background: var(--panel-bg);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--intensity-8);
+            padding: 24px;
+            width: 100%;
+            max-width: 650px;
+            box-shadow: 0 10px 30px var(--input-shadow);
+        }
+        .header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .header h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .header p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .prompt-card {
+            background: var(--card-bg);
+            border: 0.5px solid var(--intensity-12);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .prompt-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px var(--input-shadow);
+            border-color: var(--primary);
+        }
+        .card-tag {
+            align-self: flex-start;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+        .tag-blue { background: rgba(88, 178, 220, 0.15); color: #58B2DC; }
+        .tag-orange { background: rgba(243, 160, 76, 0.15); color: var(--primary); }
+        .tag-green { background: rgba(64, 180, 62, 0.15); color: var(--success); }
+        .tag-purple { background: rgba(180, 129, 187, 0.15); color: #B481BB; }
+
+        .prompt-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-primary);
+            font-weight: 500;
+            background: var(--background);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+        }
+        .copy-btn {
+            align-self: flex-end;
+            height: 32px;
+            padding: 0 16px;
+            border: 0;
+            border-radius: var(--radius-sm);
+            background: var(--primary);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.1s;
+        }
+        .copy-btn:hover { background: var(--accent); }
+        .copy-btn:active { transform: scale(0.97); }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--tooltip-bg);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            font-weight: 500;
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+    </style>
+</head>
+<body>
+
+<div class="widget-container">
+    <div class="header">
+        <h3>📐 新手平面图设计万能词卡</h3>
+        <p>一键复制以下新手高频词汇与提问模板，快速与建筑/家装 AI 沟通</p>
+    </div>
+
+    <div class="card-grid">
+        <!-- 1 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-blue">人流动线 (Circulation Flow)</span>
+            <div class="prompt-text" id="p1">请帮我检查这个户型图的人流动线（从玄关到客厅、厨房、卧室的走动路线），看看有没有走道过长或多余折返的浪费空间？</div>
+            <button class="copy-btn" data-target="p1">复制提问词</button>
+        </div>
+
+        <!-- 2 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-orange">开间与进深 (Span & Depth)</span>
+            <div class="prompt-text" id="p2">这个客厅的开间（采光面宽度）和进深（房间深度）比例是多少？家具摆放会不会显得狭长阴暗？</div>
+            <button class="copy-btn" data-target="p2">复制提问词</button>
+        </div>
+
+        <!-- 3 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-green">干湿分区 (Zoning)</span>
+            <div class="prompt-text" id="p3">从日常使用角度看，这个平面图的水区（厨房、卫生间、阳台）分布是否集中？卫生间能否做成“干湿分离”？</div>
+            <button class="copy-btn" data-target="p3">复制提问词</button>
+        </div>
+
+        <!-- 4 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-purple">承重墙与非承重墙</span>
+            <div class="prompt-text" id="p4">在这张平面图中，哪些墙体是加粗的承重墙，哪些是细线的非承重墙？如果我要打通做成开放式厨房，能动哪些墙？</div>
+            <button class="copy-btn" data-target="p4">复制提问词</button>
+        </div>
+
+        <!-- 5 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-blue">南北通透 (Cross Ventilation)</span>
+            <div class="prompt-text" id="p5">这个平面图在夏季能形成空气对流吗？门窗相对位置是否符合“南北通透”的自然通风设计？</div>
+            <button class="copy-btn" data-target="p5">复制提问词</button>
+        </div>
+
+        <!-- 6 -->
+        <div class="prompt-card">
+            <span class="card-tag tag-orange">尺度感与家具尺寸</span>
+            <div class="prompt-text" id="p6">按照 1:100 的图纸比例，我如果摆放一张 2 米长的双人床和标准衣柜，卧室还剩下多少过道通道宽度（建议不小于 60cm）？</div>
+            <button class="copy-btn" data-target="p6">复制提问词</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast">已成功复制到剪贴板！</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const text = document.getElementById(targetId).textContent;
+        
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }).catch(err => {
+            console.error('无法复制: ', err);
+        });
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手使用小贴士：万能追问卡片</title>
+    <style>
+        :root {
+            --primary: #F3A04C;
+            --accent: #E58522;
+            --background: #F4F4F6;
+            --panel-bg: #FEFDFC;
+            --card-bg: #ffffff;
+            --tooltip-bg: #454545;
+            --success: #40B43E;
+            --warning: #EBA400;
+            --destructive: #E65C53;
+            --text-primary: rgba(0,0,0,.8);
+            --text-secondary: rgba(0,0,0,.5);
+            --intensity-6: rgba(0,0,0,.06);
+            --intensity-8: rgba(0,0,0,.08);
+            --intensity-12: rgba(0,0,0,.12);
+            --intensity-20: rgba(0,0,0,.2);
+            --input-shadow: rgba(0,0,0,.08);
+            --radius-sm: 8px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #232324;
+                --panel-bg: #332D28;
+                --card-bg: #2E2E2E;
+                --tooltip-bg: #BABABA;
+                --text-primary: rgba(255,255,255,.8);
+                --text-secondary: rgba(255,255,255,.5);
+                --intensity-6: rgba(255,255,255,.06);
+                --intensity-8: rgba(255,255,255,.08);
+                --intensity-12: rgba(255,255,255,.12);
+                --intensity-20: rgba(255,255,255,.2);
+                --input-shadow: rgba(0,0,0,.28);
+            }
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .widget-container {
+            background: var(--panel-bg);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--intensity-8);
+            padding: 24px;
+            width: 100%;
+            max-width: 550px;
+            box-shadow: 0 10px 30px var(--input-shadow);
+        }
+        .header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .header h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .header p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .prompt-card {
+            background: var(--card-bg);
+            border: 0.5px solid var(--intensity-12);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .prompt-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px var(--input-shadow);
+            border-color: var(--primary);
+        }
+        .card-tag {
+            align-self: flex-start;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+        .tag-blue { background: rgba(88, 178, 220, 0.15); color: #58B2DC; }
+        .tag-orange { background: rgba(243, 160, 76, 0.15); color: var(--primary); }
+        .tag-green { background: rgba(64, 180, 62, 0.15); color: var(--success); }
+        .tag-purple { background: rgba(180, 129, 187, 0.15); color: #B481BB; }
+
+        .prompt-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-primary);
+            font-weight: 500;
+            background: var(--background);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+        }
+        .copy-btn {
+            align-self: flex-end;
+            height: 32px;
+            padding: 0 16px;
+            border: 0;
+            border-radius: var(--radius-sm);
+            background: var(--primary);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.1s;
+        }
+        .copy-btn:hover { background: var(--accent); }
+        .copy-btn:active { transform: scale(0.97); }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--tooltip-bg);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            font-weight: 500;
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+    </style>
+</head>
+<body>
+
+<div class="widget-container">
+    <div class="header">
+        <h3>💡 万能追问助手小贴士</h3>
+        <p>点击下方按钮，一键复制专家追问词</p>
+    </div>
+
+    <div class="card-grid">
+        <div class="prompt-card">
+            <span class="card-tag tag-blue">视角切换</span>
+            <div class="prompt-text" id="p1">作为 [专家名]，如果你是我的直属主管或资深带教，你会对这份初稿提出哪两个“一针见血”的修改意见？</div>
+            <button class="copy-btn" data-target="p1">复制追问词</button>
+        </div>
+
+        <div class="prompt-card">
+            <span class="card-tag tag-orange">风险预防</span>
+            <div class="prompt-text" id="p2">请基于你的专业经验，列出执行这个方案时最可能出现的 3 个“墨菲定律”场景（即最容易搞砸的地方），并给出预防措施。</div>
+            <button class="copy-btn" data-target="p2">复制追问词</button>
+        </div>
+
+        <div class="prompt-card">
+            <span class="card-tag tag-green">细节深挖</span>
+            <div class="prompt-text" id="p3">当前的回答太通用了。请加入 3 个只有该领域资深从业者才会提到的“实操细节”或“行业黑话”，让方案看起来更具专业说服力。</div>
+            <button class="copy-btn" data-target="p3">复制追问词</button>
+        </div>
+
+        <div class="prompt-card">
+            <span class="card-tag tag-purple">职能接力</span>
+            <div class="prompt-text" id="p4">感谢你的分析。如果下一步我要把这个任务交给 [下一个专家名]，请你为他总结一份“技术交接契约（Handover Contract）”，列出他执行时必须知道的所有前置条件。</div>
+            <button class="copy-btn" data-target="p4">复制追问词</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast">已成功复制到剪贴板！</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const text = document.getElementById(targetId).textContent;
+        
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }).catch(err => {
+            console.error('无法复制: ', err);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
