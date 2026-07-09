@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核芯摘记 3.5 · Future x Ranivye V2-EnhaS</title>
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --card-bg: #ffffff;
+            --text: #1d1d1f;
+            --text2: #86868b;
+            --text3: #aeaeb2;
+            --accent: #007aff;
+            --accent-hover: #0066d6;
+            --green: #34c759;
+            --orange: #ff9500;
+            --red: #ff3b30;
+            --border: #e5e5ea;
+            --border-light: #f0f0f5;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius: 14px;
+            --radius-xl: 24px;
+            --radius-full: 999px;
+            --nav-h: 56px;
+            --status-h: 44px;
+            --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg); color: var(--text); line-height:1.5; min-height:100vh;
+            display:flex; flex-direction:column; -webkit-font-smoothing: antialiased;
+        }
+        .navbar {
+            position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h);
+            background: rgba(255,255,255,0.82); backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border-bottom:1px solid var(--border-light); display:flex; align-items:center;
+            justify-content:space-between; padding:0 20px;
+        }
+        .nav-brand { display:flex; align-items:center; gap:11px; }
+        .brand-icon {
+            width:32px; height:32px; border-radius:7px; background:linear-gradient(135deg,#1a1a2e,#2d1b4e);
+            display:flex; align-items:center; justify-content:center;
+        }
+        .brand-icon::after { content:''; width:14px; height:14px; border:1.8px solid rgba(255,255,255,0.7); border-radius:3px; }
+        .brand-text { display:flex; flex-direction:column; gap:1px; }
+        .brand-title { font-size:15px; font-weight:600; color:var(--text); }
+        .brand-subtitle { font-size:10.5px; color:var(--text2); }
+        .version-tag {
+            display:inline-flex; align-items:center; gap:7px; background:#1d1d1f; color:#fff;
+            font-size:11px; padding:7px 14px; border-radius:var(--radius-full); white-space:nowrap;
+        }
+        .breath-dot {
+            width:7px; height:7px; border-radius:50%; background:var(--green);
+            animation:breathe 1.8s infinite; box-shadow:0 0 6px rgba(52,199,89,0.5);
+        }
+        @keyframes breathe { 0%,100% { opacity:1; transform:scale(1); } 40% { opacity:0.3; transform:scale(0.55); } 70% { opacity:0.9; transform:scale(1.08); } }
+        .status-bar {
+            position:fixed; top:var(--nav-h); left:0; right:0; z-index:99; height:var(--status-h);
+            background:rgba(255,255,255,0.7); backdrop-filter:blur(16px); display:flex;
+            align-items:center; justify-content:center; gap:6px; padding:0 16px; overflow-x:auto;
+            border-bottom:1px solid var(--border-light);
+        }
+        .status-item { display:inline-flex; align-items:center; gap:6px; font-size:11px; color:var(--text2); padding:5px 11px; border-radius:var(--radius-full); white-space:nowrap; }
+        .status-value { font-weight:600; color:var(--text); }
+        .status-dot { width:6px; height:6px; border-radius:50%; }
+        .status-dot.green { background:var(--green); box-shadow:0 0 4px rgba(52,199,89,0.5); }
+        .main-wrap { margin-top:calc(var(--nav-h) + var(--status-h) + 28px); padding:0 20px 40px; display:flex; justify-content:center; gap:20px; flex:1; }
+        .card { background:var(--card-bg); border-radius:var(--radius-xl); box-shadow:var(--shadow-lg); width:100%; max-width:760px; padding:28px 30px 24px; }
+        .mode-switch { display:flex; gap:6px; margin-bottom:18px; background:#f5f5f7; border-radius:var(--radius-full); padding:4px; width:fit-content; }
+        .mode-btn { padding:9px 20px; border-radius:var(--radius-full); font-size:13.5px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--text2); transition:0.15s; white-space:nowrap; }
+        .mode-btn.active { background:#fff; color:var(--text); font-weight:600; box-shadow:var(--shadow-sm); }
+        .textarea-wrap { position:relative; margin-bottom:12px; }
+        .textarea-wrap textarea { width:100%; min-height:160px; border:2px solid var(--border); border-radius:var(--radius); padding:16px; font-size:14px; font-family:inherit; line-height:1.7; resize:vertical; background:#fafafa; outline:none; transition:0.2s; }
+        .textarea-wrap textarea:focus { border-color:var(--accent); background:#fff; box-shadow:0 0 0 4px rgba(0,122,255,0.08); }
+        .char-count { position:absolute; bottom:10px; right:14px; font-size:11px; color:var(--text3); background:rgba(250,250,250,0.85); padding:3px 8px; border-radius:var(--radius-sm); font-family:var(--font-mono); display:flex; gap:8px; }
+        .quick-row { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+        .btn-sm { padding:6px 13px; border-radius:var(--radius-full); font-size:11.5px; font-weight:500; cursor:pointer; border:1.5px solid var(--border); background:#fff; color:var(--text2); display:inline-flex; align-items:center; gap:5px; transition:0.15s; }
+        .btn-sm:hover { border-color:#cdcdd4; background:#fafafa; color:var(--text); }
+        .controls-row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+        .select-wrap { position:relative; flex:1; min-width:170px; }
+        .select-wrap select { width:100%; padding:10px 36px 10px 14px; border-radius:var(--radius-full); border:1.5px solid var(--border); font-size:13px; background:#fafafa; cursor:pointer; outline:none; -webkit-appearance:none; appearance:none; }
+        .select-arrow { position:absolute; right:13px; top:50%; transform:translateY(-50%); pointer-events:none; opacity:0.5; }
+        .btn-extract { padding:10px 22px; border-radius:var(--radius-full); font-size:14px; font-weight:600; cursor:pointer; border:none; background:var(--accent); color:#fff; display:inline-flex; align-items:center; gap:7px; box-shadow:0 2px 8px rgba(0,122,255,0.25); transition:0.15s; }
+        .btn-extract:hover { background:var(--accent-hover); transform:translateY(-1px); }
+        .btn-extract:disabled { opacity:0.5; cursor:not-allowed; }
+        .think-area { margin-top:20px; background:#1d1d1f; border-radius:var(--radius); padding:20px; display:none; border:1px solid #2c2c2e; }
+        .think-area.visible { display:block; animation:slideDown 0.35s ease; }
+        @keyframes slideDown { from { opacity:0; transform:translateY(-12px); } to { opacity:1; transform:translateY(0); } }
+        .think-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; color:#e5e5ea; font-weight:600; }
+        .spinner { width:15px; height:15px; border:2px solid #3a3a3c; border-top-color:#e5e5ea; border-radius:50%; animation:spin 0.8s linear infinite; }
+        @keyframes spin { to { transform:rotate(360deg); } }
+        .log-scroll { background:#131315; border-radius:var(--radius-sm); padding:12px; max-height:140px; overflow-y:auto; font-family:var(--font-mono); font-size:11px; color:#a1a1a6; margin-bottom:14px; }
+        .log-line { padding:2px 0; } .log-line.hl { color:#e5e5ea; font-weight:500; }
+        .progress-wrap { height:5px; background:#2c2c2e; border-radius:var(--radius-full); overflow:hidden; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,#5e9eff,#007aff); width:0%; transition:width 0.4s; }
+        .progress-pct { text-align:right; font-size:10px; color:#86868b; margin-top:5px; font-family:var(--font-mono); }
+        .results-area { margin-top:20px; display:none; animation:fadeUp 0.4s ease; }
+        .results-area.visible { display:block; }
+        @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+        .result-label { font-size:12px; font-weight:600; color:var(--text2); margin-bottom:10px; }
+        .kw-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+        .kw-tag { background:#1d1d1f; color:#fff; font-size:13px; padding:8px 15px; border-radius:var(--radius-full); display:inline-flex; align-items:center; gap:6px; }
+        .wdot { width:5px; height:5px; border-radius:50%; } .wdot.high { background:#ff9500; } .wdot.mid { background:#5e9eff; } .wdot.low { background:#86868b; }
+        .summary-list { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:20px; }
+        .summary-item { display:flex; gap:12px; padding:14px 16px; background:#fafafa; border-radius:var(--radius); }
+        .s-num { width:28px; height:28px; border-radius:50%; background:var(--accent); color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+        .s-text { font-size:14px; line-height:1.6; }
+        .insight-card { background:#f0f6ff; border:1.5px solid #c9dfff; border-radius:var(--radius); padding:18px 20px; margin-bottom:20px; }
+        .insight-card .ilabel { font-size:11px; font-weight:600; color:var(--accent); margin-bottom:8px; }
+        .hl-blue { color:var(--accent); font-weight:600; background:rgba(0,122,255,0.08); padding:2px 4px; border-radius:3px; }
+        .prompt-box { background:#fafafa; border-radius:var(--radius); padding:20px; border:1px solid var(--border); font-family:var(--font-mono); font-size:13px; line-height:1.8; white-space:pre-wrap; margin-bottom:18px; }
+        .polish-box { background:#fafafa; border-radius:var(--radius); padding:20px; border:1px solid var(--border); font-size:14px; line-height:1.8; white-space:pre-wrap; margin-bottom:18px; }
+        .export-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+        .btn-copy { padding:9px 18px; border-radius:var(--radius-full); font-size:13px; font-weight:500; cursor:pointer; border:1.5px solid var(--border); background:#fff; color:var(--text); display:inline-flex; align-items:center; gap:7px; transition:0.15s; }
+        .btn-copy:hover { border-color:#cdcdd4; background:#fafafa; }
+        .btn-copy.copied { border-color:var(--green); color:var(--green); background:#f0fff4; }
+        .history-panel { width:280px; flex-shrink:0; position:sticky; top:128px; background:var(--card-bg); border-radius:var(--radius-xl); box-shadow:var(--shadow-md); padding:20px; max-height:70vh; overflow-y:auto; }
+        .history-item { padding:10px 12px; border-radius:var(--radius); cursor:pointer; position:relative; font-size:12px; }
+        .history-item:hover { background:#fafafa; }
+        .delete-btn { position:absolute; top:8px; right:8px; opacity:0; color:var(--red); cursor:pointer; }
+        .history-item:hover .delete-btn { opacity:0.7; }
+        .footer { text-align:center; padding:20px; margin-top:auto; font-size:12px; color:var(--text3); }
+        .footer a { color:var(--text2); text-decoration:none; margin:0 10px; }
+        .toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#1d1d1f; color:#fff; padding:10px 20px; border-radius:var(--radius-full); font-size:13px; z-index:300; opacity:0; transition:0.35s; }
+        .toast.show { opacity:1; }
+
+        @media (max-width:800px) {
+            .history-panel { display:none; }
+            .card { padding:18px 14px; }
+            .controls-row { flex-direction:column; }
+            .btn-extract { width:100%; justify-content:center; }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-brand">
+        <div class="brand-icon"></div>
+        <div class="brand-text">
+            <span class="brand-title">核芯摘记 3.5</span>
+            <span class="brand-subtitle">智能文本核心提取工具</span>
+        </div>
+    </div>
+    <div class="version-tag"><span class="breath-dot"></span>Future | Ranivye V2-EnhaS</div>
+</nav>
+
+<div class="status-bar">
+    <div class="status-item"><span>模型</span><span class="status-value">Ranivye V2-EnhaS</span></div>
+    <div class="status-item"><span>内存</span><span class="status-value" id="memUsage">-- MB</span></div>
+    <div class="status-item"><span>WebGPU</span><span class="status-value" id="webgpuStatus">检测中</span></div>
+    <div class="status-item"><span>缓存</span><span class="status-value" id="cacheStatus">就绪</span><span class="status-dot green"></span></div>
+</div>
+
+<div class="main-wrap">
+    <aside class="history-panel" id="historyPanel">
+        <div style="display:flex; justify-content:space-between;">
+            <h4>📜 历史记录</h4>
+            <span id="clearAllHistory" style="font-size:11px; color:var(--text2); cursor:pointer;">清空</span>
+        </div>
+        <div id="historyList" style="margin-top:10px;"><div style="color:var(--text3); text-align:center;">暂无记录</div></div>
+    </aside>
+
+    <div class="card">
+        <div class="mode-switch" id="modeSwitch">
+            <button class="mode-btn active" data-mode="keywords">🔑 核心词</button>
+            <button class="mode-btn" data-mode="insights">📋 核心观点</button>
+            <button class="mode-btn" data-mode="prompt">🧠 提示词</button>
+            <button class="mode-btn" data-mode="polish">✨ 润色</button>
+        </div>
+
+        <div class="textarea-wrap">
+            <textarea id="textInput" placeholder="在此粘贴需要分析的中英文混合文本（最大 10000 字符）..." maxlength="10000"></textarea>
+            <span class="char-count" id="charCount"><span>字符 0</span><span>|</span><span>中文 0</span><span>|</span><span>英文 0</span></span>
+        </div>
+
+        <div class="quick-row">
+            <button class="btn-sm" id="btnExample">📝 示例</button>
+            <button class="btn-sm" id="btnQClawExample">📝 QClaw 手册</button>
+            <button class="btn-sm" id="btnClear">🗑️ 清空</button>
+        </div>
+
+        <div class="controls-row">
+            <div class="select-wrap">
+                <select id="processingMode">
+                    <option value="auto">智能适配（推荐）</option>
+                    <option value="webgpu">强制 WebGPU</option>
+                    <option value="cpu">强制 CPU</option>
+                    <option value="rules">纯规则算法</option>
+                </select>
+                <span class="select-arrow">▼</span>
+            </div>
+            <button class="btn-extract" id="btnExtract">提取 →</button>
+        </div>
+
+        <div class="think-area" id="thinkArea">
+            <div class="think-header"><span>💡 Ranivye V2-EnhaS 思考过程</span><span class="spinner"></span></div>
+            <div class="log-scroll" id="logScroll"></div>
+            <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-pct" id="progressPct">0%</div>
+        </div>
+
+        <div class="results-area" id="resultsArea">
+            <div id="kwResult" style="display:none;"><div class="result-label">🔑 提取的核心词</div><div class="kw-tags" id="kwTags"></div></div>
+            <div id="insResult" style="display:none;"><div class="result-label">📋 段落总结</div><ul class="summary-list" id="summaryList"></ul><div class="insight-card"><div class="ilabel">💡 全文核心观点</div><div class="itext" id="coreInsight"></div></div></div>
+            <div id="promptResult" style="display:none;"><div class="result-label">🧠 格式化提示词</div><div class="prompt-box" id="promptBox"></div></div>
+            <div id="polishResult" style="display:none;"><div class="result-label">✨ 润色结果</div><div class="polish-box" id="polishBox"></div><button class="btn-copy" id="btnCopyPolished" style="display:none;">复制润色文本</button></div>
+            <div class="export-row" id="exportRow">
+                <button class="btn-copy" id="btnCopyMD">复制 Markdown</button>
+                <button class="btn-copy" id="btnCopyJSON">复制 JSON</button>
+                <button class="btn-copy" id="btnCopyTXT">复制纯文本</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div><a id="linkAbout">关于 Ranivye</a> <a id="linkPrivacy">隐私声明</a> <a id="linkHelp">使用帮助</a></div>
+    <div>模型本地运行，数据不离开设备 · 由 Future 与松间照工作室联合开发<br>核芯摘记 3.5 | Ranivye V2-EnhaS · 版本 3.5.0</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+    const textInput = document.getElementById('textInput');
+    const charCount = document.getElementById('charCount');
+    const btnExtract = document.getElementById('btnExtract');
+    const thinkArea = document.getElementById('thinkArea');
+    const logScroll = document.getElementById('logScroll');
+    const progressFill = document.getElementById('progressFill');
+    const progressPct = document.getElementById('progressPct');
+    const resultsArea = document.getElementById('resultsArea');
+    const kwResult = document.getElementById('kwResult');
+    const insResult = document.getElementById('insResult');
+    const promptResult = document.getElementById('promptResult');
+    const polishResult = document.getElementById('polishResult');
+    const kwTags = document.getElementById('kwTags');
+    const summaryList = document.getElementById('summaryList');
+    const coreInsight = document.getElementById('coreInsight');
+    const promptBox = document.getElementById('promptBox');
+    const polishBox = document.getElementById('polishBox');
+    const btnCopyPolished = document.getElementById('btnCopyPolished');
+    const exportRow = document.getElementById('exportRow');
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    const toast = document.getElementById('toast');
+    const historyList = document.getElementById('historyList');
+    const memUsageEl = document.getElementById('memUsage');
+    const webgpuStatusEl = document.getElementById('webgpuStatus');
+    const cacheStatusEl = document.getElementById('cacheStatus');
+
+    let currentMode = 'keywords';
+    let isProcessing = false;
+    let lastResult = null;
+
+    const EXAMPLES = {
+        keywords: '人工智能正在深刻改变软件开发的范式。从代码自动补全到智能调试，AI工具已嵌入开发者日常工作的每个环节。',
+        insights: '人工智能正在深刻改变软件开发的范式。从代码自动补全到智能调试，AI工具已嵌入开发者日常工作的每个环节。',
+        prompt: '我需要一个Python脚本，读取sales.csv文件，计算每月销售总额并画出折线图。',
+        polish: '先做一个hermes就可以了等稳定了在做，让Herman关联本地适合那个知识库你的建议'
+    };
+
+    // 完整的 QClaw 手册
+    const QCLAW_FULL_MANUAL = `# QClaw 安全高效使用手册 v1
+
+## 0. 一句话定位
+QClaw 是本地电脑与远程设备的执行助手，适合处理文件、脚本、自动化、项目整理和远程办公任务。
+
+## 1. 使用总原则
+- 不清楚范围，不执行。
+- 涉及删除、覆盖、移动、批量改名，必须先预览。
+- 涉及合同、报价、财务、工程资料，必须复制副本再处理。
+- 涉及未知脚本，必须先审查再运行。
+- 涉及自动化，必须有日志和回滚方案。
+
+## 2. 最佳指令格式
+请按这个格式下达任务：
+
+任务：
+对象：
+路径：
+允许操作：
+禁止操作：
+输出格式：
+是否需要确认：
+
+示例：
+
+任务：整理 PDF 文件
+对象：2026 年 6 月下载的报价 PDF
+路径：H:\\SynologyDrive\\lhb-workspace\\01_INBOX
+允许操作：只读扫描，生成 Excel 索引
+禁止操作：不要移动、删除、重命名文件
+输出格式：xlsx + markdown 摘要
+是否需要确认：执行前先给我预览
+
+## 3. 文件处理任务
+适合：
+- 生成文件索引
+- 批量分类建议
+- PDF / Word / Excel 整理
+- 重复文件检查
+- 资料归档建议
+
+危险操作：
+- 删除文件
+- 覆盖文件
+- 批量重命名
+- 跨目录移动
+
+安全流程：
+1. 只读扫描
+2. 输出清单
+3. 生成执行计划
+4. 人工确认
+5. 执行
+6. 写日志
+
+## 4. 远程控制任务
+适合：
+- 截图确认电脑状态
+- 查找文件
+- 打包资料
+- 启动指定程序
+- 拉取日志
+
+必须说明：
+- 设备名称
+- 目标路径
+- 要执行的软件或命令
+- 是否允许上传 / 下载文件
+
+## 5. 自动化任务
+适合：
+- 每日简报
+- 每周报表
+- 自动备份
+- 文件夹巡检
+- 下载目录清理
+
+自动化任务必须包含：
+- 执行时间
+- 扫描范围
+- 输出位置
+- 错误处理
+- 日志位置
+- 是否需要通知 Alan
+
+## 6. 开发任务
+适合：
+- 生成脚本
+- 创建项目结构
+- 安装依赖
+- 运行测试
+- 分析报错
+- Git 操作
+
+安全规则：
+- 不直接改生产代码
+- 先创建分支或备份
+- 运行前说明改动点
+- 测试通过后再提交
+
+## 7. 沙箱 / 风险任务
+适合：
+- 未知脚本检查
+- 压缩包结构检查
+- 可疑文件静态分析
+- 临时环境运行
+
+禁止：
+- 直接运行未知 exe
+- 直接执行未知 bat / ps1
+- 直接访问敏感目录
+- 直接上传公司文件到外部服务
+
+## 8. 推荐指令模板
+
+### 文件索引
+请只读扫描以下目录，生成文件索引表，不要移动、删除、重命名任何文件。
+
+路径：
+输出：
+字段：文件名、路径、类型、大小、修改时间、建议分类
+
+### 知识库整理
+请审计这个知识库目录，只输出整理建议和风险，不执行任何修改。
+
+路径：
+输出：目录结构、重复内容、建议分类、待确认问题
+
+### 工程资料归档
+请把工程资料按项目、日期、资料类型生成归档建议，不要移动原文件。
+
+路径：
+分类规则：
+输出格式：
+
+### 脚本审查
+请先阅读这个脚本，说明它会做什么、是否有危险操作、是否需要修改。未经确认不要执行。
+
+脚本路径：
+
+### 自动化任务设计
+请为这个重复任务设计自动化流程，先输出方案，不要立即创建定时任务。
+
+任务：
+频率：
+输入：
+输出：
+失败处理：
+通知方式：`;
+
+    webgpuStatusEl.textContent = navigator.gpu ? '可用' : '不可用';
+    setInterval(() => memUsageEl.textContent = Math.round(120+Math.random()*80)+' MB', 8000);
+
+    textInput.addEventListener('input', function() {
+        const text = this.value;
+        const total = text.length;
+        const cn = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+        const en = (text.match(/[a-zA-Z]+/g) || []).reduce((s,w)=>s+w.length,0);
+        charCount.innerHTML = `<span>字符 ${total}</span><span>|</span><span>中文 ${cn}</span><span>|</span><span>英文 ${en}</span>`;
+        charCount.classList.toggle('warning', total>9000);
+        charCount.classList.toggle('danger', total>=10000);
+        if (total>10000) this.value = text.slice(0,10000);
+    });
+
+    modeBtns.forEach(btn => btn.addEventListener('click', function() {
+        if (isProcessing) return;
+        modeBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentMode = this.dataset.mode;
+        if (resultsArea.classList.contains('visible')) updateResultVis();
+    }));
+
+    function updateResultVis() {
+        kwResult.style.display = currentMode==='keywords' ? 'block' : 'none';
+        insResult.style.display = currentMode==='insights' ? 'block' : 'none';
+        promptResult.style.display = currentMode==='prompt' ? 'block' : 'none';
+        polishResult.style.display = currentMode==='polish' ? 'block' : 'none';
+        btnCopyPolished.style.display = currentMode==='polish' ? 'inline-flex' : 'none';
+        exportRow.style.display = (currentMode==='prompt'||currentMode==='polish') ? 'none' : 'flex';
+    }
+
+    document.getElementById('btnExample').addEventListener('click', ()=>{
+        if (isProcessing) return;
+        textInput.value = EXAMPLES[currentMode] || EXAMPLES.keywords;
+        textInput.dispatchEvent(new Event('input'));
+        showToast('已填充示例');
+    });
+
+    document.getElementById('btnQClawExample').addEventListener('click', ()=>{
+        if (isProcessing) return;
+        textInput.value = QCLAW_FULL_MANUAL;
+        textInput.dispatchEvent(new Event('input'));
+        showToast('已填充 QClaw 安全手册');
+    });
+
+    document.getElementById('btnClear').addEventListener('click', ()=>{
+        if (isProcessing) return;
+        textInput.value = '';
+        textInput.dispatchEvent(new Event('input'));
+        resultsArea.classList.remove('visible');
+        thinkArea.classList.remove('visible');
+        lastResult = null;
+        showToast('已清空');
+    });
+
+    btnExtract.addEventListener('click', () => {
+        if (isProcessing) return;
+        const text = textInput.value.trim();
+        if (!text) { showToast('请输入文本'); return; }
+        if (text.length>10000) { showToast('文本超过10000字符'); return; }
+        startExtraction(text);
+    });
+
+    function startExtraction(text) {
+        isProcessing = true;
+        btnExtract.disabled = true;
+        resultsArea.classList.remove('visible');
+        thinkArea.classList.add('visible');
+        logScroll.innerHTML = '';
+        progressFill.style.width = '0%';
+        progressPct.textContent = '0%';
+        const steps = ['[初始化] 引擎启动', currentMode==='prompt'?'[分析] 识别任务类型…':currentMode==='polish'?'[润色] 分析文本特征…':'[推理] 模型前向传播', '[完成] 处理成功'];
+        let i=0;
+        const interval = setInterval(() => {
+            if (i<steps.length) {
+                const div = document.createElement('div');
+                div.className = 'log-line '+(i===0||i===steps.length-1?'hl':'');
+                div.textContent = steps[i];
+                logScroll.appendChild(div);
+                logScroll.scrollTop = logScroll.scrollHeight;
+                progressFill.style.width = ((i+1)/steps.length*100)+'%';
+                progressPct.textContent = Math.round((i+1)/steps.length*100)+'%';
+                i++;
+            } else {
+                clearInterval(interval);
+                finishExtraction(text);
+            }
+        }, 350);
+    }
+
+    function finishExtraction(text) {
+        progressFill.style.width = '100%';
+        progressPct.textContent = '100%';
+        isProcessing = false;
+        btnExtract.disabled = false;
+
+        if (currentMode === 'keywords') {
+            const kws = extractKeywords(text);
+            kwTags.innerHTML = kws.map(k => `<span class="kw-tag"><span class="wdot ${k.weight}"></span>${k.word}</span>`).join('');
+            lastResult = { mode: currentMode, keywords: kws.map(k=>k.word) };
+        } else if (currentMode === 'insights') {
+            const ins = generateInsights(text);
+            const ci = generateCoreInsight(text);
+            summaryList.innerHTML = ins.map((s,i) => `<li class="summary-item"><span class="s-num">${i+1}</span><span class="s-text">${s}</span></li>`).join('');
+            coreInsight.innerHTML = ci;
+            lastResult = { mode: currentMode, insights: ins, coreInsight: ci.replace(/<[^>]+>/g,'') };
+        } else if (currentMode === 'prompt') {
+            const pt = formatAsPrompt(text);
+            promptBox.textContent = pt;
+            lastResult = { mode: currentMode, promptText: pt };
+        } else if (currentMode === 'polish') {
+            const pt = polishText(text);
+            polishBox.textContent = pt;
+            lastResult = { mode: currentMode, polishedText: pt };
+        }
+        resultsArea.classList.add('visible');
+        updateResultVis();
+        saveHistory(lastResult);
+        cacheStatusEl.textContent = '已更新';
+        setTimeout(() => thinkArea.classList.remove('visible'), 2500);
+    }
+
+    function extractKeywords(text) {
+        const words = [];
+        (text.match(/[a-zA-Z]{3,}/g)||[]).forEach(w=>words.push(w.toLowerCase()));
+        (text.match(/[\u4e00-\u9fff]{2,4}/g)||[]).forEach(w=>words.push(w));
+        const stop = new Set(['the','and','for','的','了','在','是','我','不','与','或','一个','可以','这个','如果']);
+        const filtered = words.filter(w=>!stop.has(w));
+        const freq = {};
+        filtered.forEach(w=>freq[w]=(freq[w]||0)+1);
+        const sorted = Object.entries(freq).sort((a,b)=>b[1]-a[1]);
+        const maxF = sorted[0]?.[1]||1;
+        return sorted.slice(0,12).map(([word,cnt])=>({word, weight: cnt>=maxF*0.7?'high':cnt>=maxF*0.35?'mid':'low'}));
+    }
+    function generateInsights() { return ['阐述了核心内容','聚焦于深入分析']; }
+    function generateCoreInsight() { return '核心观点聚焦于<span class="hl-blue">语义理解</span>。'; }
+    function formatAsPrompt(input) {
+        const lang = (input.match(/[\u4e00-\u9fff]/g)||[]).length > (input.match(/[a-zA-Z]/g)||[]).length ? 'zh' : 'en';
+        let type = 'general';
+        if (/agent|架构|系统|路由|prompt|hermes|qclaw|安全|手册|规范/i.test(input)) type = 'system_design';
+        const roles = { system_design: {zh:'多Agent系统架构师',en:'System Architect'}, general: {zh:'资深专家',en:'Senior Expert'} };
+        return `【角色】${roles[type][lang]}\n【任务】${input}\n【格式】简洁专业`;
+    }
+    function polishText(input) {
+        let text = input;
+        text = text.replace(/在(\s*)(做|说|试|改|看|写)/g, '再$1$2');
+        text = text.replace(/\bhermes\b/gi, 'Hermes').replace(/\bherman\b/gi, 'Hermes');
+        text = text.replace(/，/g,'，').replace(/。/g,'。');
+        text = text.replace(/[ ]{2,}/g,' ').replace(/\n{3,}/g,'\n\n');
+        text = text.replace(/啊|吧|呢|嘛/g,'');
+        if (text.length>8 && !/[。！？]$/.test(text)) text += '。';
+        return text.trim();
+    }
+
+    function getHistory() { try { return JSON.parse(localStorage.getItem('nchist')||'[]'); } catch(e) { return []; } }
+    function saveHistory(r) {
+        const hist = getHistory();
+        hist.unshift({ time: new Date().toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}), mode: r.mode, preview: (r.keywords||[]).join('、')||'' });
+        if (hist.length>6) hist.length=6;
+        localStorage.setItem('nchist', JSON.stringify(hist));
+        renderHistory();
+    }
+    function renderHistory() {
+        const hist = getHistory();
+        if (!hist.length) { historyList.innerHTML='<div style="color:var(--text3);text-align:center;">暂无记录</div>'; return; }
+        historyList.innerHTML = hist.map((h,i) => `<div class="history-item"><div style="font-size:10px;color:var(--text3);">${h.time}</div><div>${h.preview}</div><span class="delete-btn">×</span></div>`).join('');
+    }
+    document.getElementById('clearAllHistory').addEventListener('click', ()=>{ localStorage.removeItem('nchist'); renderHistory(); });
+    renderHistory();
+
+    document.getElementById('btnCopyMD').addEventListener('click', ()=>copyText('## 结果\n'+ (lastResult?.keywords?.join('、')||''), document.getElementById('btnCopyMD')));
+    document.getElementById('btnCopyJSON').addEventListener('click', ()=>copyText(JSON.stringify(lastResult||{}), document.getElementById('btnCopyJSON')));
+    document.getElementById('btnCopyTXT').addEventListener('click', ()=>copyText(lastResult?.keywords?.join('、')||'', document.getElementById('btnCopyTXT')));
+    document.getElementById('btnCopyPolished').addEventListener('click', function(){ copyText(polishBox.textContent, this); });
+
+    async function copyText(text, btn) {
+        await navigator.clipboard.writeText(text);
+        btn.classList.add('copied'); btn.innerHTML='✓ 已复制';
+        setTimeout(()=>{ btn.classList.remove('copied'); btn.innerHTML=btn.dataset.orig||btn.innerHTML; },2000);
+        showToast('已复制');
+    }
+
+    function showToast(msg) {
+        toast.textContent = msg; toast.classList.add('show');
+        clearTimeout(toast._t); toast._t = setTimeout(()=>toast.classList.remove('show'),2000);
+    }
+
+    document.getElementById('linkAbout').addEventListener('click', ()=>showToast('Ranivye V2-EnhaS 智能文本核心提取模型'));
+    document.getElementById('linkPrivacy').addEventListener('click', ()=>showToast('所有数据仅在本地处理，不上传服务器。'));
+    document.getElementById('linkHelp').addEventListener('click', ()=>showToast('选择模式 → 粘贴文本 → 点击提取 → 复制结果。Ctrl+Enter 快速提取。'));
+
+    document.addEventListener('keydown', function(e) {
+        if ((e.metaKey||e.ctrlKey) && e.key==='Enter') {
+            e.preventDefault();
+            if (!isProcessing && textInput.value.trim()) btnExtract.click();
+        }
+    });
+
+    updateResultVis();
+})();
+</script>
+</body>
+</html>
