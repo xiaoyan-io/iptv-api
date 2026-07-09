@@ -64,14 +64,24 @@
 
 | 文件 | 说明 | 允许操作 |
 |------|------|----------|
-| `nginx.conf` | **Nginx 反向代理** | 添加新工具路由（`location /xxx/`）、修改代理规则 |
+| `nginx.conf` | **Nginx 反向代理** | 修改代理规则（`/iptv`、`/hls/` 等） |
 | `nginx.conf.template` | **Nginx 模板** | 同上，保持与 `nginx.conf` 同步 |
 
-### 首页仪表盘
+> 静态工具路由已抽取到 `tools-routes.conf`，由脚本自动生成，**不要手动编辑**。
+
+### 仪表盘与工具元数据
 
 | 文件 | 说明 | 允许操作 |
 |------|------|----------|
-| `user_output/index.html` | **服务仪表盘首页** | 添加/修改工具卡片、更新 TOOLS 数组 |
+| `user_output/index.html` | **服务仪表盘首页** | 修改布局/样式，工具列表由 `tools.json` 驱动 |
+| `user_output/tools.json` | **工具元数据清单** | 添加/修改/删除工具条目（仪表盘自动同步） |
+
+### 部署脚本
+
+| 文件 | 说明 |
+|------|------|
+| `scripts/deploy-tool.sh` | **一键部署工具**：copy → 注册 tools.json → 生成路由 → 同步容器 |
+| `scripts/gen-nginx-routes.sh` | **生成 nginx 路由**：读取 tools.json → 输出 tools-routes.conf |
 
 ---
 
@@ -79,7 +89,8 @@
 
 | 路径 | 说明 |
 |------|------|
-| `user_output/`（除 index.html 外） | 所有生成结果、日志、EPG 缓存 |
+| `user_output/`（除 index.html、tools.json 外） | 所有生成结果、日志、EPG 缓存 |
+| `tools-routes.conf` | nginx 静态工具路由，由 `gen-nginx-routes.sh` 生成 |
 | `output/` | 旧版输出目录（root 权限，不可写） |
 
 ---
@@ -90,26 +101,27 @@
 
 ### 工具部署流程
 
-添加新工具分 4 步：
+**一键部署（推荐）**：
+```bash
+./scripts/deploy-tool.sh <slug> <icon> <标题> <描述> <颜色> <HTML文件>
+# 示例：
+./scripts/deploy-tool.sh my-tool 🔧 "我的工具" "描述文字" "#1a2a3a" ./my-tool.html
+```
 
-1. **准备 HTML 文件** — 单页应用，保存为 `user_output/<工具名>/index.html`
-2. **添加 nginx 路由** — 在 `nginx.conf` 和 `nginx.conf.template` 中添加：
-   ```
-   location /工具名/ {
-       root /iptv-api/user_output;
-   }
-   ```
-3. **注册到仪表盘** — 在 `user_output/index.html` 的 `TOOLS` 数组中添加一条：
-   ```js
-   {icon:'📄', name:'工具名称', desc:'简短描述', href:'/工具名', color:'#1a2a3a'},
-   ```
-4. **同步容器** — `docker cp` + `docker exec nginx -s reload`
+脚本自动完成：复制 HTML → 注册到 `tools.json` → 生成 nginx 路由 → 同步容器 → 重载 nginx。
+
+**手动流程**（不跑脚本时）：
+1. 复制 HTML 到 `user_output/<slug>/index.html`
+2. 在 `user_output/tools.json` 添加条目（`type: "static"`）
+3. 运行 `./scripts/gen-nginx-routes.sh` 重新生成路由
+4. 同步到容器：`docker cp tools-routes.conf iptv-api:/etc/nginx/` → `docker exec iptv-api nginx -s reload`
 
 ### nginx 路由规则
 
-- **动态反向代理**：`/iptv` → `proxy_pass` 到 gunicorn（5180 端口）
-- **静态文件工具**：`/xxx/` → `root /iptv-api/user_output`，自动服务 `index.html`
-- 新工具统一用静态文件模式
+- **动态反向代理**（`/iptv`、`/hls/`）→ `proxy_pass` 到 gunicorn（5180 端口）
+- **静态文件工具** — 由 `tools-routes.conf` 自动生成，每个 `type: "static"` 的工具对应一条 `location /xxx/ { root /iptv-api/user_output; }`
+- **默认路由** `location /` → 服务仪表盘首页
+- 新工具统一用静态文件模式，**不要手动编辑 nginx.conf 加 location**
 
 ---
 
