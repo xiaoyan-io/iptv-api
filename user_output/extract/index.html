@@ -130,6 +130,21 @@
         .toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#1d1d1f; color:#fff; padding:10px 20px; border-radius:var(--radius-full); font-size:13px; z-index:300; opacity:0; transition:0.35s; }
         .toast.show { opacity:1; }
 
+        .tips-wrap{display:none}.tips-wrap.visible{display:block;animation:fadeUp .4s}
+        .tips-search{margin-bottom:14px}
+        .tips-search input{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-full);background:#fafafa;font-size:13px;outline:none;transition:.2s;font-family:inherit}
+        .tips-search input:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(0,122,255,.08)}
+        .tips-cats{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}
+        .tips-cat{padding:5px 13px;border:1.5px solid var(--border);border-radius:var(--radius-full);background:transparent;color:var(--text2);cursor:pointer;font-size:12px;transition:.2s;white-space:nowrap}
+        .tips-cat:hover{border-color:var(--accent);color:var(--accent)}
+        .tips-cat.active{background:var(--accent);border-color:var(--accent);color:#fff}
+        .tips-list{display:flex;flex-direction:column;gap:5px}
+        .tip-item{padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius);background:#fafafa;cursor:pointer;font-size:13px;line-height:1.5;transition:.2s;position:relative}
+        .tip-item:hover{background:var(--primary-light);border-color:var(--accent)}
+        .tip-item .tip-cat{display:inline-block;font-size:10px;color:var(--text3);margin-right:6px;padding:1px 6px;border:1px solid var(--border);border-radius:4px;background:#fff}
+        .tip-item.copied::after{content:'已复制';position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--green);background:#fff;padding:2px 8px;border-radius:4px}
+        .tips-count{font-size:11px;color:var(--text3);margin-top:10px;text-align:center}
+
         @media (max-width:800px) {
             .history-panel { display:none; }
             .card { padding:18px 14px; }
@@ -172,6 +187,7 @@
             <button class="mode-btn" data-mode="insights">📋 核心观点</button>
             <button class="mode-btn" data-mode="prompt">🧠 提示词</button>
             <button class="mode-btn" data-mode="polish">✨ 润色</button>
+            <button class="mode-btn" data-mode="tips">💡 小贴士</button>
         </div>
 
         <div class="textarea-wrap">
@@ -196,6 +212,13 @@
                 <span class="select-arrow">▼</span>
             </div>
             <button class="btn-extract" id="btnExtract">提取 →</button>
+        </div>
+
+        <div class="tips-wrap" id="tipsWrap">
+            <div class="tips-search"><input type="text" id="tipsSearch" placeholder="搜索追问技巧..." autofocus></div>
+            <div class="tips-cats" id="tipsCats"></div>
+            <div class="tips-list" id="tipsList"></div>
+            <div class="tips-count" id="tipsCount"></div>
         </div>
 
         <div class="think-area" id="thinkArea">
@@ -439,6 +462,12 @@ QClaw 是本地电脑与远程设备的执行助手，适合处理文件、脚�
     }));
 
     function updateResultVis() {
+        const isTextMode = !['tips'].includes(currentMode);
+        textInput.closest('.textarea-wrap').style.display = isTextMode ? '' : 'none';
+        document.querySelector('.quick-row').style.display = isTextMode ? '' : 'none';
+        document.querySelector('.controls-row').style.display = isTextMode ? '' : 'none';
+        document.getElementById('tipsWrap').classList.toggle('visible', currentMode==='tips');
+        if (currentMode==='tips') renderTips();
         kwResult.style.display = currentMode==='keywords' ? 'block' : 'none';
         insResult.style.display = currentMode==='insights' ? 'block' : 'none';
         promptResult.style.display = currentMode==='prompt' ? 'block' : 'none';
@@ -615,6 +644,169 @@ QClaw 是本地电脑与远程设备的执行助手，适合处理文件、脚�
     });
 
     updateResultVis();
+
+    const TIPS_DATA = [
+      {cat:"调试修复",tips:[
+        "请解释这个错误的根本原因，不只是表面问题",
+        "帮我把这个报错翻译成人话，告诉我哪里写错了",
+        "这个代码为什么没按预期运行？逐行分析一下",
+        "打印关键变量的值，帮我找出逻辑漏洞",
+        "帮我加一些调试日志，定位问题出在哪一步",
+        "这个报错我在 Stack Overflow 上查过了，但那些方案都没用，还有其他办法吗",
+        "这个 bug 可能是边界情况导致的，帮我检查空值、边界和异常输入",
+        "代码在 A 环境正常但在 B 环境报错，可能是什么差异导致的",
+      ]},
+      {cat:"需求细化",tips:[
+        "我问的问题太宽泛了，帮我拆解成几个更具体的小问题",
+        "你给我的方案有几个方向，能帮我分析一下各自的优缺点吗",
+        "有什么我没想到的细节吗？帮我补充一下",
+        "如果预算/时间有限，你觉得最优先做哪个部分",
+        "如果要给非技术人员解释这个方案，我该怎么说",
+        "这个方案有没有更简单的替代做法？",
+        "假如需求变了，这个方案的改动成本大不大",
+      ]},
+      {cat:"代码生成",tips:[
+        "帮我生成完整的可运行代码，不要省略号和注释占位",
+        "除了你给出的方案，还有别的实现方式吗？对比一下",
+        "这个代码的性能怎么样？能优化吗？",
+        "帮我把这个功能拆成更小的函数，每个只做一件事",
+        "帮我加上必要的错误处理，特别是网络请求和文件操作",
+        "这个代码有没有安全漏洞？帮我检查一下",
+        "帮我写单元测试，覆盖正常情况、边界情况和异常情况",
+        "帮我生成 TypeScript 类型定义",
+      ]},
+      {cat:"代码审查",tips:[
+        "帮我 review 这段代码，从可读性、性能、安全三个角度给建议",
+        "这段代码有哪些坏味道？重构的话从哪里下手",
+        "这个命名合适吗？帮我想几个更好的名字",
+        "这个函数超过 50 行了，怎么拆比较合理",
+        "这段逻辑有重复，帮我抽象成通用函数",
+        "如果团队其他人来维护这段代码，哪里最容易踩坑",
+      ]},
+      {cat:"解释说明",tips:[
+        "别用专业术语，用最简单的话解释这是什么",
+        "这个技术选型背后的 trade-off 是什么",
+        "给我一个实际生活中的类比来理解这个概念",
+        "这个库/框架的核心思想是什么，它解决了什么问题",
+        "能画个 ASCII 流程图帮我理解这个流程吗",
+        "解释一下这个设计模式，以及它适合什么场景",
+      ]},
+      {cat:"继续开发",tips:[
+        "我刚才提到要做什么来着？帮我回顾一下上下文",
+        "上一步做完了，下一步应该做什么",
+        "把我们刚才的讨论整理成 TODO 列表",
+        "这个项目的架构是怎样的？画个目录树出来",
+        "我刚改了文件，帮我检查一下有没有遗漏的地方",
+        "基于目前的进度，估计还要多久能完成",
+      ]},
+      {cat:"多智能体 ao",tips:[
+        "用 ao 多智能体审查这段代码，覆盖安全、性能和规范三个维度",
+        "ao compose 帮我生成一个工作流，分析这个需求并拆成开发任务",
+        "ao run --team code-review 用我的黄金审查团队跑一遍",
+        "这个需求太复杂了，帮我用 ao compose 生成工作流来执行",
+        "用 ao 多智能体分析这段逻辑有没有漏洞",
+        "ao compose '多轮审校这篇文章' --run",
+      ]},
+      {cat:"数据分析",tips:[
+        "帮我解读这组数据，指出异常值和趋势",
+        "这个统计方法选得对吗？有没有更好的替代方案",
+        "帮我生成数据可视化的建议，用什么图表达什么结论",
+        "这组数据的相关性分析和因果关系分别是什么",
+        "帮我检查数据清洗步骤，有没有遗漏的异常值或缺失值处理",
+      ]},
+      {cat:"写作润色",tips:[
+        "帮我改写成更正式/更专业的语气",
+        "这段话逻辑通不通？帮我重构一下段落结构",
+        "帮我精简这段文字，删掉废话保留核心信息",
+        "给这段文字起 3 个吸引人的标题",
+        "帮我检查语法错误和用词不当的地方",
+      ]},
+      {cat:"决策辅助",tips:[
+        "从风险和收益两个角度对比方案 A 和 B，列出取舍",
+        "如果只能选一个方案，你推荐哪个？为什么？",
+        "帮我做 SWOT 分析，列出这个决策的内外部因素",
+        "这个决策最坏情况下会发生什么？我能承受吗",
+      ]},
+      {cat:"学习辅助",tips:[
+        "用费曼学习法（简单类比 + 大白话）给我解释这个知识点",
+        "帮我出 5 道选择题检验我对这个概念的理解程度",
+        "把这个复杂流程拆成一步步的学习路径，从零开始",
+        "我理解了这个概念，但能不能举几个反例帮我加深理解",
+      ]},
+      {cat:"逆向思维",tips:[
+        "如果目标是最大化失败概率，这个方案最可能怎么搞砸",
+        "假设这个方案完全错误，你觉得问题最可能出在哪",
+        "在这个问题上，大多数人会犯什么思维误区",
+        "如果你是竞争对手，你会怎么攻击这个方案",
+      ]},
+      {cat:"Prompt 优化",tips:[
+        "给我几个不同的 prompt 写法，让 AI 输出更稳定",
+        "我这个 prompt 哪里不够清晰？怎么改进",
+        "帮我把这个复杂需求写成一个结构化的 prompt",
+        "给几个 few-shot 示例，让 AI 更好地理解我的要求",
+      ]},
+    ];
+
+    let tipsActiveCat = null;
+
+    function renderTips() {
+      const q = document.getElementById('tipsSearch').value.toLowerCase();
+      const catsContainer = document.getElementById('tipsCats');
+      const listContainer = document.getElementById('tipsList');
+      const countContainer = document.getElementById('tipsCount');
+
+      catsContainer.innerHTML = '<button class="tips-cat'+(tipsActiveCat===null?' active':'')+'" data-cat="all">全部</button>'+
+        TIPS_DATA.map(d => '<button class="tips-cat'+(tipsActiveCat===d.cat?' active':'')+'" data-cat="'+d.cat+'">'+d.cat+'</button>').join('');
+
+      let items = [];
+      for (const group of TIPS_DATA) {
+        if (tipsActiveCat && group.cat!==tipsActiveCat) continue;
+        for (const tip of group.tips) {
+          if (q && !tip.toLowerCase().includes(q)) continue;
+          items.push({cat:group.cat, tip});
+        }
+      }
+
+      if (!items.length) {
+        listContainer.innerHTML = '<div style="text-align:center;color:var(--text3);padding:30px;font-size:13px">没有匹配的结果</div>';
+        countContainer.textContent = '';
+        return;
+      }
+
+      listContainer.innerHTML = items.map(item =>
+        '<div class="tip-item" data-tip="'+item.tip.replace(/"/g,'&quot;')+'">'+
+        '<span class="tip-cat">'+item.cat+'</span>'+item.tip+'</div>'
+      ).join('');
+      countContainer.textContent = '共 '+items.length+' 条小贴士';
+    }
+
+    document.addEventListener('click', function(e) {
+      if (currentMode!=='tips') return;
+      const catBtn = e.target.closest('.tips-cat');
+      if (catBtn) {
+        tipsActiveCat = catBtn.dataset.cat==='all' ? null : catBtn.dataset.cat;
+        renderTips();
+        return;
+      }
+      const tipEl = e.target.closest('.tip-item');
+      if (tipEl) {
+        const text = tipEl.dataset.tip;
+        navigator.clipboard.writeText(text).then(() => {
+          tipEl.classList.add('copied');
+          showToast('已复制');
+          setTimeout(() => tipEl.classList.remove('copied'), 1200);
+        }).catch(() => {
+          const ta = document.createElement('textarea');
+          ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+          document.body.removeChild(ta);
+          tipEl.classList.add('copied');
+          showToast('已复制');
+          setTimeout(() => tipEl.classList.remove('copied'), 1200);
+        });
+      }
+    });
+
+    document.getElementById('tipsSearch').addEventListener('input', renderTips);
 })();
 </script>
 </body>
