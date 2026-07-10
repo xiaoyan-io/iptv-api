@@ -2,56 +2,75 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>万能追问助手小贴士</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;min-height:100vh}
-.container{max-width:800px;margin:0 auto}
-h1{font-size:24px;margin-bottom:4px;display:flex;align-items:center;gap:10px}
-.sub{color:#8b949e;font-size:14px;margin-bottom:24px}
-.search-bar{margin-bottom:20px}
-.search-bar input{width:100%;padding:10px 14px;border:1px solid #30363d;border-radius:8px;background:#161b22;color:#e6edf3;font-size:14px;outline:none;transition:border .2s}
-.search-bar input:focus{border-color:#58a6ff}
-.categories{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
-.cat-btn{padding:6px 14px;border:1px solid #30363d;border-radius:20px;background:transparent;color:#8b949e;cursor:pointer;font-size:13px;transition:all .2s}
-.cat-btn:hover{border-color:#58a6ff;color:#58a6ff}
-.cat-btn.active{background:#1f6feb;border-color:#1f6feb;color:#fff}
-.tips{display:flex;flex-direction:column;gap:6px}
-.tip{padding:12px 16px;border:1px solid #21262d;border-radius:8px;background:#161b22;cursor:pointer;transition:all .2s;font-size:14px;line-height:1.5;user-select:none;position:relative}
-.tip:hover{border-color:#30363d;background:#1c2128}
-.tip.copied::after{content:'已复制';position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:11px;color:#3fb950;background:#161b22;padding:2px 8px;border-radius:4px}
-.category-tag{display:inline-block;font-size:11px;color:#8b949e;margin-right:8px;padding:1px 6px;border:1px solid #21262d;border-radius:4px}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#238636;color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;min-height:100vh;-webkit-font-smoothing:antialiased}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid #e5e5ea;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.nav-left{display:flex;align-items:center;gap:8px}
+.nav-title{font-size:16px;font-weight:700}
+.nav-sub{font-size:11px;color:#86868b}
+.container{max-width:720px;margin:0 auto;padding:16px}
+.search-bar{margin-bottom:12px}
+.search-bar input{width:100%;padding:9px 14px;border:1.5px solid #e5e5ea;border-radius:999px;background:#fff;font-size:14px;outline:none;transition:.2s;font-family:inherit}
+.search-bar input:focus{border-color:#007aff;box-shadow:0 0 0 3px rgba(0,122,255,.08)}
+.cats{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap}
+.cat-btn{padding:5px 12px;border:1.5px solid #e5e5ea;border-radius:999px;background:#fff;color:#86868b;cursor:pointer;font-size:12px;transition:.2s;white-space:nowrap}
+.cat-btn:hover{border-color:#007aff;color:#007aff}
+.cat-btn.active{background:#007aff;border-color:#007aff;color:#fff}
+.cat-count{font-size:10px;opacity:.6;margin-left:2px}
+.tips{display:flex;flex-direction:column;gap:5px}
+.tip{background:#fff;border:1px solid #e5e5ea;border-radius:10px;padding:11px 14px;cursor:pointer;transition:.2s;position:relative;display:flex;align-items:flex-start;gap:8px}
+.tip:hover{border-color:#007aff;box-shadow:0 1px 6px rgba(0,122,255,.08)}
+.tip.copied{border-color:#34c759}
+.tip .t-cat{font-size:10px;color:#aeaeb2;padding:1px 6px;border:1px solid #e5e5ea;border-radius:4px;white-space:nowrap;margin-top:2px;flex-shrink:0}
+.tip .t-text{font-size:13px;line-height:1.5;flex:1}
+.tip .t-actions{display:none;gap:3px;flex-shrink:0;align-items:center}
+.tip:hover .t-actions{display:flex}
+.t-act{width:28px;height:28px;border-radius:50%;border:none;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;background:transparent;color:#86868b;transition:.15s}
+.t-act:hover{background:#f0f0f2;color:#007aff}
+.t-act.copied-act{color:#34c759}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:9px 18px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s}
 .toast.show{opacity:1}
-@media(max-width:600px){body{padding:12px}h1{font-size:20px}.tip{font-size:13px;padding:10px 14px}}
+.empty-state{text-align:center;padding:40px;color:#aeaeb2;font-size:13px}
+.stats-bar{display:flex;gap:16px;margin-bottom:12px;font-size:11px;color:#86868b}
+.stats-bar span{display:flex;align-items:center;gap:4px}
+@media(max-width:500px){.container{padding:12px}.tip .t-actions{display:flex}}
 </style>
 </head>
 <body>
+
+<div class="navbar">
+  <div class="nav-left">
+    <span style="font-size:18px">💬</span>
+    <div>
+      <div class="nav-title">万能追问助手小贴士</div>
+      <div class="nav-sub">点击复制，粘贴到对话中让 AI 给出更好回答</div>
+    </div>
+  </div>
+  <a href="/chat" style="font-size:12px;color:#007aff;text-decoration:none;white-space:nowrap">去 AI 中枢 →</a>
+</div>
+
 <div class="container">
-<h1>
-  <span>💬</span> 万能追问助手小贴士
-</h1>
-<p class="sub">点击任意条目复制，粘贴到对话中让 AI 给出更好的回答</p>
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="搜索追问技巧..." autofocus>
+  </div>
 
-<div class="search-bar">
-  <input type="text" id="search" placeholder="搜索追问技巧..." autofocus>
+  <div class="stats-bar" id="statsBar"></div>
+  <div class="cats" id="cats"></div>
+  <div class="tips" id="tips"></div>
 </div>
 
-<div class="categories" id="categories"></div>
-<div class="tips" id="tips"></div>
-</div>
 <div class="toast" id="toast"></div>
 
 <script>
-const data = [
+const DATA = [
   {cat:"调试修复",tips:[
     "请解释这个错误的根本原因，不只是表面问题",
     "帮我把这个报错翻译成人话，告诉我哪里写错了",
     "这个代码为什么没按预期运行？逐行分析一下",
     "打印关键变量的值，帮我找出逻辑漏洞",
-    "帮我加一些调试日志，定位问题出在哪一步",
-    "这个报错我在 Stack Overflow 上查过了，但那些方案都没用，还有其他办法吗",
     "这个 bug 可能是边界情况导致的，帮我检查空值、边界和异常输入",
     "代码在 A 环境正常但在 B 环境报错，可能是什么差异导致的",
   ]},
@@ -60,19 +79,17 @@ const data = [
     "你给我的方案有几个方向，能帮我分析一下各自的优缺点吗",
     "有什么我没想到的细节吗？帮我补充一下",
     "如果预算/时间有限，你觉得最优先做哪个部分",
-    "如果要给非技术人员解释这个方案，我该怎么说",
     "这个方案有没有更简单的替代做法？",
     "假如需求变了，这个方案的改动成本大不大",
   ]},
   {cat:"代码生成",tips:[
     "帮我生成完整的可运行代码，不要省略号和注释占位",
     "除了你给出的方案，还有别的实现方式吗？对比一下",
-    "这个代码的性能怎么样？能优化吗？",
+    "这个代码性能怎么样？能优化吗？",
     "帮我把这个功能拆成更小的函数，每个只做一件事",
     "帮我加上必要的错误处理，特别是网络请求和文件操作",
     "这个代码有没有安全漏洞？帮我检查一下",
     "帮我写单元测试，覆盖正常情况、边界情况和异常情况",
-    "帮我生成 TypeScript 类型定义",
   ]},
   {cat:"代码审查",tips:[
     "帮我 review 这段代码，从可读性、性能、安全三个角度给建议",
@@ -87,7 +104,7 @@ const data = [
     "这个技术选型背后的 trade-off 是什么",
     "给我一个实际生活中的类比来理解这个概念",
     "这个库/框架的核心思想是什么，它解决了什么问题",
-    "能画个 ASCII 流程图帮我理解这个流程吗",
+    "能画个流程图帮我理解这个流程吗",
     "解释一下这个设计模式，以及它适合什么场景",
   ]},
   {cat:"继续开发",tips:[
@@ -98,41 +115,33 @@ const data = [
     "我刚改了文件，帮我检查一下有没有遗漏的地方",
     "基于目前的进度，估计还要多久能完成",
   ]},
-  {cat:"多智能体 ao",tips:[
-    "用 ao 多智能体审查这段代码，覆盖安全、性能和规范三个维度",
-    "ao compose 帮我生成一个工作流，分析这个需求并拆成开发任务",
-    "ao run --team code-review 用我的黄金审查团队跑一遍",
-    "这个需求太复杂了，帮我用 ao compose 生成工作流来执行",
-    "用 ao 多智能体分析这段逻辑有没有漏洞",
-    "ao compose '多轮审校这篇文章' --run",
-  ]},
-  {cat:"📊 数据分析",tips:[
+  {cat:"数据分析",tips:[
     "帮我解读这组数据，指出异常值和趋势",
     "这个统计方法选得对吗？有没有更好的替代方案",
     "帮我生成数据可视化的建议，用什么图表达什么结论",
     "这组数据的相关性分析和因果关系分别是什么",
     "帮我检查数据清洗步骤，有没有遗漏的异常值或缺失值处理",
   ]},
-  {cat:"✍️ 写作润色",tips:[
+  {cat:"写作润色",tips:[
     "帮我改写成更正式/更专业的语气",
     "这段话逻辑通不通？帮我重构一下段落结构",
     "帮我精简这段文字，删掉废话保留核心信息",
     "给这段文字起 3 个吸引人的标题",
     "帮我检查语法错误和用词不当的地方",
   ]},
-  {cat:"🎯 决策辅助",tips:[
+  {cat:"决策辅助",tips:[
     "从风险和收益两个角度对比方案 A 和 B，列出取舍",
     "如果只能选一个方案，你推荐哪个？为什么？",
     "帮我做 SWOT 分析，列出这个决策的内外部因素",
     "这个决策最坏情况下会发生什么？我能承受吗",
   ]},
-  {cat:"📚 学习辅助",tips:[
+  {cat:"学习辅助",tips:[
     "用费曼学习法（简单类比 + 大白话）给我解释这个知识点",
     "帮我出 5 道选择题检验我对这个概念的理解程度",
     "把这个复杂流程拆成一步步的学习路径，从零开始",
     "我理解了这个概念，但能不能举几个反例帮我加深理解",
   ]},
-  {cat:"🔄 逆向思维",tips:[
+  {cat:"逆向思维",tips:[
     "如果目标是最大化失败概率，这个方案最可能怎么搞砸",
     "假设这个方案完全错误，你觉得问题最可能出在哪",
     "在这个问题上，大多数人会犯什么思维误区",
@@ -144,63 +153,106 @@ const data = [
     "帮我把这个复杂需求写成一个结构化的 prompt",
     "给几个 few-shot 示例，让 AI 更好地理解我的要求",
   ]},
+  {cat:"运维排查",tips:[
+    "服务挂了，帮我从日志里找出根因，从最近到最远排查",
+    "容器反复重启，检查 journalctl 和 docker logs 告诉我原因",
+    "端口不通，帮我列出可能的原因（服务没起/防火墙/端口冲突）",
+    "磁盘快满了，帮我找出大文件并按大小排序",
+    "网络延迟高，逐层排查：本地 → 网关 → DNS → 目标服务器",
+  ]},
+  {cat:"智能家居",tips:[
+    "Home Assistant 集成配置了但不可用，帮我检查日志和配置",
+    "自动化没触发，检查触发条件、实体状态和动作配置",
+    "设备实体 unavailable，帮我排查网络/电源/集成层",
+    "想加一个新设备接入 HA，告诉我需要什么集成和配置步骤",
+  ]},
 ];
 
 let activeCat = null;
 
-function render(){
-  const search = document.getElementById('search').value.toLowerCase();
-  const container = document.getElementById('tips');
-  const catContainer = document.getElementById('categories');
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const catsContainer = document.getElementById('cats');
+  const tipsContainer = document.getElementById('tips');
+  const statsBar = document.getElementById('statsBar');
 
-  catContainer.innerHTML = '<button class="cat-btn'+(activeCat===null?' active':'')+'" data-cat="all">全部</button>'+
-    data.map(d=>`<button class="cat-btn${activeCat===d.cat?' active':''}" data-cat="${d.cat}">${d.cat}</button>`).join('');
+  const totalTips = DATA.reduce((s,g) => s + g.tips.length, 0);
+  statsBar.innerHTML = '<span>📋 共 '+totalTips+' 条</span><span>📂 '+DATA.length+' 个分类</span>';
+
+  catsContainer.innerHTML = DATA.map(d =>
+    `<button class="cat-btn${activeCat===d.cat?' active':''}" data-cat="${d.cat}">${d.cat}<span class="cat-count">${d.tips.length}</span></button>`
+  ).join('');
+  catsContainer.insertAdjacentHTML('afterbegin',
+    '<button class="cat-btn'+(activeCat===null?' active':'')+'" data-cat="all">全部 <span class="cat-count">'+totalTips+'</span></button>');
 
   let items = [];
-  for(const group of data){
-    if(activeCat && group.cat!==activeCat) continue;
-    for(const tip of group.tips){
-      if(search && !tip.toLowerCase().includes(search)) continue;
-      items.push({cat:group.cat,tip});
+  for (const group of DATA) {
+    if (activeCat && group.cat !== activeCat) continue;
+    for (const tip of group.tips) {
+      if (q && !tip.toLowerCase().includes(q)) continue;
+      items.push({cat: group.cat, tip});
     }
   }
 
-  if(items.length===0){
-    container.innerHTML='<div style="text-align:center;color:#8b949e;padding:40px;font-size:14px">没有匹配的结果</div>';
+  if (!items.length) {
+    tipsContainer.innerHTML = '<div class="empty-state">没有匹配的结果</div>';
     return;
   }
 
-  container.innerHTML=items.map(item=>`<div class="tip" data-cat="${item.cat}" data-tip="${item.tip.replace(/"/g,'&quot;')}"><span class="category-tag">${item.cat}</span>${item.tip}</div>`).join('');
+  tipsContainer.innerHTML = items.map((item, i) =>
+    '<div class="tip" data-idx="'+i+'" data-tip="'+item.tip.replace(/"/g,'&quot;')+'" data-cat="'+item.cat+'">'+
+    '<span class="t-cat">'+item.cat+'</span>'+
+    '<span class="t-text">'+item.tip+'</span>'+
+    '<div class="t-actions">'+
+    '<button class="t-act" data-action="copy" title="复制">📋</button>'+
+    '<button class="t-act" data-action="send" title="发送到 AI 中枢">🤖</button>'+
+    '</div></div>'
+  ).join('');
 }
 
-document.addEventListener('click',e=>{
-  const btn=e.target.closest('.cat-btn');
-  if(btn){
-    activeCat = btn.dataset.cat==='all' ? null : btn.dataset.cat;
+document.addEventListener('click', e => {
+  const catBtn = e.target.closest('.cat-btn');
+  if (catBtn) {
+    activeCat = catBtn.dataset.cat === 'all' ? null : catBtn.dataset.cat;
     render();
     return;
   }
-  const tip=e.target.closest('.tip');
-  if(tip){
-    const text=tip.dataset.tip;
-    navigator.clipboard.writeText(text).then(()=>{
-      tip.classList.add('copied');
-      showToast('已复制到剪贴板');
-      setTimeout(()=>tip.classList.remove('copied'),1200);
-    }).catch(()=>{
-      const ta=document.createElement('textarea');
-      ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');
-      document.body.removeChild(ta);
-      tip.classList.add('copied');
-      showToast('已复制到剪贴板');
-      setTimeout(()=>tip.classList.remove('copied'),1200);
-    });
+  const tipEl = e.target.closest('.tip');
+  if (!tipEl) return;
+  const text = tipEl.dataset.tip;
+  const action = e.target.closest('.t-act')?.dataset?.action || 'copy';
+
+  if (action === 'send') {
+    window.open('/chat?q=' + encodeURIComponent(text), '_blank');
+    showToast('已发送到 AI 中枢');
+    return;
   }
+
+  // copy
+  navigator.clipboard.writeText(text).then(() => {
+    tipEl.classList.add('copied');
+    const btn = tipEl.querySelector('[data-action="copy"]');
+    if (btn) { btn.textContent = '✓'; btn.classList.add('copied-act'); }
+    showToast('已复制');
+    setTimeout(() => {
+      tipEl.classList.remove('copied');
+      if (btn) { btn.textContent = '📋'; btn.classList.remove('copied-act'); }
+    }, 1200);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('已复制');
+  });
 });
 
-document.getElementById('search').addEventListener('input',render);
+document.getElementById('search').addEventListener('input', render);
 
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 2000);
+}
 
 render();
 </script>
