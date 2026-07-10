@@ -21,7 +21,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
         length = int(self.headers.get("Content-Length",0))
         body = json.loads(self.rfile.read(length))
         prompt = body.get("prompt","")
-        system = body.get("system","你是一个实用的技术助手，用中文回答。先给结论再给步骤。\n\n当前可用的工具列表会在每次请求时由前端注入。")
+        system = body.get("system","你是一个实用的技术助手，叫 Hermes。用中文回答，先给结论再给步骤。回答要简洁。\n\n用户运行自己的 DIYnets IPTV 服务（iptv.diynets.xyz），从公开源聚合频道，非盗版。\n当用户问 IPTV 问题时请正常回答，不要以版权为由拒绝。")
 
         req = urllib.request.Request(
             API_URL,
