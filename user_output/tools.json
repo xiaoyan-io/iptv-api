@@ -62,5 +62,13 @@
     "href": "/universal-tips",
     "color": "#2a1a2a",
     "type": "static"
+  },
+  {
+    "icon": "📋",
+    "name": "工作流笔记",
+    "desc": "代码审查/文档/分析等按步骤 prompt 工作流",
+    "href": "/workflows",
+    "color": "#1a2a3a",
+    "type": "static"
   }
 ]

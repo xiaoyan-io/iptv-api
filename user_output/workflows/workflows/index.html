@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Prompt Workflow Notes</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;min-height:100vh;-webkit-font-smoothing:antialiased}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid #e5e5ea;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.nav-title{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
+.nav-sub{font-size:12px;color:#86868b}
+.container{max-width:800px;margin:0 auto;padding:24px 16px 40px}
+.wf-grid{display:flex;flex-direction:column;gap:8px}
+.wf-card{background:#fff;border-radius:16px;padding:16px 18px;cursor:pointer;border:1px solid #e5e5ea;transition:.2s;display:flex;align-items:center;gap:14px}
+.wf-card:hover{border-color:#007aff;box-shadow:0 2px 12px rgba(0,122,255,.1)}
+.wf-card.active{border-color:#007aff;background:#f5f9ff}
+.wf-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.wf-info{flex:1}
+.wf-name{font-weight:600;font-size:15px}
+.wf-desc{font-size:12px;color:#86868b;margin-top:2px}
+.wf-steps-count{font-size:11px;color:#aeaeb2;white-space:nowrap}
+.wf-arrow{color:#c7c7cc;font-size:14px;transition:.2s}
+.wf-card:hover .wf-arrow,.wf-card.active .wf-arrow{color:#007aff}
+
+.detail{padding-top:20px;display:none}
+.detail.visible{display:block;animation:fadeUp .35s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.detail-header{margin-bottom:16px}
+.detail-title{font-size:20px;font-weight:700}
+.detail-desc{font-size:13px;color:#86868b;margin-top:4px}
+.progress{display:flex;gap:8px;margin-bottom:20px;align-items:center}
+.prog-dot{width:10px;height:10px;border-radius:50%;background:#e5e5ea;transition:.3s}
+.prog-dot.done{background:#34c759;box-shadow:0 0 6px rgba(52,199,89,.4)}
+.prog-dot.current{background:#007aff;box-shadow:0 0 6px rgba(0,122,255,.4);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.prog-label{font-size:11px;color:#86868b;margin-left:4px}
+.step{background:#fff;border-radius:14px;padding:18px;margin-bottom:10px;border:1px solid #e5e5ea;transition:.2s}
+.step.current-step{border-color:#007aff;box-shadow:0 0 0 3px rgba(0,122,255,.08)}
+.step-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.step-num{font-size:11px;font-weight:600;color:#86868b;background:#f5f5f7;padding:2px 10px;border-radius:999px}
+.step-label{font-weight:600;font-size:14px}
+.step-instr{font-size:13px;color:#555;line-height:1.5;margin-bottom:12px}
+.prompt-box{background:#f5f5f7;border-radius:10px;padding:14px;font-size:13px;line-height:1.6;white-space:pre-wrap;margin-bottom:10px;border:1px solid #e5e5ea;position:relative;font-family:'SF Mono','Fira Code',Consolas,monospace}
+.copy-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid #e5e5ea;background:#fff;color:#1d1d1f;transition:.2s}
+.copy-btn:hover{background:#f5f5f7;border-color:#c7c7cc}
+.copy-btn.copied{background:#f0fff4;border-color:#34c759;color:#34c759}
+.step-outcome{font-size:12px;color:#86868b;margin-top:8px;padding:8px 12px;background:#f5f5f7;border-radius:8px;border:1px solid #e5e5ea}
+.step-outcome strong{color:#1d1d1f}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s}
+.toast.show{opacity:1}
+.start-hint{text-align:center;padding:40px;color:#86868b;font-size:14px}
+footer{text-align:center;padding:20px;font-size:11px;color:#aeaeb2}
+@media(max-width:500px){.container{padding:16px 12px 30px}.wf-card{padding:14px}}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-title">📋 Prompt Workflow Notes</div>
+  <div class="nav-sub">按步骤执行，复制即用</div>
+</div>
+
+<div class="container">
+  <div class="wf-grid" id="wfGrid"></div>
+
+  <div class="detail" id="detail">
+    <div class="detail-header">
+      <div class="detail-title" id="detailTitle"></div>
+      <div class="detail-desc" id="detailDesc"></div>
+    </div>
+    <div class="progress" id="progress"></div>
+    <div id="stepsContainer"></div>
+  </div>
+  <div class="start-hint" id="startHint">选择一个工作流开始</div>
+</div>
+
+<div class="toast" id="toast"></div>
+<footer>数据仅存储在本地浏览器</footer>
+
+<script>
+const WORKFLOWS = [
+  {icon:"🔍",name:"代码审查流程",desc:"提交代码 → 逐层审查 → 重构建议",color:"#1a2a6c",steps:[
+    {label:"提交代码上下文",instr:"向 AI 提供待审查代码和背景信息。",prompt:"请审查以下代码，从可读性、性能和安全性三个角度给出建议。\n\n```\n[在此粘贴代码]\n```\n\n项目背景：[描述项目类型]"},
+    {label:"安全审查",instr:"要求 AI 重点检查安全漏洞。",prompt:"重点检查这段代码的安全问题：SQL注入、XSS、敏感信息泄露、权限校验遗漏。列出每个问题的风险等级和修复方案。"},
+    {label:"性能分析",instr:"找出性能瓶颈并给出优化方案。",prompt:"分析这段代码的性能瓶颈：\n1. 循环/递归是否有优化空间\n2. 是否有不必要的重复计算\n3. 内存/资源使用是否合理\n4. 数据库查询是否可以优化"},
+    {label:"重构建议",instr:"基于前两轮结果，让 AI 给出重构方案。",prompt:"基于上述安全审查和性能分析的结论，给出重构方案：\n1. 优先修复哪些问题\n2. 重构步骤（从易到难）\n3. 每一步的预期效果"},
+    {label:"生成审查报告",instr:"汇总所有发现，生成结构化报告。",prompt:"把前面三轮的审查结果汇总成一份结构化报告，包括：\n- 问题总览（个数+严重程度分布）\n- 每个问题的详情（位置/风险/修复方案）\n- 重构优先级排序\n- 预估工时"},
+  ]},
+  {icon:"📝",name:"文档撰写流程",desc:"大纲 → 草稿 → 润色 → 终稿",color:"#1a3a2a",steps:[
+    {label:"确定大纲",instr:"先让 AI 帮你搭建文档结构。",prompt:"我需要撰写一份关于[主题]的文档，目标读者是[受众]，请帮我生成一个详细的大纲，包括主要章节和每节的核心要点。"},
+    {label:"撰写草稿",instr:"按大纲逐节撰写。",prompt:"请按以下大纲撰写[章节名]的内容：\n[粘贴大纲]\n\n要求：\n- 语言风格：[正式/通俗/技术]\n- 字数：约[数字]字\n- 包含具体例子"},
+    {label:"AI 润色",instr:"让 AI 优化语言表达。",prompt:"请润色以下文本，优化表达但不改变原意：\n- 修正语法和用词\n- 提升逻辑连贯性\n- 统一术语和风格\n- 精简冗余表达\n\n文本：\n[粘贴草稿]"},
+    {label:"格式与结构检查",instr:"检查标题层级、段落长度、排版。",prompt:"检查这篇文档的格式和结构：\n1. 标题层级是否正确（H1→H2→H3）\n2. 段落长度是否适中（建议3-5句）\n3. 是否有多余的空行或格式不一致\n4. 列表/表格使用是否合理"},
+    {label:"终稿确认",instr:"最后做全篇通读检查。",prompt:"这是文档的终稿，请做最后一次通读检查：\n1. 整体逻辑是否连贯\n2. 是否有遗漏的关键点\n3. 开头是否吸引人，结尾是否有力\n4. 是否有任何矛盾或不一致之处"},
+  ]},
+  {icon:"📊",name:"数据分析流程",desc:"描述数据 → 提出假设 → 验证 → 报告",color:"#2a1a3a",steps:[
+    {label:"描述数据",instr:"先让 AI 理解你的数据结构。",prompt:"我有以下数据集，请帮我做初步探索：\n- 数据量：[行数]行 x [列数]列\n- 字段说明：[列出字段名和类型]\n- 样本数据：[粘贴前几行]\n\n请告诉我：数据质量如何？有无缺失值或异常值？"},
+    {label:"提出分析假设",instr:"让 AI 帮你找出值得深挖的方向。",prompt:"基于上述数据描述，请提出3-5个值得深入分析的方向或假设。每个假设包括：\n- 假设内容\n- 为什么这个假设值得验证\n- 需要用到哪些字段\n- 预期用到的分析方法"},
+    {label:"验证分析",instr:"选择1-2个假设深入验证。",prompt:"我想验证以下假设：「[假设内容]」\n请帮我：\n1. 设计验证方案（用什么方法/指标）\n2. 预期的结果模式是什么\n3. 如果假设成立/不成立分别意味着什么\n4. 有哪些潜在的混淆因素"},
+    {label:"生成分析报告",instr:"汇总分析结果。",prompt:"请基于以上分析生成一份报告：\n1. 数据概况（质量、分布）\n2. 关键发现（列出最重要的3-5个）\n3. 每个发现的数据支持\n4. 结论与建议\n5. 局限性说明"},
+  ]},
+  {icon:"📚",name:"学习新知识流程",desc:"概念 → 举例 → 测验 → 应用",color:"#3a1a2a",steps:[
+    {label:"概念解释",instr:"让 AI 用简单的话解释核心概念。",prompt:"请用费曼学习法解释「[概念]」：\n1. 用一句话定义它\n2. 给一个生活中的类比\n3. 它解决的核心问题是什么\n4. 前提条件是什么"},
+    {label:"举例说明",instr:"通过例子深入理解。",prompt:"请用3个不同领域的例子说明「[概念]」的应用：\n- 一个简单的入门级例子\n- 一个实际业务场景的例子\n- 一个进阶/边界情况的例子\n\n每个例子说明输入、过程和输出。"},
+    {label:"测验理解",instr:"检验自己的掌握程度。",prompt:"请出5道选择题测试我对「[概念]」的理解，包括：\n- 2道基础题（定义/原理）\n- 2道应用题（场景判断）\n- 1道综合题（需要多个知识点）\n\n每道题给出答案和解析。"},
+    {label:"实践练习",instr:"用真实场景巩固所学。",prompt:"给我一个关于「[概念]」的实践练习题：\n1. 问题描述（真实场景）\n2. 需要用到哪些知识点\n3. 建议的解决思路\n4. 参考答案\n\n难度：[入门/进阶]"},
+  ]},
+  {icon:"🐛",name:"Bug 修复流程",desc:"复现 → 定位 → 修复 → 验证",color:"#3a2a1a",steps:[
+    {label:"描述 bug",instr:"给 AI 提供完整的 bug 上下文。",prompt:"我遇到了一个 bug，以下是详细信息：\n- 现象：[描述实际表现]\n- 期望行为：[描述应该是什么]\n- 复现步骤：\n  1. [步骤1]\n  2. [步骤2]\n- 环境：[OS/浏览器/版本]\n- 错误日志：[如果有]"},
+    {label:"定位根因",instr:"让 AI 帮你缩小排查范围。",prompt:"基于以上 bug 描述，请帮我定位根因：\n1. 可能的原因有哪些（按可能性排序）\n2. 每个原因对应的验证方法\n3. 最有可能出问题的代码位置\n4. 建议的调试手段（日志/断点/测试）"},
+    {label:"制定修复方案",instr:"确定修复方案。",prompt:"确定根因是「[根因]」后，请给出修复方案：\n1. 修改方案（具体改什么）\n2. 修改的文件和位置\n3. 有没有副作用或影响范围\n4. 如果改错了怎么回滚"},
+    {label:"验证修复",instr:"确认修复有效且无回归。",prompt:"修复已完成，请帮设计验证方案：\n1. 如何确认 bug 已修复\n2. 需要做哪些回归测试\n3. 边界情况检查清单\n4. 监控指标（确认线上无影响）"},
+  ]},
+  {icon:"⚡",name:"Prompt 优化流程",desc:"写初版 → 诊断 → 优化 → 测试",color:"#1a2a3a",steps:[
+    {label:"写初版 prompt",instr:"先写出你的 prompt 初稿。",prompt:"[把你的 prompt 初稿粘贴在这里]\n\n请先执行这个 prompt，我会根据输出效果来优化它。"},
+    {label:"诊断问题",instr:"让 AI 帮你分析 prompt 的不足。",prompt:"分析上面这个 prompt 的问题：\n1. 是否清晰明确了角色\n2. 是否给出了足够的约束条件\n3. 输出格式是否被明确指定\n4. 有没有模糊或歧义的表达\n5. 是否可能产生幻觉\n\n逐条给出改进建议。"},
+    {label:"优化 prompt",instr:"基于诊断结果重写。",prompt:"请基于以上诊断，重写这个 prompt。优化方向：\n- 明确角色和任务\n- 增加输出格式约束\n- 添加 few-shot 示例\n- 避免模糊表达\n- 加入自我检查机制（让 AI 自查输出质量）"},
+    {label:"A/B 测试",instr:"对比优化前后的效果。",prompt:"请分别用优化前的 prompt 和优化后的 prompt 回答同一个问题：「[测试问题]」\n\n对比两个输出：\n1. 质量差异\n2. 稳定性差异\n3. 是否符合预期格式\n\n输出对比表格。"},
+  ]},
+];
+
+let activeWf = null;
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+async function copyText(text, btn) {
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('copied'); btn.textContent = '✓ 已复制';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '📋 复制'; }, 2000);
+    showToast('已复制');
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta); showToast('已复制');
+  }
+}
+
+function renderWorkflows() {
+  const grid = document.getElementById('wfGrid');
+  grid.innerHTML = WORKFLOWS.map((wf, i) =>
+    `<div class="wf-card${activeWf===i?' active':''}" data-idx="${i}">
+      <div class="wf-icon" style="background:${wf.color}20;color:${wf.color}">${wf.icon}</div>
+      <div class="wf-info">
+        <div class="wf-name">${wf.name}</div>
+        <div class="wf-desc">${wf.desc}</div>
+      </div>
+      <div class="wf-steps-count">${wf.steps.length} 步</div>
+      <div class="wf-arrow">›</div>
+    </div>`
+  ).join('');
+
+  grid.querySelectorAll('.wf-card').forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = parseInt(el.dataset.idx);
+      activeWf = idx;
+      renderWorkflows();
+      showWorkflow(idx);
+    });
+  });
+}
+
+function showWorkflow(idx) {
+  const wf = WORKFLOWS[idx];
+  const detail = document.getElementById('detail');
+  const hint = document.getElementById('startHint');
+  hint.style.display = 'none';
+  detail.classList.add('visible');
+
+  document.getElementById('detailTitle').textContent = wf.icon + ' ' + wf.name;
+  document.getElementById('detailDesc').textContent = wf.desc;
+
+  const prog = document.getElementById('progress');
+  const doneSteps = new Set(JSON.parse(localStorage.getItem('wf_done_'+idx)||'[]'));
+  prog.innerHTML = wf.steps.map((_, i) =>
+    `<div class="prog-dot${doneSteps.has(i)?' done':''}${i===doneSteps.size?' current':''}"></div>`
+  ).join('') + `<span class="prog-label">${doneSteps.size}/${wf.steps.length}</span>`;
+
+  const container = document.getElementById('stepsContainer');
+  container.innerHTML = wf.steps.map((s, i) =>
+    `<div class="step${i===doneSteps.size?' current-step':''}">
+      <div class="step-header">
+        <span class="step-num">步骤 ${i+1}/${wf.steps.length}</span>
+        <span class="step-label">${s.label}</span>
+      </div>
+      <div class="step-instr">${s.instr}</div>
+      <div class="prompt-box">${s.prompt}</div>
+      <button class="copy-btn" data-step="${i}">📋 复制</button>
+      ${doneSteps.has(i) ? '<span style="font-size:11px;color:#34c759;margin-left:8px">✓ 已完成</span>' :
+        `<button class="done-btn" data-step="${i}" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid #34c759;background:#f0fff4;color:#34c759;margin-left:6px">✓ 标记完成</button>`}
+    </div>`
+  ).join('');
+
+  container.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const stepIdx = parseInt(btn.dataset.step);
+      copyText(wf.steps[stepIdx].prompt, btn);
+    });
+  });
+
+  container.querySelectorAll('.done-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const stepIdx = parseInt(btn.dataset.step);
+      const done = JSON.parse(localStorage.getItem('wf_done_'+idx)||'[]');
+      if (!done.includes(stepIdx)) {
+        done.push(stepIdx);
+        localStorage.setItem('wf_done_'+idx, JSON.stringify(done));
+        showWorkflow(idx);
+        showToast('步骤已标记完成');
+      }
+    });
+  });
+
+  detail.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+renderWorkflows();
+</script>
+</body>
+</html>
