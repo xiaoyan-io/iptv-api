@@ -49,6 +49,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .step-outcome strong{color:#1d1d1f}
 .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s}
 .toast.show{opacity:1}
+.run-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid #007aff;background:#007aff;color:#fff;transition:.2s;margin-left:6px}
+.run-btn:hover{background:#0066d6}
+.run-btn:disabled{opacity:.5;cursor:wait}
+.run-btn.running{background:#ff9500;border-color:#ff9500}
+.result-box{background:#f5f5f7;border-radius:10px;padding:14px;margin-top:10px;font-size:13px;line-height:1.6;white-space:pre-wrap;border:1px solid #e5e5ea;display:none;max-height:400px;overflow-y:auto}
+.result-box.visible{display:block;animation:fadeUp .3s}
+.result-box.loading{opacity:.6}
+.result-box .r-hdr{font-size:11px;color:#86868b;margin-bottom:6px;display:flex;justify-content:space-between}
+.result-box .r-hdr .r-close{cursor:pointer;color:#aeaeb2;padding:0 4px}
 .start-hint{text-align:center;padding:40px;color:#86868b;font-size:14px}
 footer{text-align:center;padding:20px;font-size:11px;color:#aeaeb2}
 @media(max-width:500px){.container{padding:16px 12px 30px}.wf-card{padding:14px}}
@@ -58,7 +67,7 @@ footer{text-align:center;padding:20px;font-size:11px;color:#aeaeb2}
 
 <div class="navbar">
   <div class="nav-title">📋 Prompt Workflow Notes</div>
-  <div class="nav-sub">按步骤执行，复制即用</div>
+  <div class="nav-sub">按步骤执行，可复制也可直接运行</div>
 </div>
 
 <div class="container">
@@ -202,6 +211,8 @@ function showWorkflow(idx) {
       <div class="step-instr">${s.instr}</div>
       <div class="prompt-box">${s.prompt}</div>
       <button class="copy-btn" data-step="${i}">📋 复制</button>
+      <button class="run-btn" data-step="${i}">▶ 执行</button>
+      <div class="result-box" id="result${i}"></div>
       ${doneSteps.has(i) ? '<span style="font-size:11px;color:#34c759;margin-left:8px">✓ 已完成</span>' :
         `<button class="done-btn" data-step="${i}" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid #34c759;background:#f0fff4;color:#34c759;margin-left:6px">✓ 标记完成</button>`}
     </div>`
@@ -225,6 +236,37 @@ function showWorkflow(idx) {
         showToast('步骤已标记完成');
       }
     });
+  });
+
+  container.querySelectorAll('.run-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const stepIdx = parseInt(btn.dataset.step);
+      const prompt = wf.steps[stepIdx].prompt;
+      const resultBox = document.getElementById('result'+stepIdx);
+      btn.disabled = true; btn.classList.add('running'); btn.textContent = '⏳ 执行中';
+      resultBox.className = 'result-box visible loading';
+      resultBox.innerHTML = '<div class="r-hdr"><span>⏳ AI 响应中...</span></div>';
+      try {
+        const r = await fetch('/api/chat', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({prompt, system: '你是一个实用的系统运维和技术助手。用中文回答，先给结论再给步骤。回答要简洁，可以直接执行的命令用代码块标出。'}),
+          signal: AbortSignal.timeout(120000)
+        });
+        const data = await r.json();
+        resultBox.className = 'result-box visible';
+        resultBox.innerHTML = '<div class="r-hdr"><span>✅ AI 回复</span><span class="r-close">✕</span></div><div>' + data.reply.replace(/\n/g,'<br>').replace(/```/g,'<br>') + '</div>';
+      } catch(e) {
+        resultBox.className = 'result-box visible';
+        resultBox.innerHTML = '<div class="r-hdr"><span style="color:#ff3b30">⚠️ 错误</span><span class="r-close">✕</span></div><div>' + e.message + '</div>';
+      }
+      btn.disabled = false; btn.classList.remove('running'); btn.textContent = '▶ 执行';
+    });
+  });
+
+  // Close result boxes
+  container.querySelectorAll('.r-close').forEach(el => {
+    el.addEventListener('click', () => el.closest('.result-box').className = 'result-box');
   });
 
   detail.scrollIntoView({behavior:'smooth', block:'start'});

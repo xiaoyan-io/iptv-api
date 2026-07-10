@@ -22,6 +22,11 @@ sed -e "s/\${APP_PORT}/${APP_PORT}/g" \
 
 nginx -g 'daemon off;' &
 
+# LLM proxy for workflow execution
+export LLM_API_KEY="${LLM_API_KEY:-}"
+export PROXY_PORT=5181
+python3 $APP_WORKDIR/chat-proxy.py &
+
 python -u $APP_WORKDIR/main.py &
 
 exec python -u -m gunicorn service.app:app -b 127.0.0.1:$APP_PORT --timeout=1000
