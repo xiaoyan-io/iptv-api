@@ -70,5 +70,13 @@
     "href": "/workflows",
     "color": "#1a2a3a",
     "type": "static"
+  },
+  {
+    "icon": "💬",
+    "name": "Hermes Chat",
+    "desc": "直接与 AI 对话，支持历史记录",
+    "href": "/chat",
+    "color": "#007aff",
+    "type": "static"
   }
 ]
