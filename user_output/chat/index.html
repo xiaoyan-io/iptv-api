@@ -3,50 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Hermes Chat</title>
+<title>AI 助手中枢</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid #e5e5ea;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.nav-title{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
-.nav-sub{font-size:12px;color:#86868b}
-.msg-area{flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:12px}
-.msg{max-width:85%;padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.6;animation:fadeUp .25s;white-space:pre-wrap;word-break:break-word}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid #e5e5ea;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px}
+.nav-title{font-size:16px;font-weight:700}
+.nav-sub{font-size:11px;color:#86868b}
+.toolbar{flex-shrink:0;padding:8px 16px;background:#fff;border-bottom:1px solid #e5e5ea;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.toolbar::-webkit-scrollbar{display:none}
+.tool-btn{display:flex;align-items:center;gap:4px;padding:5px 10px;border-radius:8px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid #e5e5ea;background:#fafafa;color:#1d1d1f;white-space:nowrap;text-decoration:none;transition:.15s;flex-shrink:0}
+.tool-btn:hover{background:#fff;border-color:#007aff;color:#007aff}
+.tool-btn .t-icon{font-size:14px}
+.msg-area{flex:1;overflow-y:auto;padding:12px 16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;font-size:14px;line-height:1.6;animation:fadeUp .25s;white-space:pre-wrap;word-break:break-word}
 .msg.user{background:#007aff;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
 .msg.ai{background:#fff;color:#1d1d1f;align-self:flex-start;border-bottom-left-radius:4px;border:1px solid #e5e5ea}
-.msg.system{background:transparent;color:#86868b;align-self:center;font-size:12px;padding:4px 8px}
-.msg .time{font-size:10px;opacity:.6;margin-top:4px}
-.msg .copy-link{font-size:11px;color:var(--accent,#007aff);cursor:pointer;margin-top:4px;display:inline-block}
-.msg .copy-link:hover{text-decoration:underline}
+.msg.ai .tool-rec{display:inline-flex;align-items:center;gap:3px;margin:2px 0;padding:2px 8px;border-radius:6px;font-size:12px;background:#f0f6ff;color:#007aff;cursor:pointer;text-decoration:none;border:1px solid #d0e2ff}
+.msg.ai .tool-rec:hover{background:#e0eeff}
+.msg .m-time{font-size:10px;opacity:.6;margin-top:3px}
+.msg .m-copy{font-size:11px;color:#007aff;cursor:pointer;margin-top:2px;display:inline-block;opacity:.7}
+.msg .m-copy:hover{opacity:1;text-decoration:underline}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.typing{display:flex;align-items:center;gap:4px;padding:16px 18px}
+.typing{display:flex;align-items:center;gap:4px;padding:14px 16px}
 .typing .dot{width:6px;height:6px;border-radius:50%;background:#aeaeb2;animation:bounce 1.4s infinite}
 .typing .dot:nth-child(2){animation-delay:.2s}
 .typing .dot:nth-child(3){animation-delay:.4s}
 @keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
-.input-bar{flex-shrink:0;padding:12px 16px;background:#fff;border-top:1px solid #e5e5ea;display:flex;gap:10px;align-items:flex-end}
-.input-bar textarea{flex:1;border:1.5px solid #e5e5ea;border-radius:20px;padding:10px 16px;font-size:14px;font-family:inherit;outline:none;resize:none;max-height:120px;line-height:1.5;transition:.2s;background:#fafafa}
+.input-bar{flex-shrink:0;padding:10px 12px;background:#fff;border-top:1px solid #e5e5ea;display:flex;gap:8px;align-items:flex-end}
+.input-bar textarea{flex:1;border:1.5px solid #e5e5ea;border-radius:20px;padding:9px 14px;font-size:14px;font-family:inherit;outline:none;resize:none;max-height:100px;line-height:1.5;transition:.2s;background:#fafafa}
 .input-bar textarea:focus{border-color:#007aff;background:#fff;box-shadow:0 0 0 3px rgba(0,122,255,.08)}
-.send-btn{width:44px;height:44px;border-radius:50%;border:none;background:#007aff;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s}
+.send-btn{width:40px;height:40px;border-radius:50%;border:none;background:#007aff;color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s}
 .send-btn:hover{background:#0066d6}
 .send-btn:disabled{background:#c7c7cc;cursor:not-allowed}
-.empty-state{flex:1;display:flex;align-items:center;justify-content:center;color:#aeaeb2;font-size:14px;flex-direction:column;gap:8px}
-.empty-state .big{font-size:40px;opacity:.3}
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s;pointer-events:none}
+.empty-state{flex:1;display:flex;align-items:center;justify-content:center;color:#aeaeb2;font-size:13px;flex-direction:column;gap:6px}
+.empty-state .big{font-size:36px;opacity:.3}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:9px 18px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s;pointer-events:none}
 .toast.show{opacity:1}
 </style>
 </head>
 <body>
 
 <div class="navbar">
-  <div class="nav-title">💬 Hermes Chat</div>
-  <button class="nav-sub" id="clearBtn" style="background:none;border:none;cursor:pointer;color:#86868b;font-size:12px">清空</button>
+  <div class="nav-left">
+    <span style="font-size:20px">🤖</span>
+    <div>
+      <div class="nav-title">AI 助手中枢</div>
+      <div class="nav-sub">对话 + 工具快捷入口</div>
+    </div>
+  </div>
+  <button id="clearBtn" style="background:none;border:none;cursor:pointer;color:#86868b;font-size:12px;padding:4px 8px">清空</button>
 </div>
+
+<div class="toolbar" id="toolbar"></div>
 
 <div class="msg-area" id="msgArea">
   <div class="empty-state" id="emptyState">
     <div class="big">💬</div>
-    <div>给 Hermes 发消息</div>
+    <div>问我问题，或点上面工具直接使用</div>
   </div>
 </div>
 
@@ -63,8 +78,74 @@ const sendBtn = document.getElementById('sendBtn');
 const msgArea = document.getElementById('msgArea');
 const emptyState = document.getElementById('emptyState');
 const toast = document.getElementById('toast');
+const toolbar = document.getElementById('toolbar');
 
-const STORAGE_KEY = 'hermes_chat_history';
+const STORAGE_KEY = 'hermes_chat_hub';
+
+let toolsList = [];
+const SYSTEM_PROMPT = [
+  '你是一个实用的 AI 助手，叫 Hermes。用中文回答，先给结论再给步骤。',
+  '回答要简洁，可直接执行的命令用代码块标出。',
+  '',
+  '当前可用的工具（用户点击即可打开）：',
+];
+
+async function loadTools() {
+  try {
+    const r = await fetch('/tools.json');
+    toolsList = await r.json();
+    toolbar.innerHTML = toolsList.map(t =>
+      '<a class="tool-btn" href="'+t.href+'" target="_blank">' +
+      '<span class="t-icon">'+t.icon+'</span> '+t.name+'</a>'
+    ).join('');
+    SYSTEM_PROMPT.length = 3;
+    SYSTEM_PROMPT.push(...toolsList.map(t =>
+      '- 「'+t.name+'」('+t.href+') — '+t.desc
+    ));
+    SYSTEM_PROMPT.push('');
+    SYSTEM_PROMPT.push('当用户的问题适合用某个工具解决时，在回复末尾推荐：');
+    SYSTEM_PROMPT.push('👉 推荐工具：[[工具名称](工具链接)]');
+  } catch {}
+}
+loadTools();
+
+function showToast(msg) {
+  toast.textContent = msg; toast.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+function scrollBottom() { msgArea.scrollTop = msgArea.scrollHeight; }
+function timeStr() { return new Date().toLocaleString('zh-CN', {hour:'2-digit',minute:'2-digit'}); }
+
+function addMsg(role, text, isHistory) {
+  emptyState.style.display = 'none';
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  let html = text.replace(/\n/g,'<br>');
+  if (role === 'ai') {
+    html = html.replace(/👉\s*推荐工具[：:]\s*\[\[(.+?)\]\((.+?)\)\]/g,
+      '<div style="margin-top:6px">👉 推荐工具：<a class="tool-rec" href="$2" target="_blank">$1</a></div>');
+    html += '<div class="m-copy" onclick="copyMsg(this)">📋 复制</div>' +
+      '<div class="m-time">' + timeStr() + '</div>';
+  } else if (role === 'user') {
+    html += '<div class="m-time">' + timeStr() + '</div>';
+  }
+  div.innerHTML = html;
+  msgArea.appendChild(div);
+  if (!isHistory) scrollBottom();
+}
+
+function renderHistory() {
+  msgArea.innerHTML = '';
+  const msgs = loadHistory();
+  if (!msgs.length) { emptyState.style.display = 'flex'; return; }
+  msgs.forEach(m => addMsg(m.role, m.text, true));
+  scrollBottom();
+}
+
+function copyMsg(el) {
+  const text = el.parentElement.innerText.replace('📋 复制','').replace(/^\d{2}:\d{2}$/,'').trim();
+  navigator.clipboard.writeText(text).then(() => showToast('已复制'));
+}
 
 function loadHistory() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'); } catch { return []; }
@@ -73,80 +154,34 @@ function saveHistory(msgs) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(msgs.slice(-100)));
 }
 
-function showToast(msg) {
-  toast.textContent = msg; toast.classList.add('show');
-  clearTimeout(toast._t); toast._t = setTimeout(() => toast.classList.remove('show'), 2000);
-}
-
-function scrollBottom() {
-  msgArea.scrollTop = msgArea.scrollHeight;
-}
-
-function timeStr() {
-  return new Date().toLocaleString('zh-CN', {hour:'2-digit',minute:'2-digit'});
-}
-
-function addMsg(role, text, isHistory) {
-  emptyState.style.display = 'none';
-  const div = document.createElement('div');
-  div.className = 'msg ' + role;
-  if (role === 'ai') {
-    div.innerHTML = text.replace(/\n/g,'<br>') +
-      '<div class="copy-link" onclick="copyMsg(this)">📋 复制</div>' +
-      '<div class="time">' + timeStr() + '</div>';
-  } else if (role === 'user') {
-    div.textContent = text;
-    div.innerHTML += '<div class="time">' + timeStr() + '</div>';
-  }
-  msgArea.appendChild(div);
-  if (!isHistory) scrollBottom();
-}
-
-function renderHistory() {
-  msgArea.innerHTML = '';
-  const msgs = loadHistory();
-  if (!msgs.length) {
-    emptyState.style.display = 'flex';
-    return;
-  }
-  msgs.forEach(m => addMsg(m.role, m.text, true));
-  scrollBottom();
-}
-
-function copyMsg(el) {
-  const text = el.parentElement.textContent.replace('📋 复制','').replace(/^\d{2}:\d{2}$/,'').trim();
-  navigator.clipboard.writeText(text).then(() => showToast('已复制'));
-}
-
 async function send() {
   const text = input.value.trim();
   if (!text) return;
   input.value = ''; input.style.height = 'auto';
   sendBtn.disabled = true;
 
-  // user message
   addMsg('user', text);
   const history = loadHistory();
   history.push({role:'user', text, time: timeStr()});
   saveHistory(history);
 
-  // typing indicator
   const typingDiv = document.createElement('div');
   typingDiv.className = 'msg ai typing';
   typingDiv.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
-  msgArea.appendChild(typingDiv);
-  scrollBottom();
+  msgArea.appendChild(typingDiv); scrollBottom();
 
   try {
     const r = await fetch('/api/chat', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({prompt: text}),
+      body: JSON.stringify({
+        prompt: text,
+        system: SYSTEM_PROMPT.join('\n')
+      }),
       signal: AbortSignal.timeout(180000)
     });
     const data = await r.json();
     typingDiv.remove();
-
     addMsg('ai', data.reply);
     history.push({role:'ai', text: data.reply, time: timeStr()});
     saveHistory(history);
@@ -158,18 +193,14 @@ async function send() {
   input.focus();
 }
 
-// auto-resize textarea
 input.addEventListener('input', () => {
   input.style.height = 'auto';
-  input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+  input.style.height = Math.min(input.scrollHeight, 100) + 'px';
 });
-
 input.addEventListener('keydown', e => {
   if ((e.metaKey||e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); send(); }
 });
-
 sendBtn.addEventListener('click', send);
-
 document.getElementById('clearBtn').addEventListener('click', () => {
   if (confirm('清空所有聊天记录？')) {
     localStorage.removeItem(STORAGE_KEY);

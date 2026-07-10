@@ -21,7 +21,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
         length = int(self.headers.get("Content-Length",0))
         body = json.loads(self.rfile.read(length))
         prompt = body.get("prompt","")
-        system = body.get("system","你是一个实用的技术助手，用中文回答。先给结论再给步骤。")
+        system = body.get("system","你是一个实用的技术助手，用中文回答。先给结论再给步骤。\n\n当前可用的工具列表会在每次请求时由前端注入。")
 
         req = urllib.request.Request(
             API_URL,
