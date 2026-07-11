@@ -1,17 +1,13 @@
 # 这是EPG订阅列表，用于生成M3U结果频道菜单信息
 # This is the EPG subscription list used to generate M3U result channel menu information
-
 # 综合源（覆盖亚洲频道，推荐）
-http://e.erw.cc/e.xml.gz
-
 # Astro Malaysia（覆盖缅甸/东南亚频道）
-https://weareblahs.github.io/epg/astro.xml.gz
-
 # Unifi TV（马来西亚，补充东南亚频道）
-https://weareblahs.github.io/epg/unifitv.xml.gz
-
 # 51zmt EPG（中国频道）
-http://epg.51zmt.top:8000/e.xml
-
 # EPG PW（全球频道，包含亚洲）
+http://e.erw.cc/e.xml.gz
+http://epg.51zmt.top:8000/e.xml
 https://epg.pw/xmltv/epg.xml.gz
+
+# https://weareblahs.github.io/epg/astro.xml.gz
+# https://weareblahs.github.io/epg/unifitv.xml.gz
