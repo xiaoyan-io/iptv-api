@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>文件分享</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f5f5f7;color:#1d1d1f;min-height:100vh;-webkit-font-smoothing:antialiased}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid #e5e5ea;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.nav-left{display:flex;align-items:center;gap:8px}
+.nav-title{font-size:16px;font-weight:700}
+.nav-sub{font-size:11px;color:#86868b}
+.container{max-width:640px;margin:0 auto;padding:16px}
+.drop-zone{border:2px dashed #c7c7cc;border-radius:16px;padding:40px 20px;text-align:center;cursor:pointer;transition:.3s;background:#fff;margin-bottom:16px}
+.drop-zone:hover,.drop-zone.dragover{border-color:#007aff;background:#f0f7ff}
+.drop-zone .icon{font-size:40px;margin-bottom:8px}
+.drop-zone .text{font-size:15px;color:#86868b}
+.drop-zone .hint{font-size:12px;color:#aeaeb2;margin-top:4px}
+.drop-zone .hint2{font-size:11px;color:#aeaeb2;margin-top:8px;padding:6px 12px;background:#f5f5f7;border-radius:8px;display:inline-block}
+.progress-wrap{display:none;margin-bottom:16px}
+.progress-wrap.active{display:block}
+.progress-bar{height:6px;background:#e5e5ea;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:#007aff;width:0%;border-radius:3px;transition:width .3s}
+.progress-text{font-size:12px;color:#86868b;margin-top:4px;display:flex;justify-content:space-between}
+.file-list{display:flex;flex-direction:column;gap:6px}
+.file-card{background:#fff;border:1px solid #e5e5ea;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px;transition:.2s}
+.file-card:hover{border-color:#007aff;box-shadow:0 1px 4px rgba(0,122,255,.08)}
+.file-icon{font-size:24px;flex-shrink:0}
+.file-info{flex:1;min-width:0}
+.file-name{font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-meta{font-size:11px;color:#86868b;margin-top:2px}
+.file-actions{display:flex;gap:4px;flex-shrink:0}
+.btn{height:30px;padding:0 12px;border-radius:8px;border:1px solid #e5e5ea;background:#fff;cursor:pointer;font-size:12px;transition:.2s;display:inline-flex;align-items:center;gap:4px;color:#1d1d1f;text-decoration:none;font-family:inherit}
+.btn:hover{border-color:#007aff;color:#007aff}
+.btn-primary{background:#007aff;border-color:#007aff;color:#fff}
+.btn-primary:hover{background:#0066d6}
+.btn-danger{color:#ff3b30;border-color:#ffd1d1}
+.btn-danger:hover{background:#fff5f5;border-color:#ff3b30}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1d1d1f;color:#fff;padding:9px 18px;border-radius:999px;font-size:13px;z-index:300;opacity:0;transition:.35s;pointer-events:none}
+.toast.show{opacity:1}
+.copied-toast{background:#34c759}
+.empty-state{text-align:center;padding:40px;color:#aeaeb2;font-size:13px}
+input[type=file]{display:none}
+@media(max-width:500px){.container{padding:12px}}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-left">
+    <span style="font-size:18px">📤</span>
+    <div>
+      <div class="nav-title">文件分享</div>
+      <div class="nav-sub" id="fileCount">拖拽或点击上传</div>
+    </div>
+  </div>
+  <a href="/" style="font-size:12px;color:#007aff;text-decoration:none">← 回首页</a>
+</div>
+
+<div class="container">
+  <div class="drop-zone" id="dropZone">
+    <div class="icon">📁</div>
+    <div class="text">拖拽文件到此处</div>
+    <div class="hint">或点击选择文件</div>
+    <div class="hint2" id="uploadHint">最大 200MB · 支持任何文件类型</div>
+    <input type="file" id="fileInput">
+  </div>
+
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text"><span id="progressName">-</span><span id="progressPct">0%</span></div>
+  </div>
+
+  <div id="fileList" class="file-list"></div>
+  <div id="emptyState" class="empty-state">暂无文件</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = '/api/upload';
+
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const fileList = document.getElementById('fileList');
+const emptyState = document.getElementById('emptyState');
+const progressWrap = document.getElementById('progressWrap');
+const progressFill = document.getElementById('progressFill');
+const progressName = document.getElementById('progressName');
+const progressPct = document.getElementById('progressPct');
+const fileCount = document.getElementById('fileCount');
+const toast = document.getElementById('toast');
+
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('dragover'); uploadFiles(e.dataTransfer.files); });
+fileInput.addEventListener('change', () => { if (fileInput.files.length) uploadFiles(fileInput.files); });
+
+async function uploadFiles(files) {
+  for (const file of files) {
+    await uploadFile(file);
+  }
+  fileInput.value = '';
+  loadFiles();
+}
+
+async function uploadFile(file) {
+  if (file.size > 200 * 1024 * 1024) { showToast('文件超过 200MB 限制'); return; }
+  progressWrap.classList.add('active');
+  progressFill.style.width = '0%';
+  progressName.textContent = file.name;
+  progressPct.textContent = '0%';
+
+  const form = new FormData();
+  form.append('file', file);
+
+  try {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', API, true);
+    xhr.upload.onprogress = e => {
+      if (e.lengthComputable) {
+        const pct = Math.round(e.loaded / e.total * 100);
+        progressFill.style.width = pct + '%';
+        progressPct.textContent = pct + '%';
+      }
+    };
+    const result = await new Promise((resolve, reject) => {
+      xhr.onload = () => {
+        try { resolve(JSON.parse(xhr.responseText)); } catch(e) { reject(e); }
+      };
+      xhr.onerror = () => reject(new Error('network error'));
+      xhr.send(form);
+    });
+
+    if (result.ok) {
+      showToast('✅ 上传成功');
+      copyToClipboard(result.url);
+      showToast('✅ 上传成功 · 链接已复制');
+    } else {
+      showToast('❌ ' + (result.error || '上传失败'));
+    }
+  } catch(e) {
+    showToast('❌ 上传失败: ' + e.message);
+  }
+
+  setTimeout(() => progressWrap.classList.remove('active'), 500);
+}
+
+async function loadFiles() {
+  try {
+    const resp = await fetch(API + '/list');
+    const data = await resp.json();
+    const files = data.files || [];
+
+    fileCount.textContent = files.length + ' 个文件';
+    emptyState.style.display = files.length ? 'none' : 'block';
+
+    if (!files.length) { fileList.innerHTML = ''; return; }
+
+    fileList.innerHTML = files.map(f => {
+      const ext = (f.name.split('.').pop() || '').toLowerCase();
+      const icon = {jpg:'🖼',jpeg:'🖼',png:'🖼',gif:'🖼',webp:'🖼',svg:'🖼',mp4:'🎬',mkv:'🎬',mov:'🎬',avi:'🎬',mp3:'🎵',wav:'🎵',flac:'🎵',zip:'📦',rar:'📦',7z:'📦',gz:'📦',tar:'📦',apk:'📱',pdf:'📄',doc:'📄',docx:'📄',xls:'📊',xlsx:'📊',txt:'📝',m3u:'📺',json:'📋',html:'🌐'}[ext] || '📄';
+      return '<div class="file-card">' +
+        '<div class="file-icon">' + icon + '</div>' +
+        '<div class="file-info">' +
+        '<div class="file-name" title="' + f.name + '">' + f.name + '</div>' +
+        '<div class="file-meta">' + f.size_str + ' · ' + f.mtime + '</div></div>' +
+        '<div class="file-actions">' +
+        '<button class="btn" onclick="copyUrl(\'' + f.url + '\')">📋 复制</button>' +
+        '<a class="btn btn-primary" href="' + f.url + '" download>⬇ 下载</a>' +
+        '<button class="btn btn-danger" onclick="deleteFile(\'' + f.name + '\')">🗑</button></div></div>';
+    }).join('');
+  } catch(e) {
+    console.error('load error', e);
+  }
+}
+
+async function deleteFile(name) {
+  if (!confirm('删除 ' + name + '？')) return;
+  try {
+    const resp = await fetch(API + '/delete?file=' + encodeURIComponent(name), { method: 'DELETE' });
+    const data = await resp.json();
+    if (data.ok) { showToast('已删除'); loadFiles(); }
+    else showToast('删除失败');
+  } catch(e) { showToast('删除失败'); }
+}
+
+function copyUrl(url) {
+  copyToClipboard(url);
+  showToast('📋 链接已复制');
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard) navigator.clipboard.writeText(text);
+  else { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
+}
+
+function showToast(msg, isCopy) {
+  toast.textContent = msg;
+  toast.className = 'toast' + (isCopy ? ' copied-toast' : '') + ' show';
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+loadFiles();
+</script>
+</body>
+</html>

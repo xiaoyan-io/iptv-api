@@ -78,5 +78,13 @@
     "href": "/chat",
     "color": "#007aff",
     "type": "static"
+  },
+  {
+    "icon": "📤",
+    "name": "文件分享",
+    "desc": "拖拽上传 · 生成分享链接 · 最大 200MB",
+    "href": "/share",
+    "color": "#0071e3",
+    "type": "static"
   }
 ]
