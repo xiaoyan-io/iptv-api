@@ -94,5 +94,13 @@
     "href": "/alist",
     "color": "#1673b7",
     "type": "proxy"
+  },
+  {
+    "icon": "🤖",
+    "name": "Hermes 新手助手",
+    "desc": "常用功能 · 一键复制安全提问模板",
+    "href": "/hermes-help",
+    "color": "#1f3a5f",
+    "type": "static"
   }
 ]
