@@ -86,5 +86,13 @@
     "href": "/share",
     "color": "#0071e3",
     "type": "static"
+  },
+  {
+    "icon": "📂",
+    "name": "Alist",
+    "desc": "文件管理 · 多存储聚合 · 云端网盘",
+    "href": "/alist",
+    "color": "#1673b7",
+    "type": "proxy"
   }
 ]

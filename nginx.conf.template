@@ -8,7 +8,7 @@ events {
 
 rtmp {
     server {
-        listen ${NGINX_RTMP_PORT};
+        listen 1935;
 
         application hls {
             live on;
@@ -16,17 +16,17 @@ rtmp {
             hls_path /tmp/hls;
             hls_fragment 3s;
             hls_playlist_length 60;
-            on_done    http://127.0.0.1:${APP_PORT}/on_done;
+            on_done    http://127.0.0.1:5180/on_done;
         }
     }
 }
 
 http {
     server {
-        listen ${NGINX_HTTP_PORT};
+        listen 8080;
 
         location /iptv {
-            proxy_pass http://127.0.0.1:${APP_PORT}/;
+            proxy_pass http://127.0.0.1:5180/;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -36,10 +36,37 @@ http {
 
         include /etc/nginx/tools-routes.conf;
 
+        location /api/upload {
+            client_max_body_size 200M;
+            proxy_pass http://127.0.0.1:5183;
+            proxy_set_header Host $host;
+            proxy_read_timeout 300s;
+            proxy_connect_timeout 30s;
+            proxy_buffering off;
+            add_header Access-Control-Allow-Origin *;
+            add_header Access-Control-Allow-Methods "GET, POST, DELETE, OPTIONS";
+            add_header Access-Control-Allow-Headers "Content-Type";
+            if ($request_method = OPTIONS) { return 204; }
+        }
+
+        location /alist/ {
+            proxy_pass http://alist:5244/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_read_timeout 300s;
+            proxy_connect_timeout 30s;
+            proxy_buffering off;
+            add_header Access-Control-Allow-Origin *;
+        }
+
         location /api/ {
             proxy_pass http://127.0.0.1:5181;
             proxy_set_header Host $host;
-            proxy_read_timeout 120s;
+            proxy_read_timeout 180s;
+            proxy_connect_timeout 30s;
+            proxy_buffering off;
             add_header Access-Control-Allow-Origin *;
             add_header Access-Control-Allow-Methods "POST, OPTIONS";
             add_header Access-Control-Allow-Headers "Content-Type";
@@ -76,7 +103,7 @@ http {
         }
 
         location ~ ^/hls/(.+)\.m3u8$ {
-            proxy_pass http://127.0.0.1:${APP_PORT}/hls_proxy/$1;
+            proxy_pass http://127.0.0.1:5180/hls_proxy/$1;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
