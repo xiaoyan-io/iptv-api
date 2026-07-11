@@ -18,11 +18,11 @@ main{max-width:780px;margin:auto;padding:28px 16px 60px}.hero{text-align:center;
 <body>
 <header><a class="back" href="/">← 首页</a><strong>Hermes 新手助手</strong><a class="chat" href="/chat">打开对话</a></header>
 <main>
-<section class="hero"><div class="icon">🤖</div><h1>不会提问，也可以使用 Hermes</h1><p>选择一个常用功能，复制后贴到 Hermes Chat。中文、英文、错字都没问题。</p><div class="safe">🛡️ 模板默认要求先检查、简单解释；危险操作必须先询问你。</div></section>
+<section class="hero"><div class="icon">🤖</div><h1>不会提问，也可以使用 Hermes</h1><p>选择一个常用功能，问题会自动填入 Hermes Chat。中文、英文、错字都没问题。</p><div class="safe">🛡️ 模板默认要求先检查、简单解释；危险操作必须先询问你。</div></section>
 <h2 class="section-title">常用功能</h2>
 <div class="grid" id="cards"></div>
 <h2 class="section-title">不知道选哪个？</h2>
-<section class="custom"><textarea id="custom" placeholder="贴上错误文字，或只写几个词，例如：HA 离线、看这个目录、不知道下一步"></textarea><div class="actions" style="margin-top:9px"><button class="btn primary" id="copyCustom">复制安全提问</button><a class="btn" style="text-align:center;text-decoration:none" href="/chat">打开 Hermes Chat</a></div><div class="tip">生成内容会自动加入：请先理解我的意思；不确定时先只读；用简单中文回答。</div></section>
+<section class="custom"><textarea id="custom" placeholder="贴上错误文字，或只写几个词，例如：HA 离线、看这个目录、不知道下一步"></textarea><div class="actions" style="margin-top:9px"><button class="btn" id="copyCustom">复制安全提问</button><button class="btn primary" id="openCustom">自动填入 Chat</button></div><div class="tip">生成内容会自动加入：请先理解我的意思；不确定时先只读；用简单中文回答。</div></section>
 <p class="tip warn">⚠️ 不要粘贴密码、Token、验证码或完整摄像头地址。</p>
 </main>
 <div class="toast" id="toast">已复制，可以粘贴到 Hermes Chat</div>
@@ -40,8 +40,11 @@ const items=[
 const cards=document.getElementById('cards'),toast=document.getElementById('toast');
 function notify(){toast.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>toast.classList.remove('show'),1800)}
 async function copy(text){try{await navigator.clipboard.writeText(text)}catch{const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}notify()}
-items.forEach(([icon,title,desc,prompt])=>{const el=document.createElement('article');el.className='card';el.innerHTML=`<h2>${icon} ${title}</h2><p>${desc}</p><div class="actions"><button class="btn primary">复制提问</button><a class="btn" style="text-align:center;text-decoration:none" href="/chat">打开对话</a></div>`;el.querySelector('button').onclick=()=>copy(prompt);cards.appendChild(el)});
-document.getElementById('copyCustom').onclick=()=>{const text=document.getElementById('custom').value.trim()||'我不知道怎么描述这个问题。请先问我最重要的一个问题。';copy(`这是我的问题：${text}\n\n请先理解我的大概意思。中文或用词不准确时不要责怪我；有歧义先复述。默认只读检查，不要修改。请用简单中文回答，一次只给一个步骤。`)};
+const chatUrl=prompt=>'/chat/?prompt='+encodeURIComponent(prompt);
+const customPrompt=()=>{const text=document.getElementById('custom').value.trim()||'我不知道怎么描述这个问题。请先问我最重要的一个问题。';return `这是我的问题：${text}\n\n请先理解我的大概意思。中文或用词不准确时不要责怪我；有歧义先复述。默认只读检查，不要修改。请用简单中文回答，一次只给一个步骤。`};
+items.forEach(([icon,title,desc,prompt])=>{const el=document.createElement('article');el.className='card';el.innerHTML=`<h2>${icon} ${title}</h2><p>${desc}</p><div class="actions"><button class="btn">复制提问</button><a class="btn primary" style="text-align:center;text-decoration:none" href="${chatUrl(prompt)}">自动填入 Chat</a></div>`;el.querySelector('button').onclick=()=>copy(prompt);cards.appendChild(el)});
+document.getElementById('copyCustom').onclick=()=>copy(customPrompt());
+document.getElementById('openCustom').onclick=()=>location.href=chatUrl(customPrompt());
 </script>
 </body>
 </html>

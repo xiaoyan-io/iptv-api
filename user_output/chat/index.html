@@ -217,6 +217,15 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 });
 
 renderHistory();
+
+// Accept a safe pre-filled prompt from /hermes-help. Never auto-send it.
+const initialPrompt = new URLSearchParams(location.search).get('prompt');
+if (initialPrompt) {
+  input.value = initialPrompt.slice(0, 4000);
+  input.dispatchEvent(new Event('input'));
+  input.focus();
+  history.replaceState(null, '', location.pathname);
+}
 </script>
 </body>
 </html>
