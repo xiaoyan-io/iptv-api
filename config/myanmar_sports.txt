@@ -1,31 +1,11 @@
 ⚽ Sports Alan公益,#genre#
 CCTV-5
-CCTV-5+
-CCTV-16
 CCTV-4K
-CCTV-Storm Football
 CCTV-13
-BBC World News
-CNN
-Al Jazeera
 
 📺 International Sports Alan公益,#genre#
-beIN Sports USA
 beIN SPORTS XTRA
-CBS Sports HQ
-CBS Sports Golazo Network
-NBA TV
 NFL Network
-Fox Sports 1
-Sony Sports Ten 1
-Sony Sports Ten 2
-Sony Sports Ten 3
-Sony Sports Ten 5
-
-💪 Fighting & Wrestling Alan公益,#genre#
-UFC
-WWE Superstar Central
-Boxing
 
 📺 Chinese TV Alan公益,#genre#
 CCTV-1
@@ -33,11 +13,7 @@ CCTV-2
 CCTV-3
 CCTV-4
 CCTV-6
-CCTV-7
-CCTV-8
 CCTV-9
-CCTV-10
-CCTV-11
 CCTV-12
 CCTV-14
 CCTV-15
