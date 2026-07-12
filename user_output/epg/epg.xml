@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260711185149 +0800">
+<tv date="20260712020047 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1290,75 +1290,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260711010000 +0800" stop="20260711030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711030000 +0800" stop="20260711040000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711040000 +0800" stop="20260711050000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711050000 +0800" stop="20260711060000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711060000 +0800" stop="20260711070000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711070000 +0800" stop="20260711073000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711073000 +0800" stop="20260711080000 +0800">
-		<title lang="zh">NFL Team Highlights</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711080000 +0800" stop="20260711090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711090000 +0800" stop="20260711100000 +0800">
-		<title lang="zh">Deion's Double Play</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711100000 +0800" stop="20260711120000 +0800">
-		<title lang="zh">Bullies of Baltimore</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711120000 +0800" stop="20260711130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711130000 +0800" stop="20260711140000 +0800">
-		<title lang="zh">Matthew Stafford: Locked In</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711140000 +0800" stop="20260711150000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711150000 +0800" stop="20260711160000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711160000 +0800" stop="20260711170000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711170000 +0800" stop="20260711180000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711180000 +0800" stop="20260711183000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711183000 +0800" stop="20260711190000 +0800">
-		<title lang="zh">NFL Team Highlights</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711190000 +0800" stop="20260711200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711200000 +0800" stop="20260711210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711210000 +0800" stop="20260711220000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711220000 +0800" stop="20260711233000 +0800">
-		<title lang="zh">NFL Replay: Tennessee Titans at Pittsburgh Steelers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260711233000 +0800" stop="20260712010000 +0800">
-		<title lang="zh">NFL Replay</title>
-	</programme>
 	<programme channel="NFL Network" start="20260712010000 +0800" stop="20260712040000 +0800">
 		<title lang="zh">NFL Football: 2011: New Orleans Saints at Green Bay Packers</title>
 	</programme>
@@ -1413,81 +1344,24 @@
 	<programme channel="NFL Network" start="20260713130000 +0800" stop="20260713143000 +0800">
 		<title lang="zh">NFL Replay: 2015 – Week 1: New York Giants at Dallas Cowboys</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713143000 +0800" stop="20260714000000 +0800">
+	<programme channel="NFL Network" start="20260713143000 +0800" stop="20260713160000 +0800">
 		<title lang="zh">NFL Replay: Game of the Week: Green Bay Packers at San Francisco 49ers</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713160000 +0800" stop="20260713170000 +0800">
+		<title lang="zh">The Timeline: The Ice Bowl</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713170000 +0800" stop="20260713180000 +0800">
+		<title lang="zh">The Timeline: The Tuck Rule</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713180000 +0800" stop="20260713190000 +0800">
+		<title lang="zh">The Timeline: Last Day in L.A</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713190000 +0800" stop="20260714000000 +0800">
+		<title lang="zh">The Timeline: 0-26 Bucs</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260711000000 +0800" stop="20260711010000 +0800">
-		<title lang="zh">X-Games Reaction Sports: May 2026</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711010000 +0800" stop="20260711020000 +0800">
-		<title lang="zh">Breakaway: Women in Polo</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711020000 +0800" stop="20260711030000 +0800">
-		<title lang="zh">Copa Sudamericana: Highlights: Matchday 5</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711030000 +0800" stop="20260711040000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 37 – Janurary</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711040000 +0800" stop="20260711060000 +0800">
-		<title lang="zh">Skateboarding: Jackalope, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711060000 +0800" stop="20260711063000 +0800">
-		<title lang="zh">Mass Participation Series: Ultra Gobi 2025</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711063000 +0800" stop="20260711080000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Dunk Contest</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711080000 +0800" stop="20260711083000 +0800">
-		<title lang="zh">Mass Participation Series: 2026: Transvulcania</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711083000 +0800" stop="20260711093000 +0800">
-		<title lang="zh">GT World Challenge Europe: Monza Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711093000 +0800" stop="20260711103000 +0800">
-		<title lang="zh">X-Games Reaction Sports: May 2026</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711103000 +0800" stop="20260711123000 +0800">
-		<title lang="zh">Skateboarding: Jackalope, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711123000 +0800" stop="20260711133000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Riddle vs. Lee and the Southern Crown Reveal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711133000 +0800" stop="20260711143000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711143000 +0800" stop="20260711160000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Dunk Contest</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711160000 +0800" stop="20260711170000 +0800">
-		<title lang="zh">GT World Challenge Europe: Monza Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711170000 +0800" stop="20260711190000 +0800">
-		<title lang="zh">Skateboarding: Jackalope, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711190000 +0800" stop="20260711200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Mixed Matches from Hollywood Beach, Fla. (Part 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711200000 +0800" stop="20260711210000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 38 – Feb</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711210000 +0800" stop="20260711213000 +0800">
-		<title lang="zh">ABSA Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711213000 +0800" stop="20260711220000 +0800">
-		<title lang="zh">Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711220000 +0800" stop="20260711223000 +0800">
-		<title lang="zh">Mass Participation</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711223000 +0800" stop="20260711225000 +0800">
-		<title lang="zh">500 Great Goals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260711225000 +0800" stop="20260712010000 +0800">
-		<title lang="zh">Ekstraklasa Soccer</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260712010000 +0800" stop="20260712013000 +0800">
 		<title lang="zh">90 in 30</title>
 	</programme>
@@ -1542,7 +1416,10 @@
 	<programme channel="beIN SPORTS XTRA" start="20260713080000 +0800" stop="20260713130000 +0800">
 		<title lang="zh">X-Games Reaction Sports: March</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713130000 +0800" stop="20260714000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260713130000 +0800" stop="20260713190000 +0800">
 		<title lang="zh">BRAVE CF: Crowning Moments, Part 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260713190000 +0800" stop="20260714000000 +0800">
+		<title lang="zh">Pro Footvolley Tour: Episode 17: 2025 Miami Beach World Open</title>
 	</programme>
 </tv>
