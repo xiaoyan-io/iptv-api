@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260712185624 +0800">
+<tv date="20260713020245 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1335,45 +1335,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260712010000 +0800" stop="20260712040000 +0800">
-		<title lang="zh">NFL Football: 2011: New Orleans Saints at Green Bay Packers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712040000 +0800" stop="20260712070000 +0800">
-		<title lang="zh">NFL Football: 2021: Dallas Cowboys vs. Tampa Bay Buccaneers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712070000 +0800" stop="20260712100000 +0800">
-		<title lang="zh">NFL Football: 2024: Baltimore Ravens at Kansas City Chiefs</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712100000 +0800" stop="20260712130000 +0800">
-		<title lang="zh">NFL Football: 2023: Detroit Lions vs. Kansas City Chiefs</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712130000 +0800" stop="20260712160000 +0800">
-		<title lang="zh">NFL Football: 2021: Dallas Cowboys vs. Tampa Bay Buccaneers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712160000 +0800" stop="20260712170000 +0800">
-		<title lang="zh">The Timeline: Greatest Show on Turf</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712170000 +0800" stop="20260712180000 +0800">
-		<title lang="zh">The Timeline: September 11th</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712180000 +0800" stop="20260712190000 +0800">
-		<title lang="zh">The Timeline: There's Only One America's Team</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712190000 +0800" stop="20260712200000 +0800">
-		<title lang="zh">The Timeline: '91 Atlanta Falcons</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712200000 +0800" stop="20260712210000 +0800">
-		<title lang="zh">The Timeline: Rebirth in New Orleans</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712210000 +0800" stop="20260712220000 +0800">
-		<title lang="zh">The Timeline: The Fog Bowl</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712220000 +0800" stop="20260712233000 +0800">
-		<title lang="zh">NFL Replay: New York Giants at Dallas Cowboys</title>
-	</programme>
-	<programme channel="NFL Network" start="20260712233000 +0800" stop="20260713010000 +0800">
-		<title lang="zh">NFL Replay: Minnesota Vikings at Green Bay Packers</title>
-	</programme>
 	<programme channel="NFL Network" start="20260713010000 +0800" stop="20260713040000 +0800">
 		<title lang="zh">NFL Replay: San Francisco 49ers at Green Bay Packers</title>
 	</programme>
@@ -1401,70 +1362,34 @@
 	<programme channel="NFL Network" start="20260713180000 +0800" stop="20260713190000 +0800">
 		<title lang="zh">The Timeline: Last Day in L.A</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713190000 +0800" stop="20260714000000 +0800">
+	<programme channel="NFL Network" start="20260713190000 +0800" stop="20260713200000 +0800">
 		<title lang="zh">The Timeline: 0-26 Bucs</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713200000 +0800" stop="20260713210000 +0800">
+		<title lang="zh">The Timeline: Lombardi's Redskins</title>
+	</programme>
+	<programme channel="NFL Network" start="20260713210000 +0800" stop="20260714000000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260712010000 +0800" stop="20260712013000 +0800">
-		<title lang="zh">90 in 30</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712013000 +0800" stop="20260712015000 +0800">
-		<title lang="zh">500 Great Goals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712015000 +0800" stop="20260712040000 +0800">
-		<title lang="zh">Ekstraklasa Soccer</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712040000 +0800" stop="20260712060000 +0800">
-		<title lang="zh">Premier Padel Tennis</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712060000 +0800" stop="20260712063000 +0800">
-		<title lang="zh">ABSA Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712063000 +0800" stop="20260712070000 +0800">
-		<title lang="zh">ABSA Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712070000 +0800" stop="20260712073000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712073000 +0800" stop="20260712080000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712080000 +0800" stop="20260712083000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712083000 +0800" stop="20260712090000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712090000 +0800" stop="20260712110000 +0800">
-		<title lang="zh">XFC</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712110000 +0800" stop="20260712130000 +0800">
-		<title lang="zh">XFC</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712130000 +0800" stop="20260712150000 +0800">
-		<title lang="zh">XFC</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712150000 +0800" stop="20260712170000 +0800">
-		<title lang="zh">XFC</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712170000 +0800" stop="20260712190000 +0800">
-		<title lang="zh">XFC</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712190000 +0800" stop="20260712200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Championship Match</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260712200000 +0800" stop="20260713080000 +0800">
-		<title lang="zh">X-Games Reaction Sports: March</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260713080000 +0800" stop="20260713130000 +0800">
 		<title lang="zh">X-Games Reaction Sports: March</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260713130000 +0800" stop="20260713190000 +0800">
 		<title lang="zh">BRAVE CF: Crowning Moments, Part 1</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713190000 +0800" stop="20260714000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260713190000 +0800" stop="20260713200000 +0800">
 		<title lang="zh">Pro Footvolley Tour: Episode 17: 2025 Miami Beach World Open</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260713200000 +0800" stop="20260713210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: April</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260713210000 +0800" stop="20260713220000 +0800">
+		<title lang="zh">X-Games Reaction Sports: June 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260713220000 +0800" stop="20260714000000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
 	</programme>
 </tv>
