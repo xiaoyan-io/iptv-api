@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260713191732 +0800">
+<tv date="20260714015000 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1314,61 +1314,562 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260713010000 +0800" stop="20260713040000 +0800">
-		<title lang="zh">NFL Replay: San Francisco 49ers at Green Bay Packers</title>
+	<programme channel="NFL Network" start="20260714010000 +0800" stop="20260714030000 +0800">
+		<title lang="zh">Good Morning Football</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713040000 +0800" stop="20260713070000 +0800">
-		<title lang="zh">NFL Football: 2025: Baltimore Ravens vs. Buffalo Bills</title>
+	<programme channel="NFL Network" start="20260714030000 +0800" stop="20260714033000 +0800">
+		<title lang="zh">Super Bowl Highlights: Super Bowl XXXI: Green Bay Packers vs. New England Patriots</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713070000 +0800" stop="20260713100000 +0800">
-		<title lang="zh">NFL Football: 2014: Indianapolis Colts vs. Denver Broncos</title>
+	<programme channel="NFL Network" start="20260714033000 +0800" stop="20260714043000 +0800">
+		<title lang="zh">America's Game: 1996 Green Bay Packers</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713100000 +0800" stop="20260713130000 +0800">
-		<title lang="zh">NFL Football: 2025: Baltimore Ravens vs. Buffalo Bills</title>
+	<programme channel="NFL Network" start="20260714043000 +0800" stop="20260714073000 +0800">
+		<title lang="zh">NFL Football: 1996: Jacksonville Jaguars vs. Houston Oilers</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713130000 +0800" stop="20260713143000 +0800">
-		<title lang="zh">NFL Replay: 2015 – Week 1: New York Giants at Dallas Cowboys</title>
+	<programme channel="NFL Network" start="20260714073000 +0800" stop="20260714080000 +0800">
+		<title lang="zh">Super Bowl Highlights: Super Bowl XII: Dallas Cowboys vs. Denver Broncos</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713143000 +0800" stop="20260713160000 +0800">
-		<title lang="zh">NFL Replay: Game of the Week: Green Bay Packers at San Francisco 49ers</title>
+	<programme channel="NFL Network" start="20260714080000 +0800" stop="20260714090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713160000 +0800" stop="20260713170000 +0800">
-		<title lang="zh">The Timeline: The Ice Bowl</title>
+	<programme channel="NFL Network" start="20260714090000 +0800" stop="20260714120000 +0800">
+		<title lang="zh">Super Bowl Classics: XXXI: Green Bay Packers vs. New England Patriots</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713170000 +0800" stop="20260713180000 +0800">
-		<title lang="zh">The Timeline: The Tuck Rule</title>
+	<programme channel="NFL Network" start="20260714120000 +0800" stop="20260714130000 +0800">
+		<title lang="zh">The Insiders</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713180000 +0800" stop="20260713190000 +0800">
-		<title lang="zh">The Timeline: Last Day in L.A</title>
+	<programme channel="NFL Network" start="20260714130000 +0800" stop="20260714140000 +0800">
+		<title lang="zh">America's Game: 1996 Green Bay Packers</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713190000 +0800" stop="20260713200000 +0800">
-		<title lang="zh">The Timeline: 0-26 Bucs</title>
+	<programme channel="NFL Network" start="20260714140000 +0800" stop="20260714150000 +0800">
+		<title lang="zh">America's Game: 1977 Dallas Cowboys</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713200000 +0800" stop="20260713210000 +0800">
-		<title lang="zh">The Timeline: Lombardi's Redskins</title>
+	<programme channel="NFL Network" start="20260714150000 +0800" stop="20260714160000 +0800">
+		<title lang="zh">NFL 100 Greatest: Greatest Plays: Part 2, 60-31</title>
 	</programme>
-	<programme channel="NFL Network" start="20260713210000 +0800" stop="20260714000000 +0800">
+	<programme channel="NFL Network" start="20260714160000 +0800" stop="20260714190000 +0800">
+		<title lang="zh">Super Bowl Classics: XXXI: Green Bay Packers vs. New England Patriots</title>
+	</programme>
+	<programme channel="NFL Network" start="20260714190000 +0800" stop="20260714200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260714200000 +0800" stop="20260714210000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260714210000 +0800" stop="20260714230000 +0800">
 		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260714230000 +0800" stop="20260715010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715010000 +0800" stop="20260715030000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715030000 +0800" stop="20260715040000 +0800">
+		<title lang="zh">The Hall of Fame Knocks</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715040000 +0800" stop="20260715063000 +0800">
+		<title lang="zh">NFL Football: 2009 NFC Wild Card: Green Bay Packers vs. Arizona Cardinals</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715063000 +0800" stop="20260715070000 +0800">
+		<title lang="zh">NFL Team Highlights: 2025 Carolina Panthers</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715070000 +0800" stop="20260715080000 +0800">
+		<title lang="zh">A Football Life: Steve Smith Sr</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715080000 +0800" stop="20260715090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715090000 +0800" stop="20260715120000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers at Atlanta Falcons (Mercedes-Benz Stadium, Atlanta, GA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715120000 +0800" stop="20260715130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715130000 +0800" stop="20260715160000 +0800">
+		<title lang="zh">High School Football: Polynesian Bowl (Clarence T.C. Ching Athletics Complex, Honolulu, HI, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715160000 +0800" stop="20260715190000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers at Atlanta Falcons (Mercedes-Benz Stadium, Atlanta, GA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715190000 +0800" stop="20260715200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715200000 +0800" stop="20260715210000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715210000 +0800" stop="20260715230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260715230000 +0800" stop="20260716010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716010000 +0800" stop="20260716030000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716030000 +0800" stop="20260716060000 +0800">
+		<title lang="zh">NFL Football: Indianapolis Colts at Los Angeles Rams (SoFi Stadium, Inglewood, CA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716060000 +0800" stop="20260716070000 +0800">
+		<title lang="zh">America's Game: 2021 Los Angeles Rams</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716070000 +0800" stop="20260716073000 +0800">
+		<title lang="zh">A Football Life Origins: Micah Parsons</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716073000 +0800" stop="20260716080000 +0800">
+		<title lang="zh">NFL Films Presents: What's in a Name</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716080000 +0800" stop="20260716090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716090000 +0800" stop="20260716120000 +0800">
+		<title lang="zh">NFL Football: Los Angeles Rams at Philadelphia Eagles (Lincoln Financial Field, Philadelphia, PA, US</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716120000 +0800" stop="20260716130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716130000 +0800" stop="20260716133000 +0800">
+		<title lang="zh">Sound FX: Michael Strahan</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716133000 +0800" stop="20260716140000 +0800">
+		<title lang="zh">NFL Mic'd Up: Best Trash Talk</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716140000 +0800" stop="20260716150000 +0800">
+		<title lang="zh">America's Game: 2021 Los Angeles Rams</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716150000 +0800" stop="20260716160000 +0800">
+		<title lang="zh">NFL 100 All-Time Team: Defensive Line &amp; Linebackers</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716160000 +0800" stop="20260716190000 +0800">
+		<title lang="zh">NFL Football: Minnesota Vikings vs. Los Angeles Rams (State Farm Stadium, Glendale, AZ, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716190000 +0800" stop="20260716200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716200000 +0800" stop="20260716210000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716210000 +0800" stop="20260716230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260716230000 +0800" stop="20260717010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717010000 +0800" stop="20260717030000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717030000 +0800" stop="20260717053000 +0800">
+		<title lang="zh">NFL Football: Baltimore Ravens at Buffalo Bills (New Era Field, Orchard Park, NY, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717053000 +0800" stop="20260717060000 +0800">
+		<title lang="zh">NFL Films Presents: Dion Dawkins</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717060000 +0800" stop="20260717070000 +0800">
+		<title lang="zh">NFL's Greatest Games: 2021 AFC Divisional Playoff: Buffalo Bills at Kansas City Chiefs</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717070000 +0800" stop="20260717080000 +0800">
+		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717080000 +0800" stop="20260717090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717090000 +0800" stop="20260717113000 +0800">
+		<title lang="zh">NFL Football: 2017: Indianapolis Colts vs. Buffalo Bills</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717113000 +0800" stop="20260717120000 +0800">
+		<title lang="zh">NFL Films Presents: Dion Dawkins</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717120000 +0800" stop="20260717130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717130000 +0800" stop="20260717153000 +0800">
+		<title lang="zh">NFL Football: New England Patriots at Buffalo Bills (Highmark Stadium, Orchard Park, NY, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717153000 +0800" stop="20260717163000 +0800">
+		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717163000 +0800" stop="20260717190000 +0800">
+		<title lang="zh">NFL Football: Buffalo Bills at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, MO,</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717190000 +0800" stop="20260717200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717200000 +0800" stop="20260717210000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717210000 +0800" stop="20260717230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260717230000 +0800" stop="20260718010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718010000 +0800" stop="20260718030000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718030000 +0800" stop="20260718040000 +0800">
+		<title lang="zh">A Football Life: Terrell Davis</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718040000 +0800" stop="20260718050000 +0800">
+		<title lang="zh">A Football Life: DeMarcus Ware</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718050000 +0800" stop="20260718060000 +0800">
+		<title lang="zh">A Football Life: Charles Woodson</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718060000 +0800" stop="20260718070000 +0800">
+		<title lang="zh">A Football Life: Tony Gonzalez</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718070000 +0800" stop="20260718080000 +0800">
+		<title lang="zh">A Football Life: Troy Aikman</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718080000 +0800" stop="20260718090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718090000 +0800" stop="20260718100000 +0800">
+		<title lang="zh">A Football Life: Emmitt Smith</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718100000 +0800" stop="20260718110000 +0800">
+		<title lang="zh">A Football Life: Steve Young</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718110000 +0800" stop="20260718120000 +0800">
+		<title lang="zh">A Football Life: Lawrence Taylor</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718120000 +0800" stop="20260718130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718130000 +0800" stop="20260718140000 +0800">
+		<title lang="zh">A Football Life: Barry Sanders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718140000 +0800" stop="20260718150000 +0800">
+		<title lang="zh">A Football Life: Julian Edelman</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718150000 +0800" stop="20260718160000 +0800">
+		<title lang="zh">A Football Life: Carson Palmer</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718160000 +0800" stop="20260718170000 +0800">
+		<title lang="zh">A Football Life: Edgerrin James</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718170000 +0800" stop="20260718180000 +0800">
+		<title lang="zh">A Football Life: Dan Marino</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718180000 +0800" stop="20260718190000 +0800">
+		<title lang="zh">A Football Life: John Randle</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718190000 +0800" stop="20260718200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718200000 +0800" stop="20260718210000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718210000 +0800" stop="20260718220000 +0800">
+		<title lang="zh">NFL Mic'd Up: The 2025 Season</title>
+	</programme>
+	<programme channel="NFL Network" start="20260718220000 +0800" stop="20260719010000 +0800">
+		<title lang="zh">NFL Football: 2025 AFC Wild Card: Buffalo Bills vs. Jacksonville Jaguars</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719010000 +0800" stop="20260719040000 +0800">
+		<title lang="zh">NFL Football: 2025: Chicago Bears vs. San Francisco 49ers</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719040000 +0800" stop="20260719070000 +0800">
+		<title lang="zh">NFL Football: 2025: Los Angeles Rams vs. Philadelphia Eagles</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719070000 +0800" stop="20260719100000 +0800">
+		<title lang="zh">NFL Football: 2025 NFC Divisional: Los Angeles Rams vs. Chicago Bears</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719100000 +0800" stop="20260719130000 +0800">
+		<title lang="zh">NFL Football: 2025: Green Bay Packers vs. Chicago Bears</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719130000 +0800" stop="20260719160000 +0800">
+		<title lang="zh">NFL Football: 2025 AFC Divisional: Buffalo Bills vs. Denver Broncos</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719160000 +0800" stop="20260719190000 +0800">
+		<title lang="zh">NFL Football: 2025: Baltimore Ravens vs. Buffalo Bills</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719190000 +0800" stop="20260719220000 +0800">
+		<title lang="zh">NFL Football: 2025: Los Angeles Rams vs. Seattle Seahawks – Week 16</title>
+	</programme>
+	<programme channel="NFL Network" start="20260719220000 +0800" stop="20260720010000 +0800">
+		<title lang="zh">NFL Football: 2025 NFC Wild Card: Green Bay Packers vs. Chicago Bears</title>
+	</programme>
+	<programme channel="NFL Network" start="20260720010000 +0800" stop="20260720040000 +0800">
+		<title lang="zh">NFL Football: 2025: Los Angeles Rams vs. Seattle Seahawks – Week 16</title>
+	</programme>
+	<programme channel="NFL Network" start="20260720040000 +0800" stop="20260720070000 +0800">
+		<title lang="zh">NFL Football: 2025 AFC Divisional: Buffalo Bills vs. Denver Broncos</title>
+	</programme>
+	<programme channel="NFL Network" start="20260720070000 +0800" stop="20260721000000 +0800">
+		<title lang="zh">NFL Football: 2025: Baltimore Ravens vs. Buffalo Bills</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260713080000 +0800" stop="20260713130000 +0800">
-		<title lang="zh">X-Games Reaction Sports: March</title>
+	<programme channel="beIN SPORTS XTRA" start="20260714040000 +0800" stop="20260714090000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 38 – Feb</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713130000 +0800" stop="20260713190000 +0800">
-		<title lang="zh">BRAVE CF: Crowning Moments, Part 1</title>
+	<programme channel="beIN SPORTS XTRA" start="20260714090000 +0800" stop="20260714100000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713190000 +0800" stop="20260713200000 +0800">
-		<title lang="zh">Pro Footvolley Tour: Episode 17: 2025 Miami Beach World Open</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713200000 +0800" stop="20260713210000 +0800">
-		<title lang="zh">X-Games Reaction Sports: April</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713210000 +0800" stop="20260713220000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260714100000 +0800" stop="20260714130000 +0800">
 		<title lang="zh">X-Games Reaction Sports: June 2026</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260713220000 +0800" stop="20260714000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260714130000 +0800" stop="20260714160000 +0800">
+		<title lang="zh">BRAVE CF: Crowning Moments, Part 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714160000 +0800" stop="20260714190000 +0800">
 		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714190000 +0800" stop="20260714200000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Miami Beach Wold Open, Part 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714200000 +0800" stop="20260714210000 +0800">
+		<title lang="zh">X-Games Reaction Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714210000 +0800" stop="20260714213000 +0800">
+		<title lang="zh">World Downhill Skateboarding Championships</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714213000 +0800" stop="20260714220000 +0800">
+		<title lang="zh">World Downhill Skateboarding Championships</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714220000 +0800" stop="20260714230000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260714230000 +0800" stop="20260715040000 +0800">
+		<title lang="zh">⋗ Premier Padel Tennis: Malaga, First Round (Palacio de Deportes José María Martín Carpena, ESP)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715040000 +0800" stop="20260715090000 +0800">
+		<title lang="zh">X-Games Reaction Sports: March</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715090000 +0800" stop="20260715100000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715100000 +0800" stop="20260715103000 +0800">
+		<title lang="zh">World Downhill Skateboarding Championships</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715103000 +0800" stop="20260715130000 +0800">
+		<title lang="zh">World Downhill Skateboarding Championships</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715130000 +0800" stop="20260715160000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Battle Riot 8</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715160000 +0800" stop="20260715190000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715190000 +0800" stop="20260715200000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: USA vs. Italy / USA vs. Paraguay</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715200000 +0800" stop="20260715210000 +0800">
+		<title lang="zh">X-Games Reaction Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715210000 +0800" stop="20260715213000 +0800">
+		<title lang="zh">The Sports Rundown</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715213000 +0800" stop="20260715220000 +0800">
+		<title lang="zh">The Sports Rundown</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715220000 +0800" stop="20260715230000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Fuji – Coppa Shell, Race 1 (Fuji Speedway, Shizuoka, JPN)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260715230000 +0800" stop="20260716040000 +0800">
+		<title lang="zh">⋗ Premier Padel Tennis: Malaga, Second Round (Palacio de Deportes José María Martín Carpena, ESP)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716040000 +0800" stop="20260716090000 +0800">
+		<title lang="zh">X-Games Reaction Sports: April</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716090000 +0800" stop="20260716100000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Fuji – Coppa Shell, Race 1 (Fuji Speedway, Shizuoka, JPN)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716100000 +0800" stop="20260716103000 +0800">
+		<title lang="zh">The Sports Rundown</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716103000 +0800" stop="20260716130000 +0800">
+		<title lang="zh">The Sports Rundown</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716130000 +0800" stop="20260716140000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: A New ERA Begins</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716140000 +0800" stop="20260716160000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716160000 +0800" stop="20260716190000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Fuji – Coppa Shell, Race 1 (Fuji Speedway, Shizuoka, JPN)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716190000 +0800" stop="20260716200000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Brazil vs Italy / USA vs Brazil</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716200000 +0800" stop="20260716210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 43 – July</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716210000 +0800" stop="20260716213000 +0800">
+		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Stzeged, Hungary</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716213000 +0800" stop="20260716220000 +0800">
+		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Brandenburg, Germany</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716220000 +0800" stop="20260716230000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Fuji, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260716230000 +0800" stop="20260717040000 +0800">
+		<title lang="zh">⋗ Premier Padel Tennis: Malaga P1, Round of 16 (Palacio de Deportes José María Martín Carpena, ESP)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717040000 +0800" stop="20260717090000 +0800">
+		<title lang="zh">X-Games Reaction Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717090000 +0800" stop="20260717100000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Fuji, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717100000 +0800" stop="20260717103000 +0800">
+		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Stzeged, Hungary</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717103000 +0800" stop="20260717130000 +0800">
+		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Brandenburg, Germany</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717130000 +0800" stop="20260717160000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Choose Violence 200th Episode Special</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717160000 +0800" stop="20260717190000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Fuji, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717190000 +0800" stop="20260717200000 +0800">
+		<title lang="zh">Pro Footvolley Tour: Brazil vs. Italy; USA vs. Paraguay</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717200000 +0800" stop="20260717210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 44</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717210000 +0800" stop="20260717220000 +0800">
+		<title lang="zh">Equestrian: League of Nations: Rotterdam</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717220000 +0800" stop="20260717223000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717223000 +0800" stop="20260717230000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260717230000 +0800" stop="20260718040000 +0800">
+		<title lang="zh">⋗ Premier Padel Tennis: Malaga, Quarterfinals</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718040000 +0800" stop="20260718090000 +0800">
+		<title lang="zh">X-Games Reaction Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718090000 +0800" stop="20260718093000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718093000 +0800" stop="20260718100000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718100000 +0800" stop="20260718130000 +0800">
+		<title lang="zh">Equestrian: League of Nations: Rotterdam</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718130000 +0800" stop="20260718160000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Stars, Stripes &amp; the Southern Crown</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718160000 +0800" stop="20260718163000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718163000 +0800" stop="20260718170000 +0800">
+		<title lang="zh">Gearing Up</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718170000 +0800" stop="20260718190000 +0800">
+		<title lang="zh">BYB Xtreme Fighting Series</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718190000 +0800" stop="20260718210000 +0800">
+		<title lang="zh">Premier Padel Tennis</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718210000 +0800" stop="20260718213000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718213000 +0800" stop="20260718220000 +0800">
+		<title lang="zh">Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718220000 +0800" stop="20260718223000 +0800">
+		<title lang="zh">Mass Participation</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718223000 +0800" stop="20260718225000 +0800">
+		<title lang="zh">500 Great Goals</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260718225000 +0800" stop="20260719010000 +0800">
+		<title lang="zh">Ekstraklasa Soccer</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719010000 +0800" stop="20260719013000 +0800">
+		<title lang="zh">90 in 30</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719013000 +0800" stop="20260719015000 +0800">
+		<title lang="zh">500 Great Goals</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719015000 +0800" stop="20260719040000 +0800">
+		<title lang="zh">Ekstraklasa Soccer</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719040000 +0800" stop="20260719060000 +0800">
+		<title lang="zh">Premier Padel Tennis</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719060000 +0800" stop="20260719063000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719063000 +0800" stop="20260719070000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719070000 +0800" stop="20260719073000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719073000 +0800" stop="20260719080000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719080000 +0800" stop="20260719083000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719083000 +0800" stop="20260719090000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719090000 +0800" stop="20260719110000 +0800">
+		<title lang="zh">XFC</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719110000 +0800" stop="20260719130000 +0800">
+		<title lang="zh">XFC</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719130000 +0800" stop="20260719150000 +0800">
+		<title lang="zh">XFC</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719150000 +0800" stop="20260719170000 +0800">
+		<title lang="zh">XFC</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719170000 +0800" stop="20260719190000 +0800">
+		<title lang="zh">XFC</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719190000 +0800" stop="20260719210000 +0800">
+		<title lang="zh">Pádel</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719210000 +0800" stop="20260719230000 +0800">
+		<title lang="zh">Pádel</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719230000 +0800" stop="20260719233000 +0800">
+		<title lang="zh">500 Great Goals</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719233000 +0800" stop="20260719235000 +0800">
+		<title lang="zh">500 Great Goals</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719235000 +0800" stop="20260720020000 +0800">
+		<title lang="zh">French Ligue 1 Soccer</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720020000 +0800" stop="20260720030000 +0800">
+		<title lang="zh">X Games</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720030000 +0800" stop="20260720033000 +0800">
+		<title lang="zh">Skateboarding</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720033000 +0800" stop="20260720040000 +0800">
+		<title lang="zh">Skateboarding</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720040000 +0800" stop="20260720043000 +0800">
+		<title lang="zh">IWWF – International Waterski &amp; Wakeboard Federation</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720043000 +0800" stop="20260720050000 +0800">
+		<title lang="zh">Beach Volleyball</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720050000 +0800" stop="20260720060000 +0800">
+		<title lang="zh">Pro Footvolley Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720060000 +0800" stop="20260720070000 +0800">
+		<title lang="zh">Pro Footvolley Tour</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260721000000 +0800">
+		<title lang="zh">Karate Combat</title>
 	</programme>
 </tv>
