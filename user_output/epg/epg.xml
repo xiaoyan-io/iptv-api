@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260715014638 +0800">
+<tv date="20260715075624 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260715000000 +0800" stop="20260715001800 +0800">
-		<title lang="zh">宗师列传大宋词人传范仲淹</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260715001800 +0800" stop="20260715005000 +0800">
 		<title lang="zh">寻味山海泸县</title>
@@ -24,14 +24,23 @@
 	<programme channel="CCTV-1" start="20260715021800 +0800" stop="20260715025000 +0800">
 		<title lang="zh">晚间新闻</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260715025000 +0800" stop="20260715040000 +0800">
+	<programme channel="CCTV-1" start="20260715025000 +0800" stop="20260715035400 +0800">
 		<title lang="zh">2026世界杯半决赛法国西班牙</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260715040000 +0800" stop="20260715045000 +0800">
+	<programme channel="CCTV-1" start="20260715035400 +0800" stop="20260715040000 +0800">
+		<title lang="zh">我爱世界杯</title>
+	</programme>
+	<programme channel="CCTV-1" start="20260715040000 +0800" stop="20260715040600 +0800">
+		<title lang="zh">我爱世界杯</title>
+	</programme>
+	<programme channel="CCTV-1" start="20260715040600 +0800" stop="20260715050500 +0800">
 		<title lang="zh">2026世界杯半决赛法国西班牙</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260715045000 +0800" stop="20260715053000 +0800">
-		<title lang="zh">2026世界杯半决赛法国西班牙</title>
+	<programme channel="CCTV-1" start="20260715050500 +0800" stop="20260715051900 +0800">
+		<title lang="zh">我爱世界杯</title>
+	</programme>
+	<programme channel="CCTV-1" start="20260715051900 +0800" stop="20260715053000 +0800">
+		<title lang="zh">世界杯进球集锦</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260715053000 +0800" stop="20260715054200 +0800">
 		<title lang="zh">中华古树闽侯榕树王</title>
@@ -628,7 +637,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260715000000 +0800" stop="20260715003100 +0800">
-		<title lang="zh">荒野重生三部曲(2)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260715003100 +0800" stop="20260715012700 +0800">
 		<title lang="zh">神秘的蛇(1)</title>
@@ -1326,54 +1335,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260714010000 +0800" stop="20260714030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714030000 +0800" stop="20260714033000 +0800">
-		<title lang="zh">Super Bowl Highlights: Super Bowl XXXI: Green Bay Packers vs. New England Patriots</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714033000 +0800" stop="20260714043000 +0800">
-		<title lang="zh">America's Game: 1996 Green Bay Packers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714043000 +0800" stop="20260714073000 +0800">
-		<title lang="zh">NFL Football: 1996: Jacksonville Jaguars vs. Houston Oilers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714073000 +0800" stop="20260714080000 +0800">
-		<title lang="zh">Super Bowl Highlights: Super Bowl XII: Dallas Cowboys vs. Denver Broncos</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714080000 +0800" stop="20260714090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714090000 +0800" stop="20260714120000 +0800">
-		<title lang="zh">Super Bowl Classics: XXXI: Green Bay Packers vs. New England Patriots</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714120000 +0800" stop="20260714130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714130000 +0800" stop="20260714140000 +0800">
-		<title lang="zh">America's Game: 1996 Green Bay Packers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714140000 +0800" stop="20260714150000 +0800">
-		<title lang="zh">America's Game: 1977 Dallas Cowboys</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714150000 +0800" stop="20260714160000 +0800">
-		<title lang="zh">NFL 100 Greatest: Greatest Plays: Part 2, 60-31</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714160000 +0800" stop="20260714190000 +0800">
-		<title lang="zh">Super Bowl Classics: XXXI: Green Bay Packers vs. New England Patriots</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714190000 +0800" stop="20260714200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714200000 +0800" stop="20260714210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714210000 +0800" stop="20260714230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260714230000 +0800" stop="20260715010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260715010000 +0800" stop="20260715030000 +0800">
 		<title lang="zh">Good Morning Football</title>
 	</programme>
@@ -1614,39 +1575,6 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260714040000 +0800" stop="20260714090000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 38 – Feb</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714090000 +0800" stop="20260714100000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714100000 +0800" stop="20260714130000 +0800">
-		<title lang="zh">X-Games Reaction Sports: June 2026</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714130000 +0800" stop="20260714160000 +0800">
-		<title lang="zh">BRAVE CF: Crowning Moments, Part 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714160000 +0800" stop="20260714190000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714190000 +0800" stop="20260714200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Miami Beach Wold Open, Part 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714200000 +0800" stop="20260714210000 +0800">
-		<title lang="zh">X-Games Reaction Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714210000 +0800" stop="20260714213000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714213000 +0800" stop="20260714220000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714220000 +0800" stop="20260714230000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260714230000 +0800" stop="20260715040000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: Malaga, First Round (Palacio de Deportes José María Martín Carpena, ESP)</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260715040000 +0800" stop="20260715090000 +0800">
 		<title lang="zh">X-Games Reaction Sports: March</title>
 	</programme>
@@ -1881,7 +1809,10 @@
 	<programme channel="beIN SPORTS XTRA" start="20260720060000 +0800" stop="20260720070000 +0800">
 		<title lang="zh">Pro Footvolley Tour</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260721000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260720090000 +0800">
+		<title lang="zh">Karate Combat</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720090000 +0800" stop="20260721000000 +0800">
 		<title lang="zh">Karate Combat</title>
 	</programme>
 </tv>
