@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260716015655 +0800">
+<tv date="20260716080151 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260716000000 +0800" stop="20260716001800 +0800">
-		<title lang="zh">宗师列传大宋词人传黄庭坚</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260716001800 +0800" stop="20260716004800 +0800">
 		<title lang="zh">今日说法</title>
@@ -21,13 +21,16 @@
 	<programme channel="CCTV-1" start="20260716021800 +0800" stop="20260716025000 +0800">
 		<title lang="zh">晚间新闻</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716025000 +0800" stop="20260716040000 +0800">
+	<programme channel="CCTV-1" start="20260716025000 +0800" stop="20260716035200 +0800">
 		<title lang="zh">2026世界杯半决赛英格兰阿根廷</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716040000 +0800" stop="20260716045000 +0800">
-		<title lang="zh">2026世界杯半决赛英格兰阿根廷</title>
+	<programme channel="CCTV-1" start="20260716035200 +0800" stop="20260716040000 +0800">
+		<title lang="zh">我爱世界杯</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716045000 +0800" stop="20260716053000 +0800">
+	<programme channel="CCTV-1" start="20260716040000 +0800" stop="20260716040200 +0800">
+		<title lang="zh">我爱世界杯</title>
+	</programme>
+	<programme channel="CCTV-1" start="20260716040200 +0800" stop="20260716053000 +0800">
 		<title lang="zh">2026世界杯半决赛英格兰阿根廷</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260716053000 +0800" stop="20260716054200 +0800">
@@ -99,19 +102,19 @@
 	<programme channel="CCTV-1" start="20260716193200 +0800" stop="20260716193800 +0800">
 		<title lang="zh">天气预报</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716193800 +0800" stop="20260716200300 +0800">
+	<programme channel="CCTV-1" start="20260716193800 +0800" stop="20260716200200 +0800">
 		<title lang="zh">焦点访谈</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716200300 +0800" stop="20260716205600 +0800">
+	<programme channel="CCTV-1" start="20260716200200 +0800" stop="20260716205600 +0800">
 		<title lang="zh">种墨园(30)</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716205600 +0800" stop="20260716214400 +0800">
+	<programme channel="CCTV-1" start="20260716205600 +0800" stop="20260716214500 +0800">
 		<title lang="zh">种墨园(31)</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716214400 +0800" stop="20260716215100 +0800">
+	<programme channel="CCTV-1" start="20260716214500 +0800" stop="20260716215200 +0800">
 		<title lang="zh">三餐四季Ⅱ宣传片</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260716215100 +0800" stop="20260716220000 +0800">
+	<programme channel="CCTV-1" start="20260716215200 +0800" stop="20260716220000 +0800">
 		<title lang="zh">非遗里的中国MV</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260716220000 +0800" stop="20260716223500 +0800">
@@ -1329,48 +1332,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260715010000 +0800" stop="20260715030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715030000 +0800" stop="20260715040000 +0800">
-		<title lang="zh">The Hall of Fame Knocks</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715040000 +0800" stop="20260715063000 +0800">
-		<title lang="zh">NFL Football: 2009 NFC Wild Card: Green Bay Packers vs. Arizona Cardinals</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715063000 +0800" stop="20260715070000 +0800">
-		<title lang="zh">NFL Team Highlights: 2025 Carolina Panthers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715070000 +0800" stop="20260715080000 +0800">
-		<title lang="zh">A Football Life: Steve Smith Sr</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715080000 +0800" stop="20260715090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715090000 +0800" stop="20260715120000 +0800">
-		<title lang="zh">NFL Football: Carolina Panthers at Atlanta Falcons (Mercedes-Benz Stadium, Atlanta, GA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715120000 +0800" stop="20260715130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715130000 +0800" stop="20260715160000 +0800">
-		<title lang="zh">High School Football: Polynesian Bowl (Clarence T.C. Ching Athletics Complex, Honolulu, HI, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715160000 +0800" stop="20260715190000 +0800">
-		<title lang="zh">NFL Football: Carolina Panthers at Atlanta Falcons (Mercedes-Benz Stadium, Atlanta, GA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715190000 +0800" stop="20260715200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715200000 +0800" stop="20260715210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715210000 +0800" stop="20260715230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260715230000 +0800" stop="20260716010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260716010000 +0800" stop="20260716030000 +0800">
 		<title lang="zh">Good Morning Football</title>
 	</programme>
@@ -1563,48 +1524,15 @@
 	<programme channel="NFL Network" start="20260720040000 +0800" stop="20260720070000 +0800">
 		<title lang="zh">NFL Football: 2025 AFC Divisional: Buffalo Bills vs. Denver Broncos</title>
 	</programme>
-	<programme channel="NFL Network" start="20260720070000 +0800" stop="20260721000000 +0800">
+	<programme channel="NFL Network" start="20260720070000 +0800" stop="20260720100000 +0800">
 		<title lang="zh">NFL Football: 2025: Baltimore Ravens vs. Buffalo Bills</title>
+	</programme>
+	<programme channel="NFL Network" start="20260720100000 +0800" stop="20260721000000 +0800">
+		<title lang="zh">NFL Football: 2025: Los Angeles Rams vs. Seattle Seahawks – Week 16</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260715040000 +0800" stop="20260715090000 +0800">
-		<title lang="zh">X-Games Reaction Sports: March</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715090000 +0800" stop="20260715100000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715100000 +0800" stop="20260715103000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715103000 +0800" stop="20260715130000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715130000 +0800" stop="20260715160000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Battle Riot 8</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715160000 +0800" stop="20260715190000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715190000 +0800" stop="20260715200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: USA vs. Italy / USA vs. Paraguay</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715200000 +0800" stop="20260715210000 +0800">
-		<title lang="zh">X-Games Reaction Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715210000 +0800" stop="20260715213000 +0800">
-		<title lang="zh">The Sports Rundown</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715213000 +0800" stop="20260715220000 +0800">
-		<title lang="zh">The Sports Rundown</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715220000 +0800" stop="20260715230000 +0800">
-		<title lang="zh">Ferrari Challenge Racing Series: Fuji – Coppa Shell, Race 1 (Fuji Speedway, Shizuoka, JPN)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260715230000 +0800" stop="20260716040000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: Malaga, Second Round (Palacio de Deportes José María Martín Carpena, ESP)</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260716040000 +0800" stop="20260716090000 +0800">
 		<title lang="zh">X-Games Reaction Sports: April</title>
 	</programme>
@@ -1806,7 +1734,10 @@
 	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260720090000 +0800">
 		<title lang="zh">Karate Combat</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260720090000 +0800" stop="20260721000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260720090000 +0800" stop="20260720110000 +0800">
+		<title lang="zh">Karate Combat</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720110000 +0800" stop="20260721000000 +0800">
 		<title lang="zh">Karate Combat</title>
 	</programme>
 </tv>
