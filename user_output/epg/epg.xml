@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260717185758 +0800">
+<tv date="20260718014929 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1272,54 +1272,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260717010000 +0800" stop="20260717030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717030000 +0800" stop="20260717053000 +0800">
-		<title lang="zh">NFL Football: Baltimore Ravens at Buffalo Bills (New Era Field, Orchard Park, NY, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717053000 +0800" stop="20260717060000 +0800">
-		<title lang="zh">NFL Films Presents: Dion Dawkins</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717060000 +0800" stop="20260717070000 +0800">
-		<title lang="zh">NFL's Greatest Games: 2021 AFC Divisional Playoff: Buffalo Bills at Kansas City Chiefs</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717070000 +0800" stop="20260717080000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717080000 +0800" stop="20260717090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717090000 +0800" stop="20260717113000 +0800">
-		<title lang="zh">NFL Football: 2017: Indianapolis Colts vs. Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717113000 +0800" stop="20260717120000 +0800">
-		<title lang="zh">NFL Films Presents: Dion Dawkins</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717120000 +0800" stop="20260717130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717130000 +0800" stop="20260717153000 +0800">
-		<title lang="zh">NFL Football: New England Patriots at Buffalo Bills (Highmark Stadium, Orchard Park, NY, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717153000 +0800" stop="20260717163000 +0800">
-		<title lang="zh">Hard Knocks: Training Camp With the Buffalo Bills</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717163000 +0800" stop="20260717190000 +0800">
-		<title lang="zh">NFL Football: Buffalo Bills at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, MO,</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717190000 +0800" stop="20260717200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717200000 +0800" stop="20260717210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717210000 +0800" stop="20260717230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260717230000 +0800" stop="20260718010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260718010000 +0800" stop="20260718030000 +0800">
 		<title lang="zh">Good Morning Football</title>
 	</programme>
@@ -1422,42 +1374,6 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260717040000 +0800" stop="20260717090000 +0800">
-		<title lang="zh">X-Games Reaction Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717090000 +0800" stop="20260717100000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Fuji, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717100000 +0800" stop="20260717103000 +0800">
-		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Stzeged, Hungary</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717103000 +0800" stop="20260717130000 +0800">
-		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Brandenburg, Germany</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717130000 +0800" stop="20260717160000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Choose Violence 200th Episode Special</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717160000 +0800" stop="20260717190000 +0800">
-		<title lang="zh">Ferrari Challenge UK: Fuji, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717190000 +0800" stop="20260717200000 +0800">
-		<title lang="zh">Pro Footvolley Tour: Brazil vs. Italy; USA vs. Paraguay</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717200000 +0800" stop="20260717210000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 44</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717210000 +0800" stop="20260717220000 +0800">
-		<title lang="zh">Equestrian: League of Nations: Rotterdam</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717220000 +0800" stop="20260717223000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717223000 +0800" stop="20260717230000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260717230000 +0800" stop="20260718040000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: Malaga, Quarterfinals</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260718040000 +0800" stop="20260718090000 +0800">
 		<title lang="zh">X-Games Reaction Sports</title>
 	</programme>
