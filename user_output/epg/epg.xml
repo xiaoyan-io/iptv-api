@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260718014929 +0800">
+<tv date="20260718073250 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260718000000 +0800" stop="20260718010300 +0800">
-		<title lang="zh">三餐四季Ⅲ(11)安徽</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260718010300 +0800" stop="20260718013300 +0800">
 		<title lang="zh">今日说法</title>
@@ -90,16 +90,16 @@
 	<programme channel="CCTV-1" start="20260718193200 +0800" stop="20260718193800 +0800">
 		<title lang="zh">天气预报</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260718193800 +0800" stop="20260718200300 +0800">
+	<programme channel="CCTV-1" start="20260718193800 +0800" stop="20260718200100 +0800">
 		<title lang="zh">焦点访谈</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260718200300 +0800" stop="20260718214400 +0800">
+	<programme channel="CCTV-1" start="20260718200100 +0800" stop="20260718213700 +0800">
 		<title lang="zh">非遗里的中国Ⅴ青海德令哈篇</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260718214400 +0800" stop="20260718215200 +0800">
+	<programme channel="CCTV-1" start="20260718213700 +0800" stop="20260718214700 +0800">
 		<title lang="zh">三餐四季Ⅱ宣传片</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260718215200 +0800" stop="20260718220000 +0800">
+	<programme channel="CCTV-1" start="20260718214700 +0800" stop="20260718220000 +0800">
 		<title lang="zh">非遗里的中国MV</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260718220000 +0800" stop="20260718223600 +0800">
