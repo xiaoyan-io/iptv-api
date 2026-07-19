@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260719015853 +0800">
+<tv date="20260719080523 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -619,7 +619,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260719000000 +0800" stop="20260719003100 +0800">
-		<title lang="zh">树懒的故事</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260719003100 +0800" stop="20260719012700 +0800">
 		<title lang="zh">猎手与猎物的终极对决</title>
@@ -643,7 +643,7 @@
 		<title lang="zh">秦岭家园(5)</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260719044600 +0800" stop="20260719050700 +0800">
-		<title lang="zh">故事中国</title>
+		<title lang="zh">故事中国(173)</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260719050700 +0800" stop="20260719051200 +0800">
 		<title lang="zh">香港之味(1)</title>
@@ -1299,69 +1299,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260718010000 +0800" stop="20260718030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718030000 +0800" stop="20260718040000 +0800">
-		<title lang="zh">A Football Life: Terrell Davis</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718040000 +0800" stop="20260718050000 +0800">
-		<title lang="zh">A Football Life: DeMarcus Ware</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718050000 +0800" stop="20260718060000 +0800">
-		<title lang="zh">A Football Life: Charles Woodson</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718060000 +0800" stop="20260718070000 +0800">
-		<title lang="zh">A Football Life: Tony Gonzalez</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718070000 +0800" stop="20260718080000 +0800">
-		<title lang="zh">A Football Life: Troy Aikman</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718080000 +0800" stop="20260718090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718090000 +0800" stop="20260718100000 +0800">
-		<title lang="zh">A Football Life: Emmitt Smith</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718100000 +0800" stop="20260718110000 +0800">
-		<title lang="zh">A Football Life: Steve Young</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718110000 +0800" stop="20260718120000 +0800">
-		<title lang="zh">A Football Life: Lawrence Taylor</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718120000 +0800" stop="20260718130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718130000 +0800" stop="20260718140000 +0800">
-		<title lang="zh">A Football Life: Barry Sanders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718140000 +0800" stop="20260718150000 +0800">
-		<title lang="zh">A Football Life: Julian Edelman</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718150000 +0800" stop="20260718160000 +0800">
-		<title lang="zh">A Football Life: Carson Palmer</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718160000 +0800" stop="20260718170000 +0800">
-		<title lang="zh">A Football Life: Edgerrin James</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718170000 +0800" stop="20260718180000 +0800">
-		<title lang="zh">A Football Life: Dan Marino</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718180000 +0800" stop="20260718190000 +0800">
-		<title lang="zh">A Football Life: John Randle</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718190000 +0800" stop="20260718200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718200000 +0800" stop="20260718210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718210000 +0800" stop="20260718220000 +0800">
-		<title lang="zh">NFL Mic'd Up: The 2025 Season</title>
-	</programme>
-	<programme channel="NFL Network" start="20260718220000 +0800" stop="20260719010000 +0800">
-		<title lang="zh">NFL Football: 2025 AFC Wild Card: Buffalo Bills vs. Jacksonville Jaguars</title>
-	</programme>
 	<programme channel="NFL Network" start="20260719010000 +0800" stop="20260719040000 +0800">
 		<title lang="zh">NFL Football: 2025: Chicago Bears vs. San Francisco 49ers</title>
 	</programme>
@@ -1401,59 +1338,29 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260718040000 +0800" stop="20260718090000 +0800">
-		<title lang="zh">X-Games Reaction Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718090000 +0800" stop="20260718093000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718093000 +0800" stop="20260718100000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718100000 +0800" stop="20260718130000 +0800">
-		<title lang="zh">Equestrian: League of Nations: Rotterdam</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718130000 +0800" stop="20260718160000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Stars, Stripes &amp; the Southern Crown</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718160000 +0800" stop="20260718163000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718163000 +0800" stop="20260718170000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718170000 +0800" stop="20260718190000 +0800">
-		<title lang="zh">BYB Xtreme Fighting Series</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718190000 +0800" stop="20260718210000 +0800">
-		<title lang="zh">Premier Padel Tennis</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718210000 +0800" stop="20260718213000 +0800">
-		<title lang="zh">ABSA Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718213000 +0800" stop="20260718220000 +0800">
-		<title lang="zh">Cape Epic</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718220000 +0800" stop="20260718223000 +0800">
-		<title lang="zh">Mass Participation</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718223000 +0800" stop="20260718225000 +0800">
-		<title lang="zh">500 Great Goals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260718225000 +0800" stop="20260719010000 +0800">
-		<title lang="zh">Ekstraklasa Soccer</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719010000 +0800" stop="20260719013000 +0800">
 		<title lang="zh">90 in 30</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719013000 +0800" stop="20260719015000 +0800">
 		<title lang="zh">500 Great Goals</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719015000 +0800" stop="20260719040000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260719015000 +0800" stop="20260719020000 +0800">
 		<title lang="zh">Ekstraklasa Soccer</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719040000 +0800" stop="20260719060000 +0800">
-		<title lang="zh">Premier Padel Tennis</title>
+	<programme channel="beIN SPORTS XTRA" start="20260719020000 +0800" stop="20260719030000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719030000 +0800" stop="20260719040000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Stop 2 from Hollywood Beach</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719040000 +0800" stop="20260719043000 +0800">
+		<title lang="zh">Global Champions Tour: Paris</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719043000 +0800" stop="20260719050000 +0800">
+		<title lang="zh">Global Champions League París</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719050000 +0800" stop="20260719060000 +0800">
+		<title lang="zh">Modern Pentathlon: UIPM World Cup: Budapest, Men's Final</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719060000 +0800" stop="20260719063000 +0800">
 		<title lang="zh">ABSA Cape Epic</title>
@@ -1462,7 +1369,7 @@
 		<title lang="zh">ABSA Cape Epic</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719070000 +0800" stop="20260719073000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
+		<title lang="zh">Rowing: World Cup, Lucerne</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719073000 +0800" stop="20260719080000 +0800">
 		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
@@ -1473,26 +1380,50 @@
 	<programme channel="beIN SPORTS XTRA" start="20260719083000 +0800" stop="20260719090000 +0800">
 		<title lang="zh">FIBA 3x3 Basketball World Tour</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719090000 +0800" stop="20260719110000 +0800">
-		<title lang="zh">XFC</title>
+	<programme channel="beIN SPORTS XTRA" start="20260719090000 +0800" stop="20260719093000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: DeQing vs. Skyliners</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719093000 +0800" stop="20260719100000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Shanghai vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719100000 +0800" stop="20260719103000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Toulouse vs. Amsterdam RABOBANK</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719103000 +0800" stop="20260719110000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Ulaanbaatar MMC Energy vs. Ub</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719110000 +0800" stop="20260719130000 +0800">
-		<title lang="zh">XFC</title>
+		<title lang="zh">BRAVE CF: Veterans &amp; Title Chasers</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719130000 +0800" stop="20260719150000 +0800">
-		<title lang="zh">XFC</title>
+	<programme channel="beIN SPORTS XTRA" start="20260719130000 +0800" stop="20260719140000 +0800">
+		<title lang="zh">BRAVE – MMA: Most Brutal Finishes Ever</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719140000 +0800" stop="20260719150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719150000 +0800" stop="20260719170000 +0800">
-		<title lang="zh">XFC</title>
+		<title lang="zh">Modern Pentathlon: UIPM World Cup: Budapest, Men's Final</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719170000 +0800" stop="20260719190000 +0800">
-		<title lang="zh">XFC</title>
+	<programme channel="beIN SPORTS XTRA" start="20260719170000 +0800" stop="20260719173000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: DeQing vs. Skyliners</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719190000 +0800" stop="20260719210000 +0800">
-		<title lang="zh">Pádel</title>
+	<programme channel="beIN SPORTS XTRA" start="20260719173000 +0800" stop="20260719180000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Shanghai vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719180000 +0800" stop="20260719183000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Toulouse vs. Amsterdam RABOBANK</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719183000 +0800" stop="20260719190000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Ulaanbaatar MMC Energy vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719190000 +0800" stop="20260719200000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: USA vs. Brazil // Brazil vs. Paraguay</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260719200000 +0800" stop="20260719210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 46 – October 2025</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719210000 +0800" stop="20260719230000 +0800">
-		<title lang="zh">Pádel</title>
+		<title lang="zh">⋗ Premier Padel Tennis: Malaga</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260719230000 +0800" stop="20260719233000 +0800">
 		<title lang="zh">500 Great Goals</title>
@@ -1500,37 +1431,76 @@
 	<programme channel="beIN SPORTS XTRA" start="20260719233000 +0800" stop="20260719235000 +0800">
 		<title lang="zh">500 Great Goals</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260719235000 +0800" stop="20260720020000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260719235000 +0800" stop="20260720003000 +0800">
 		<title lang="zh">French Ligue 1 Soccer</title>
 	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720003000 +0800" stop="20260720013000 +0800">
+		<title lang="zh">X-Games Reaction Sports: June 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720013000 +0800" stop="20260720020000 +0800">
+		<title lang="zh">Surfing: SFT Surf Foil World Cup Tour</title>
+	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720020000 +0800" stop="20260720030000 +0800">
-		<title lang="zh">X Games</title>
+		<title lang="zh">Ferrari Challenge UK: Oulton Park, Race 2</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720030000 +0800" stop="20260720033000 +0800">
-		<title lang="zh">Skateboarding</title>
+		<title lang="zh">Footvolley: Pro Tour: Stop 2 from Hollywood Beach</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720033000 +0800" stop="20260720040000 +0800">
 		<title lang="zh">Skateboarding</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720040000 +0800" stop="20260720043000 +0800">
-		<title lang="zh">IWWF – International Waterski &amp; Wakeboard Federation</title>
+		<title lang="zh">Equestrian: League of Nations: Rotterdam</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720043000 +0800" stop="20260720050000 +0800">
 		<title lang="zh">Beach Volleyball</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720050000 +0800" stop="20260720060000 +0800">
-		<title lang="zh">Pro Footvolley Tour</title>
+		<title lang="zh">Modern Pentathlon: UIPM World Cup: Budapest, Women's Final</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260720060000 +0800" stop="20260720070000 +0800">
 		<title lang="zh">Pro Footvolley Tour</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260720090000 +0800">
-		<title lang="zh">Karate Combat</title>
+	<programme channel="beIN SPORTS XTRA" start="20260720070000 +0800" stop="20260720080000 +0800">
+		<title lang="zh">Rowing: World Cup, Lucerne</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260720090000 +0800" stop="20260720110000 +0800">
-		<title lang="zh">Karate Combat</title>
+	<programme channel="beIN SPORTS XTRA" start="20260720080000 +0800" stop="20260720090000 +0800">
+		<title lang="zh">X-Games Reaction Sports</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260720110000 +0800" stop="20260721000000 +0800">
-		<title lang="zh">Karate Combat</title>
+	<programme channel="beIN SPORTS XTRA" start="20260720090000 +0800" stop="20260720093000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Ulaanbaatar MMC Energy vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720093000 +0800" stop="20260720100000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: DeQing vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720100000 +0800" stop="20260720103000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Toulouse vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720103000 +0800" stop="20260720110000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720110000 +0800" stop="20260720130000 +0800">
+		<title lang="zh">LUX Fight League 53</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720130000 +0800" stop="20260720150000 +0800">
+		<title lang="zh">LUX Challenge 54 (Showcenter Complex, San Pedro Garza Garcia, N.L. MEX)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720150000 +0800" stop="20260720170000 +0800">
+		<title lang="zh">Modern Pentathlon: UIPM World Cup: Budapest, Women's Final</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720170000 +0800" stop="20260720173000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Ulaanbaatar MMC Energy vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720173000 +0800" stop="20260720180000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: DeQing vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720180000 +0800" stop="20260720183000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Toulouse vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720183000 +0800" stop="20260720190000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260720190000 +0800" stop="20260721000000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Ocean City, Part 1</title>
 	</programme>
 </tv>
