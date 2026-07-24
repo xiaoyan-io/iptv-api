@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260724020025 +0800">
+<tv date="20260724081511 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260724000000 +0800" stop="20260724000400 +0800">
-		<title lang="zh">闪亮的名字最美退役军人发布仪式</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260724000400 +0800" stop="20260724003400 +0800">
 		<title lang="zh">今日说法</title>

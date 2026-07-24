@@ -5,9 +5,9 @@
 # Unifi TV（马来西亚，补充东南亚频道）
 # 51zmt EPG（中国频道）
 # EPG PW（全球频道，包含亚洲）
-http://e.erw.cc/e.xml.gz
-http://epg.51zmt.top:8000/e.xml
-https://epg.pw/xmltv/epg.xml.gz
-
 # https://weareblahs.github.io/epg/astro.xml.gz
 # https://weareblahs.github.io/epg/unifitv.xml.gz
+http://e.erw.cc/e.xml.gz
+https://epg.pw/xmltv/epg.xml.gz
+
+# http://epg.51zmt.top:8000/e.xml
