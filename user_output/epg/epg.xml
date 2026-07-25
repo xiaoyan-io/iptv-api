@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260725015918 +0800">
+<tv date="20260725075555 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260725000000 +0800" stop="20260725010300 +0800">
-		<title lang="zh">三餐四季Ⅲ(7)湖南</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260725010300 +0800" stop="20260725014700 +0800">
 		<title lang="zh">生活圈</title>
@@ -96,16 +96,16 @@
 	<programme channel="CCTV-1" start="20260725193800 +0800" stop="20260725200100 +0800">
 		<title lang="zh">焦点访谈</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260725200100 +0800" stop="20260725204500 +0800">
+	<programme channel="CCTV-1" start="20260725200100 +0800" stop="20260725204400 +0800">
 		<title lang="zh">世界义乌习近平关心引领义乌发展</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260725204500 +0800" stop="20260725213400 +0800">
+	<programme channel="CCTV-1" start="20260725204400 +0800" stop="20260725213200 +0800">
 		<title lang="zh">江海潮生(9)</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260725213400 +0800" stop="20260725214100 +0800">
+	<programme channel="CCTV-1" start="20260725213200 +0800" stop="20260725213900 +0800">
 		<title lang="zh">三餐四季Ⅱ宣传片</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260725214100 +0800" stop="20260725214900 +0800">
+	<programme channel="CCTV-1" start="20260725213900 +0800" stop="20260725214900 +0800">
 		<title lang="zh">非遗里的中国MV</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260725214900 +0800" stop="20260725220000 +0800">
@@ -634,7 +634,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260725000000 +0800" stop="20260725003100 +0800">
-		<title lang="zh">地球劫后重生(7)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260725003100 +0800" stop="20260725012700 +0800">
 		<title lang="zh">河马的生态乐园</title>
