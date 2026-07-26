@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260725185819 +0800">
+<tv date="20260726020331 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1281,78 +1281,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260725000000 +0800" stop="20260725010000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725010000 +0800" stop="20260725020000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725020000 +0800" stop="20260725030000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725030000 +0800" stop="20260725040000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725040000 +0800" stop="20260725050000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725050000 +0800" stop="20260725060000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725060000 +0800" stop="20260725070000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725070000 +0800" stop="20260725080000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725080000 +0800" stop="20260725090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725090000 +0800" stop="20260725100000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725100000 +0800" stop="20260725110000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725110000 +0800" stop="20260725120000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725120000 +0800" stop="20260725130000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725130000 +0800" stop="20260725140000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725140000 +0800" stop="20260725150000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725150000 +0800" stop="20260725160000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725160000 +0800" stop="20260725170000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725170000 +0800" stop="20260725180000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725180000 +0800" stop="20260725190000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725190000 +0800" stop="20260725200000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725200000 +0800" stop="20260725210000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725210000 +0800" stop="20260725220000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725220000 +0800" stop="20260725230000 +0800">
-		<title lang="zh">2026 NFL Flag Championships</title>
-	</programme>
-	<programme channel="NFL Network" start="20260725230000 +0800" stop="20260726000000 +0800">
-		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
-	</programme>
 	<programme channel="NFL Network" start="20260726000000 +0800" stop="20260726010000 +0800">
 		<title lang="zh">⋗ 2026 NFL Flag Championships</title>
 	</programme>
@@ -1470,108 +1398,24 @@
 	<programme channel="NFL Network" start="20260727140000 +0800" stop="20260727150000 +0800">
 		<title lang="zh">NFL's Greatest Games: 2021 AFC Divisional Playoff: Buffalo Bills at Kansas City Chiefs</title>
 	</programme>
-	<programme channel="NFL Network" start="20260727150000 +0800" stop="20260728000000 +0800">
+	<programme channel="NFL Network" start="20260727150000 +0800" stop="20260727160000 +0800">
 		<title lang="zh">NFL's Greatest Games: Super Bowl LVI: Cincinnati Bengals vs. Los Angeles Rams</title>
+	</programme>
+	<programme channel="NFL Network" start="20260727160000 +0800" stop="20260727170000 +0800">
+		<title lang="zh">NFL's Greatest Games: 2022 AFC Championship: Cincinnati Bengals vs. Kansas City Chiefs</title>
+	</programme>
+	<programme channel="NFL Network" start="20260727170000 +0800" stop="20260727180000 +0800">
+		<title lang="zh">NFL's Greatest Games: Super Bowl LVII: Kansas City Chiefs vs. Philadelphia Eagles</title>
+	</programme>
+	<programme channel="NFL Network" start="20260727180000 +0800" stop="20260727190000 +0800">
+		<title lang="zh">NFL's Greatest Games: Super Bowl LVIII: San Francisco 49ers vs. Kansas City Chiefs</title>
+	</programme>
+	<programme channel="NFL Network" start="20260727190000 +0800" stop="20260728000000 +0800">
+		<title lang="zh">2026 NFL Flag Championships</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260725000000 +0800" stop="20260725003000 +0800">
-		<title lang="zh">Breakaway: Women in Polo</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725003000 +0800" stop="20260725005500 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725005500 +0800" stop="20260725030000 +0800">
-		<title lang="zh">⋗ Ekstraklasa Soccer: Radomiak Radom vs. Wieczysta Kraków. Ekstraklasa Soccer (Stadion im. Braci Cza</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725030000 +0800" stop="20260725032500 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725032500 +0800" stop="20260725053000 +0800">
-		<title lang="zh">⋗ Ekstraklasa Soccer: Pogon Szczecin vs. Legia Warszawa. Ekstraklasa Soccer (Stadion Miejski w Szcze</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725053000 +0800" stop="20260725060000 +0800">
-		<title lang="zh">UIPM Modern Pentathlon Highlights: World Cup: Bulgaria</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725060000 +0800" stop="20260725070000 +0800">
-		<title lang="zh">X-Games Reaction Sports: March 2026</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725070000 +0800" stop="20260725080000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Stop 2 from Hollywood Beach</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725080000 +0800" stop="20260725090000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725090000 +0800" stop="20260725093000 +0800">
-		<title lang="zh">F1H20 Presesason Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725093000 +0800" stop="20260725100000 +0800">
-		<title lang="zh">Powerboat Racing Highlights: Grand Prix of Italy</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725100000 +0800" stop="20260725103000 +0800">
-		<title lang="zh">Breakaway: Women in Polo</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725103000 +0800" stop="20260725110000 +0800">
-		<title lang="zh">T100 Triathlon World Tour: San Francisco</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725110000 +0800" stop="20260725120000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Hollywood Beach</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725120000 +0800" stop="20260725123000 +0800">
-		<title lang="zh">The Knockout Room: Best of 2025</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725123000 +0800" stop="20260725130000 +0800">
-		<title lang="zh">The Knockout Room: Best of 2025</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725130000 +0800" stop="20260725140000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: A New ERA Begins</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725140000 +0800" stop="20260725150000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Kross vs. Riddle II</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725150000 +0800" stop="20260725153000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur: Toulouse vs. Ulaanbaatar MMC Energy</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725153000 +0800" stop="20260725160000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725160000 +0800" stop="20260725163000 +0800">
-		<title lang="zh">F1H20 Presesason Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725163000 +0800" stop="20260725170000 +0800">
-		<title lang="zh">Powerboat Racing Highlights: Grand Prix of Italy</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725170000 +0800" stop="20260725180000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725180000 +0800" stop="20260725183000 +0800">
-		<title lang="zh">Polo: USPA Breakaway: Women in Polo</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725183000 +0800" stop="20260725190000 +0800">
-		<title lang="zh">T100 Triathlon World Tour: San Francisco Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725190000 +0800" stop="20260725200000 +0800">
-		<title lang="zh">Pro Footvolley Tour: Episode 29 – Footvolley Stars on Hollywood Beach</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725200000 +0800" stop="20260725203000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725203000 +0800" stop="20260725210000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725210000 +0800" stop="20260725220000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's First Semifinal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725220000 +0800" stop="20260725230000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Second Semifinal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725230000 +0800" stop="20260725233000 +0800">
-		<title lang="zh">Sailing to The Games</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260725233000 +0800" stop="20260726000000 +0800">
-		<title lang="zh">90 in 30: Copa Sudamericana 2026: Nacional vs. Tigre</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260726000000 +0800" stop="20260726002500 +0800">
 		<title lang="zh">Gearing Up</title>
 	</programme>
@@ -1710,7 +1554,25 @@
 	<programme channel="beIN SPORTS XTRA" start="20260727130000 +0800" stop="20260727150000 +0800">
 		<title lang="zh">Karate Combat 56</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260727150000 +0800" stop="20260728000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260727150000 +0800" stop="20260727160000 +0800">
 		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Semifinal C (Active City Arena, Hambur</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727160000 +0800" stop="20260727170000 +0800">
+		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Final</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727170000 +0800" stop="20260727173000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille: Toulouse vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727173000 +0800" stop="20260727180000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille: Barcelona vs. Raudondvaris Hoptrans</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727180000 +0800" stop="20260727183000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille: Fuengirola vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727183000 +0800" stop="20260727190000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille, Final: Raudondvaris Hoptrans vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260727190000 +0800" stop="20260728000000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: World-Class Footvolley from Hollywood Beach, Fla</title>
 	</programme>
 </tv>
