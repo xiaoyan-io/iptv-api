@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260728015227 +0800">
+<tv date="20260728082252 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260728000000 +0800" stop="20260728000800 +0800">
-		<title lang="zh">宗师列传大宋词人传张孝祥</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260728000800 +0800" stop="20260728003900 +0800">
 		<title lang="zh">今日说法</title>
@@ -105,20 +105,20 @@
 	<programme channel="CCTV-1" start="20260728193200 +0800" stop="20260728193800 +0800">
 		<title lang="zh">天气预报</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260728193800 +0800" stop="20260728200300 +0800">
+	<programme channel="CCTV-1" start="20260728193800 +0800" stop="20260728200100 +0800">
 		<title lang="zh">焦点访谈</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260728200300 +0800" stop="20260728205500 +0800">
+	<programme channel="CCTV-1" start="20260728200100 +0800" stop="20260728205600 +0800">
 		<title lang="zh">江海潮生(12)</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260728205500 +0800" stop="20260728214400 +0800">
+	<programme channel="CCTV-1" start="20260728205600 +0800" stop="20260728214500 +0800">
 		<title lang="zh">江海潮生(13)</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260728214400 +0800" stop="20260728215100 +0800">
+	<programme channel="CCTV-1" start="20260728214500 +0800" stop="20260728215200 +0800">
 		<title lang="zh">非遗里的中国MV</title>
 	</programme>
-	<programme channel="CCTV-1" start="20260728215100 +0800" stop="20260728220000 +0800">
-		<title lang="zh">三餐四季Ⅱ宣传片</title>
+	<programme channel="CCTV-1" start="20260728215200 +0800" stop="20260728220000 +0800">
+		<title lang="zh">三餐四季宣传片</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260728220000 +0800" stop="20260728223500 +0800">
 		<title lang="zh">晚间新闻</title>
@@ -631,7 +631,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260728000000 +0800" stop="20260728003100 +0800">
-		<title lang="zh">穿越欧洲自然奇境(3)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260728003100 +0800" stop="20260728012700 +0800">
 		<title lang="zh">虎的传承(1)</title>
