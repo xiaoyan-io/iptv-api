@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260730014756 +0800">
+<tv date="20260730081300 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260730000000 +0800" stop="20260730001600 +0800">
-		<title lang="zh">宗师列传大唐诗人传初唐四杰</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260730001600 +0800" stop="20260730004700 +0800">
 		<title lang="zh">今日说法</title>
@@ -1320,42 +1320,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260729010000 +0800" stop="20260729030000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729030000 +0800" stop="20260729053000 +0800">
-		<title lang="zh">NFL Football: 2025 NFC Wild Card: San Francisco 49ers vs. Philadelphia Eagles</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729053000 +0800" stop="20260729080000 +0800">
-		<title lang="zh">NFL Football: 2025 NFC Wild Card: Los Angeles Rams vs. Carolina Panthers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729080000 +0800" stop="20260729090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729090000 +0800" stop="20260729120000 +0800">
-		<title lang="zh">NFL Football: 2025 NFC Wild Card: Green Bay Packers vs. Chicago Bears</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729120000 +0800" stop="20260729130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729130000 +0800" stop="20260729160000 +0800">
-		<title lang="zh">NFL Football: 2025 AFC Wild Card: Houston Texans vs. Pittsburgh Steelers</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729160000 +0800" stop="20260729190000 +0800">
-		<title lang="zh">NFL Football: 2025 NFC Wild Card: San Francisco 49ers vs. Philadelphia Eagles</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729190000 +0800" stop="20260729200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729200000 +0800" stop="20260729210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729210000 +0800" stop="20260729230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260729230000 +0800" stop="20260730010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260730010000 +0800" stop="20260730030000 +0800">
 		<title lang="zh">Good Morning Football</title>
 	</programme>
@@ -1515,96 +1479,15 @@
 	<programme channel="NFL Network" start="20260803030000 +0800" stop="20260803070000 +0800">
 		<title lang="zh">Back Together Weekend</title>
 	</programme>
-	<programme channel="NFL Network" start="20260803070000 +0800" stop="20260804000000 +0800">
+	<programme channel="NFL Network" start="20260803070000 +0800" stop="20260803110000 +0800">
+		<title lang="zh">Back Together Weekend</title>
+	</programme>
+	<programme channel="NFL Network" start="20260803110000 +0800" stop="20260804000000 +0800">
 		<title lang="zh">Back Together Weekend</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260729000000 +0800" stop="20260729003000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729003000 +0800" stop="20260729010000 +0800">
-		<title lang="zh">Going Pro</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729010000 +0800" stop="20260729013000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729013000 +0800" stop="20260729015000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729015000 +0800" stop="20260729040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Zambia vs. Egypt (Prince Moulay Abdellah Olympic Annex Stadium</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729040000 +0800" stop="20260729050000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Men's Second Semifinal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729050000 +0800" stop="20260729070000 +0800">
-		<title lang="zh">Archery: World Cup, Mixed Team Finals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729070000 +0800" stop="20260729073000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Zadar, Final: Amsterdamn Rabobank vs. Miami</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729073000 +0800" stop="20260729080000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Shanghai, Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729080000 +0800" stop="20260729090000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Men's Second Semifinal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729090000 +0800" stop="20260729100000 +0800">
-		<title lang="zh">GT World Challenge America: Road Atlanta (Road Atlanta, Braselton, GA, USA)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729100000 +0800" stop="20260729103000 +0800">
-		<title lang="zh">Gearing Up</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729103000 +0800" stop="20260729110000 +0800">
-		<title lang="zh">Going Pro</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729110000 +0800" stop="20260729113000 +0800">
-		<title lang="zh">The Sports Rundown</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729113000 +0800" stop="20260729120000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729120000 +0800" stop="20260729123000 +0800">
-		<title lang="zh">90 in 30: Copa Sudamericana 2026: Santos vs. Universidad Central</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729123000 +0800" stop="20260729130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729130000 +0800" stop="20260729150000 +0800">
-		<title lang="zh">Supreme Fight Night 9</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729150000 +0800" stop="20260729153000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Zadar, Final: Amsterdamn Rabobank vs. Miami</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729153000 +0800" stop="20260729160000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Shanghai, Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729160000 +0800" stop="20260729170000 +0800">
-		<title lang="zh">GT World Challenge America: Road Atlanta (Road Atlanta, Braselton, GA, USA)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729170000 +0800" stop="20260729190000 +0800">
-		<title lang="zh">Archery: World Cup, Mixed Team Finals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729190000 +0800" stop="20260729200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Stop 4 from Hollywood Beach</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729200000 +0800" stop="20260729203000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729203000 +0800" stop="20260729210000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729210000 +0800" stop="20260729230000 +0800">
-		<title lang="zh">Premier Padel Tennis: Bordeaux, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729230000 +0800" stop="20260729233000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Le Castellet – Race</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260729233000 +0800" stop="20260730000000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Road to Le Mans</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260730000000 +0800" stop="20260730003000 +0800">
 		<title lang="zh">Gearing Up</title>
 	</programme>
@@ -2001,7 +1884,10 @@
 	<programme channel="beIN SPORTS XTRA" start="20260803083000 +0800" stop="20260803090000 +0800">
 		<title lang="zh">2026 FIBA 3x3 World Cup: United States vs. Poland</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260803090000 +0800" stop="20260804000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260803090000 +0800" stop="20260803110000 +0800">
 		<title lang="zh">Copa Sudamericana Soccer: Vasco da Gama vs. Independiente Medellín (Estádio São Januário, Rio de Jan</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260803110000 +0800" stop="20260804000000 +0800">
+		<title lang="zh">Copa Sudamericana Soccer: O'Higgins vs. Boca Juniors (Estadio El Teniente, Cachapoal, CHL)</title>
 	</programme>
 </tv>
