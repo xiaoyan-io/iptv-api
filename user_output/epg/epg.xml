@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260804192317 +0800">
+<tv date="20260805015152 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1350,39 +1350,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260804000000 +0800" stop="20260804010000 +0800">
-		<title lang="zh">NFL Mic'd Up: Super Bowl LX</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804010000 +0800" stop="20260804030000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804030000 +0800" stop="20260804060000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804060000 +0800" stop="20260804090000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804090000 +0800" stop="20260804120000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804120000 +0800" stop="20260804130000 +0800">
-		<title lang="zh">Local Programming</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804130000 +0800" stop="20260804160000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804160000 +0800" stop="20260804170000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804170000 +0800" stop="20260804200000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804200000 +0800" stop="20260804230000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260804230000 +0800" stop="20260805000000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
 	<programme channel="NFL Network" start="20260805000000 +0800" stop="20260805010000 +0800">
 		<title lang="zh">The Insiders</title>
 	</programme>
@@ -1569,90 +1536,6 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260804010000 +0800" stop="20260804030000 +0800">
-		<title lang="zh">Premier Padel Tennis: Malaga, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804030000 +0800" stop="20260804040000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804040000 +0800" stop="20260804043000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Road to Le Mans</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804043000 +0800" stop="20260804045000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804045000 +0800" stop="20260804070000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Kenya vs. Algeria (Prince Moulay Abdellah Olympic Annex Stadiu</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804070000 +0800" stop="20260804073000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, First Quarterfinal: Teams TBA</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804073000 +0800" stop="20260804080000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, Second Quarterfinal: Teams TBA</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804080000 +0800" stop="20260804083000 +0800">
-		<title lang="zh">T100 Triathlon World Tour: Gold Coast</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804083000 +0800" stop="20260804090000 +0800">
-		<title lang="zh">Sailing to the Games</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804090000 +0800" stop="20260804100000 +0800">
-		<title lang="zh">GT World Challenge Europe: Circuit Paul Ricard, France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804100000 +0800" stop="20260804110000 +0800">
-		<title lang="zh">Auto Racing: Porsche Carrera Cup Germany: Imola, Race 1 (Autodromo Enzo e Dino Ferrari, Imola, Emili</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804110000 +0800" stop="20260804113000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804113000 +0800" stop="20260804120000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804120000 +0800" stop="20260804123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804123000 +0800" stop="20260804130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804130000 +0800" stop="20260804140000 +0800">
-		<title lang="zh">2026 World Taekwondo Grand Prix Series: Rome, Men's -68Kg</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804140000 +0800" stop="20260804150000 +0800">
-		<title lang="zh">2026 World Taekwondo Grand Prix Series: Rome, Men's +80Kg</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804150000 +0800" stop="20260804153000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, First Quarterfinal: Teams TBA</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804153000 +0800" stop="20260804160000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, Second Quarterfinal: Teams TBA</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804160000 +0800" stop="20260804170000 +0800">
-		<title lang="zh">GT World Challenge Europe: Circuit Paul Ricard, France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804170000 +0800" stop="20260804190000 +0800">
-		<title lang="zh">Premier Padel Tennis: Malaga, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804190000 +0800" stop="20260804200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Episode 39 – Stop 7</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804200000 +0800" stop="20260804203000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804203000 +0800" stop="20260804210000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804210000 +0800" stop="20260804220000 +0800">
-		<title lang="zh">GT World Challenge Europe: Brands Hatch, Great Britain</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804220000 +0800" stop="20260804230000 +0800">
-		<title lang="zh">Auto Racing: Porsche Carrera Cup Germany: Imola, Race 2 (Autodromo Enzo e Dino Ferrari, Imola, Emili</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804230000 +0800" stop="20260804233000 +0800">
-		<title lang="zh">Mass Participation: Ibiza Marathon</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260804233000 +0800" stop="20260805050000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: London, First Round</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260805050000 +0800" stop="20260805070000 +0800">
 		<title lang="zh">Archery: World Cup, Mixed Team Finals</title>
 	</programme>
@@ -2034,7 +1917,13 @@
 	<programme channel="beIN SPORTS XTRA" start="20260810070000 +0800" stop="20260810073000 +0800">
 		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, First Quarterfinal: Teams TBA</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260810073000 +0800" stop="20260811000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260810073000 +0800" stop="20260810080000 +0800">
 		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, Second Quarterfinal: Teams TBA</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810080000 +0800" stop="20260810090000 +0800">
+		<title lang="zh">Copa Libertadores Highlights: Matchday 5</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810090000 +0800" stop="20260811000000 +0800">
+		<title lang="zh">Copa Sudamericana: Highlights: Matchday 5</title>
 	</programme>
 </tv>
