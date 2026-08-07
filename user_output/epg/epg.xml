@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260806235451 +0800">
+<tv date="20260807021559 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260807000000 +0800" stop="20260807001100 +0800">
-		<title lang="zh">宗师列传大唐诗人传李商隐</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260807001100 +0800" stop="20260807004200 +0800">
 		<title lang="zh">今日说法</title>
@@ -1377,42 +1377,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260806000000 +0800" stop="20260806010000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806010000 +0800" stop="20260806030000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806030000 +0800" stop="20260806060000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806060000 +0800" stop="20260806090000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806090000 +0800" stop="20260806110000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806110000 +0800" stop="20260806120000 +0800">
-		<title lang="zh">NFL Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806120000 +0800" stop="20260806130000 +0800">
-		<title lang="zh">Local Programming</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806130000 +0800" stop="20260806160000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806160000 +0800" stop="20260806170000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806170000 +0800" stop="20260806200000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806200000 +0800" stop="20260806230000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260806230000 +0800" stop="20260807000000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
 	<programme channel="NFL Network" start="20260807000000 +0800" stop="20260807010000 +0800">
 		<title lang="zh">The Insiders</title>
 	</programme>
@@ -1530,81 +1494,6 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260806050000 +0800" stop="20260806060000 +0800">
-		<title lang="zh">Archery World Cup: 2026 Stage 4: Compound Team Finals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806060000 +0800" stop="20260806070000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806070000 +0800" stop="20260806073000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Netherlands vs. Australia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806073000 +0800" stop="20260806080000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Azerbaijan vs. United States</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806080000 +0800" stop="20260806083000 +0800">
-		<title lang="zh">T100 Triathlon World Tour Highlights: Spain</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806083000 +0800" stop="20260806090000 +0800">
-		<title lang="zh">Sailing to The Games</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806090000 +0800" stop="20260806100000 +0800">
-		<title lang="zh">GT World Challenge Europe: Monza Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806100000 +0800" stop="20260806110000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring: Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806110000 +0800" stop="20260806113000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806113000 +0800" stop="20260806120000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806120000 +0800" stop="20260806123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806123000 +0800" stop="20260806130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806130000 +0800" stop="20260806150000 +0800">
-		<title lang="zh">BRAVE CF 98</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806150000 +0800" stop="20260806153000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Netherlands vs. Australia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806153000 +0800" stop="20260806160000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Azerbaijan vs. United States</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806160000 +0800" stop="20260806170000 +0800">
-		<title lang="zh">GT World Challenge Europe: Monza Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806170000 +0800" stop="20260806180000 +0800">
-		<title lang="zh">Archery World Cup: 2026 Stage 4: Compound Team Finals</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806180000 +0800" stop="20260806190000 +0800">
-		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Men's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806190000 +0800" stop="20260806200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: All-Star Footvolley</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806200000 +0800" stop="20260806203000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806203000 +0800" stop="20260806210000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806210000 +0800" stop="20260806220000 +0800">
-		<title lang="zh">GT World Challenge Europe: SPA Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806220000 +0800" stop="20260806230000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring: Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806230000 +0800" stop="20260806233000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260806233000 +0800" stop="20260807050000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: London, Round of 16</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260807050000 +0800" stop="20260807070000 +0800">
 		<title lang="zh">Archery: 2026 Pan American Archery Championships (Recurve)</title>
 	</programme>
@@ -1851,7 +1740,13 @@
 	<programme channel="beIN SPORTS XTRA" start="20260810100000 +0800" stop="20260810110000 +0800">
 		<title lang="zh">Copa Libertadores Highlights: Matchday 6</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260810110000 +0800" stop="20260811000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260810110000 +0800" stop="20260810120000 +0800">
 		<title lang="zh">Copa Sudamericana: Highlights: Matchday 6</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810120000 +0800" stop="20260810123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810123000 +0800" stop="20260811000000 +0800">
+		<title lang="zh">The Knockout Room</title>
 	</programme>
 </tv>
