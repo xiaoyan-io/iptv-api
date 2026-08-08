@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260807184526 +0800">
+<tv date="20260808010348 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1302,107 +1302,104 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260807000000 +0800" stop="20260807010000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807010000 +0800" stop="20260807030000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807030000 +0800" stop="20260807060000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807060000 +0800" stop="20260807090000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807090000 +0800" stop="20260807110000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807110000 +0800" stop="20260807120000 +0800">
-		<title lang="zh">NFL Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807120000 +0800" stop="20260807130000 +0800">
-		<title lang="zh">Local Programming</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807130000 +0800" stop="20260807140000 +0800">
-		<title lang="zh">The Hall of Fame Knocks: Class of 2026</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807140000 +0800" stop="20260807150000 +0800">
-		<title lang="zh">Pro Football Hall of Fame: New Class</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807150000 +0800" stop="20260807160000 +0800">
-		<title lang="zh">America's Game: 2001 New England Patriots</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807160000 +0800" stop="20260807170000 +0800">
-		<title lang="zh">⋗ NFL GameDay Final</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807170000 +0800" stop="20260807200000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807200000 +0800" stop="20260807230000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260807230000 +0800" stop="20260808000000 +0800">
-		<title lang="zh">The Hall of Fame Knocks: Class of 2026</title>
-	</programme>
 	<programme channel="NFL Network" start="20260808000000 +0800" stop="20260808010000 +0800">
 		<title lang="zh">Pro Football Hall of Fame: New Class</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808010000 +0800" stop="20260808030000 +0800">
+	<programme channel="NFL Network" start="20260808010000 +0800" stop="20260808020000 +0800">
 		<title lang="zh">⋗ Good Morning Football</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808030000 +0800" stop="20260808060000 +0800">
+	<programme channel="NFL Network" start="20260808020000 +0800" stop="20260808030000 +0800">
 		<title lang="zh">⋗ Inside Training Camp</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808060000 +0800" stop="20260808090000 +0800">
+	<programme channel="NFL Network" start="20260808030000 +0800" stop="20260808050000 +0800">
 		<title lang="zh">⋗ Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808050000 +0800" stop="20260808060000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808060000 +0800" stop="20260808080000 +0800">
+		<title lang="zh">⋗ Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808080000 +0800" stop="20260808090000 +0800">
+		<title lang="zh">⋗ The Insiders</title>
 	</programme>
 	<programme channel="NFL Network" start="20260808090000 +0800" stop="20260808120000 +0800">
-		<title lang="zh">Inside Training Camp</title>
+		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
 	</programme>
 	<programme channel="NFL Network" start="20260808120000 +0800" stop="20260808130000 +0800">
-		<title lang="zh">Local Programming</title>
-	</programme>
-	<programme channel="NFL Network" start="20260808130000 +0800" stop="20260808160000 +0800">
-		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
-	</programme>
-	<programme channel="NFL Network" start="20260808160000 +0800" stop="20260808170000 +0800">
 		<title lang="zh">The Insiders</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808170000 +0800" stop="20260808200000 +0800">
+	<programme channel="NFL Network" start="20260808130000 +0800" stop="20260808160000 +0800">
 		<title lang="zh">Inside Training Camp</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808200000 +0800" stop="20260808230000 +0800">
+	<programme channel="NFL Network" start="20260808160000 +0800" stop="20260808170000 +0800">
 		<title lang="zh">Inside Training Camp</title>
 	</programme>
-	<programme channel="NFL Network" start="20260808230000 +0800" stop="20260809020000 +0800">
+	<programme channel="NFL Network" start="20260808170000 +0800" stop="20260808190000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808190000 +0800" stop="20260808200000 +0800">
 		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
 	</programme>
-	<programme channel="NFL Network" start="20260809020000 +0800" stop="20260809050000 +0800">
+	<programme channel="NFL Network" start="20260808200000 +0800" stop="20260808220000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808220000 +0800" stop="20260808230000 +0800">
 		<title lang="zh">⋗ Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260808230000 +0800" stop="20260809010000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260809010000 +0800" stop="20260809020000 +0800">
+		<title lang="zh">⋗ 2026 Pro Football Hall of Fame Enshrinement Ceremony</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809020000 +0800" stop="20260809033000 +0800">
+		<title lang="zh">⋗ Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809033000 +0800" stop="20260809043000 +0800">
+		<title lang="zh">Pro Football Hall of Fame: New Class</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809043000 +0800" stop="20260809050000 +0800">
+		<title lang="zh">Inside Training Camp</title>
 	</programme>
 	<programme channel="NFL Network" start="20260809050000 +0800" stop="20260809073000 +0800">
 		<title lang="zh">⋗ 2026 Pro Football Hall of Fame Enshrinement Ceremony</title>
 	</programme>
 	<programme channel="NFL Network" start="20260809073000 +0800" stop="20260809083000 +0800">
-		<title lang="zh">Pro Football Hall of Fame: New Class</title>
-	</programme>
-	<programme channel="NFL Network" start="20260809083000 +0800" stop="20260809113000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260809113000 +0800" stop="20260809143000 +0800">
-		<title lang="zh">Local Programming</title>
-	</programme>
-	<programme channel="NFL Network" start="20260809143000 +0800" stop="20260809170000 +0800">
-		<title lang="zh">2026 Pro Football Hall of Fame Enshrinement Ceremony</title>
-	</programme>
-	<programme channel="NFL Network" start="20260809170000 +0800" stop="20260809200000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260809200000 +0800" stop="20260809230000 +0800">
 		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
 	</programme>
-	<programme channel="NFL Network" start="20260809230000 +0800" stop="20260810020000 +0800">
+	<programme channel="NFL Network" start="20260809083000 +0800" stop="20260809103000 +0800">
 		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809103000 +0800" stop="20260809113000 +0800">
+		<title lang="zh">2026 Pro Football Hall of Fame Enshrinement Ceremony</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809113000 +0800" stop="20260809130000 +0800">
+		<title lang="zh">Local Programming</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809130000 +0800" stop="20260809143000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809143000 +0800" stop="20260809160000 +0800">
+		<title lang="zh">2026 Pro Football Hall of Fame Enshrinement Ceremony</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809160000 +0800" stop="20260809170000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260809170000 +0800" stop="20260809190000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809190000 +0800" stop="20260809200000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809200000 +0800" stop="20260809220000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers vs. Arizona Cardinals (Tom Benson Hall of Fame Stadium, Canton, OH, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260809220000 +0800" stop="20260809230000 +0800">
+		<title lang="zh">Pro Football Hall of Fame: New Class</title>
+	</programme>
+	<programme channel="NFL Network" start="20260809230000 +0800" stop="20260810020000 +0800">
+		<title lang="zh">⋗ Inside Training Camp</title>
 	</programme>
 	<programme channel="NFL Network" start="20260810020000 +0800" stop="20260810030000 +0800">
 		<title lang="zh">Pro Football Hall of Fame: New Class</title>
@@ -1413,84 +1410,15 @@
 	<programme channel="NFL Network" start="20260810070000 +0800" stop="20260810110000 +0800">
 		<title lang="zh">Inside Training Camp</title>
 	</programme>
-	<programme channel="NFL Network" start="20260810110000 +0800" stop="20260811000000 +0800">
-		<title lang="zh">Local Programming</title>
+	<programme channel="NFL Network" start="20260810110000 +0800" stop="20260810150000 +0800">
+		<title lang="zh">Inside Training Camp</title>
+	</programme>
+	<programme channel="NFL Network" start="20260810150000 +0800" stop="20260811000000 +0800">
+		<title lang="zh">Inside Training Camp</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260807050000 +0800" stop="20260807070000 +0800">
-		<title lang="zh">Archery: 2026 Pan American Archery Championships (Recurve)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807070000 +0800" stop="20260807073000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Serbia vs. Latvia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807073000 +0800" stop="20260807080000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Men's First Semifinal: Germany vs. France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807080000 +0800" stop="20260807083000 +0800">
-		<title lang="zh">T100 Triathlon World Tour: San Francisco</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807083000 +0800" stop="20260807090000 +0800">
-		<title lang="zh">Surfing: SFT Surf Foil World Cup Tour</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807090000 +0800" stop="20260807100000 +0800">
-		<title lang="zh">GT World Challenge Europe: SPA Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807100000 +0800" stop="20260807110000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring: Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807110000 +0800" stop="20260807113000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807113000 +0800" stop="20260807120000 +0800">
-		<title lang="zh">Inside Sailing</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807120000 +0800" stop="20260807123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807123000 +0800" stop="20260807130100 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807130100 +0800" stop="20260807150000 +0800">
-		<title lang="zh">BRAVE CF: Georgia vs. The World</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807150000 +0800" stop="20260807153000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Serbia vs. Latvia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807153000 +0800" stop="20260807160000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Men's First Semifinal: Germany vs. France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807160000 +0800" stop="20260807170000 +0800">
-		<title lang="zh">GT World Challenge Europe: SPA Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807170000 +0800" stop="20260807190000 +0800">
-		<title lang="zh">Archery: 2026 Pan American Archery Championships (Recurve)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807190000 +0800" stop="20260807200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: All-Star Footvolley</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807200000 +0800" stop="20260807203000 +0800">
-		<title lang="zh">Outdoor Sports Show</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807203000 +0800" stop="20260807210000 +0800">
-		<title lang="zh">Sailing to the Games</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807210000 +0800" stop="20260807220000 +0800">
-		<title lang="zh">GT World Challenge Europe: Misano Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807220000 +0800" stop="20260807223000 +0800">
-		<title lang="zh">Porsche Carrera Cup Germany Highlights: Spa</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807223000 +0800" stop="20260807230000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807230000 +0800" stop="20260807233000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260807233000 +0800" stop="20260808050000 +0800">
-		<title lang="zh">⋗ Premier Padel Tennis: London, Quarterfinal</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260808050000 +0800" stop="20260808070000 +0800">
 		<title lang="zh">Canoeing: ICF Sprint World Cup, Canada</title>
 	</programme>
@@ -1567,7 +1495,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260809015000 +0800" stop="20260809040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Quarterfinal: Teams TBA (Prince Héritier Moulay El-Hassan Spor</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Morocco vs. South Africa (Prince Héritier Moulay El-Hassan Spo</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260809040000 +0800" stop="20260809043000 +0800">
 		<title lang="zh">90 in 30: Club Friendly 2026: Birmingham City vs. FC Barcelona</title>
@@ -1576,7 +1504,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260809045000 +0800" stop="20260809070000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Quarterfinal: Teams TBA (Prince Héritier Moulay El-Hassan Spor</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Morocco vs. South Africa (Prince Héritier Moulay El-Hassan Spo</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260809070000 +0800" stop="20260809073000 +0800">
 		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, First Quarterfinal: Teams TBA</title>
@@ -1639,7 +1567,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260810015000 +0800" stop="20260810040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Quarterfinal: Teams TBA (Prince Héritier Moulay El-Hassan Spor</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Morocco vs. South Africa (Prince Héritier Moulay El-Hassan Spo</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260810040000 +0800" stop="20260810043000 +0800">
 		<title lang="zh">90 in 30: Club Friendly 2026-27: Sporting CP vs. Strasbourg</title>
@@ -1648,7 +1576,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260810045000 +0800" stop="20260810070000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Quarterfinal: Teams TBA (Prince Héritier Moulay El-Hassan Spor</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Morocco vs. South Africa (Prince Héritier Moulay El-Hassan Spo</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260810070000 +0800" stop="20260810073000 +0800">
 		<title lang="zh">2026 FIBA 3x3 World Cup: Poland, First Quarterfinal: Teams TBA</title>
@@ -1671,7 +1599,13 @@
 	<programme channel="beIN SPORTS XTRA" start="20260810120000 +0800" stop="20260810123000 +0800">
 		<title lang="zh">The Knockout Room</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260810123000 +0800" stop="20260811000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260810123000 +0800" stop="20260810130000 +0800">
 		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810130000 +0800" stop="20260810150000 +0800">
+		<title lang="zh">BRAVE CF</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260810150000 +0800" stop="20260811000000 +0800">
+		<title lang="zh">Skateboarding: Jackalope, Women's Final</title>
 	</programme>
 </tv>
