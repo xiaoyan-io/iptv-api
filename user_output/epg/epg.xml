@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260809010731 +0800">
+<tv date="20260809064345 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -601,13 +601,19 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260809000000 +0800" stop="20260809003100 +0800">
-		<title lang="zh">瀑布狒狒帮(4)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260809003100 +0800" stop="20260809012700 +0800">
 		<title lang="zh">生存绝技(6)</title>
 	</programme>
-	<programme channel="CCTV-9" start="20260809012700 +0800" stop="20260809022300 +0800">
+	<programme channel="CCTV-9" start="20260809012700 +0800" stop="20260809020900 +0800">
 		<title lang="zh">地球劫后重生(6)</title>
+	</programme>
+	<programme channel="CCTV-9" start="20260809020900 +0800" stop="20260809021400 +0800">
+		<title lang="zh">神奇生物在哪里</title>
+	</programme>
+	<programme channel="CCTV-9" start="20260809021400 +0800" stop="20260809022300 +0800">
+		<title lang="zh">国家公园小小世界(6)</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260809022300 +0800" stop="20260809025300 +0800">
 		<title lang="zh">地球宝藏(2)</title>
@@ -633,8 +639,14 @@
 	<programme channel="CCTV-9" start="20260809054600 +0800" stop="20260809064700 +0800">
 		<title lang="zh">生存绝技(6)</title>
 	</programme>
-	<programme channel="CCTV-9" start="20260809064700 +0800" stop="20260809074300 +0800">
+	<programme channel="CCTV-9" start="20260809064700 +0800" stop="20260809073000 +0800">
 		<title lang="zh">地球劫后重生(6)</title>
+	</programme>
+	<programme channel="CCTV-9" start="20260809073000 +0800" stop="20260809073500 +0800">
+		<title lang="zh">神奇生物在哪里</title>
+	</programme>
+	<programme channel="CCTV-9" start="20260809073500 +0800" stop="20260809074300 +0800">
+		<title lang="zh">国家公园小小世界(6)</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260809074300 +0800" stop="20260809075900 +0800">
 		<title lang="zh">重生技(6)</title>
