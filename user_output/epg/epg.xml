@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260812011711 +0800">
+<tv date="20260812071613 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260812000000 +0800" stop="20260812001400 +0800">
-		<title lang="zh">宗师列传大唐诗人传王昌龄</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260812001400 +0800" stop="20260812004500 +0800">
 		<title lang="zh">今日说法</title>
