@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260813011827 +0800">
+<tv date="20260813071735 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260813000000 +0800" stop="20260813000200 +0800">
-		<title lang="zh">宗师列传大唐诗人传李白</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260813000200 +0800" stop="20260813003300 +0800">
 		<title lang="zh">今日说法</title>
@@ -661,7 +661,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260813000000 +0800" stop="20260813003100 +0800">
-		<title lang="zh">隐秘的野生王国(2)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260813003100 +0800" stop="20260813012700 +0800">
 		<title lang="zh">大猫传奇(1)</title>
