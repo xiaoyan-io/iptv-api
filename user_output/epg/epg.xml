@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260813185359 +0800">
+<tv date="20260814011710 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1341,42 +1341,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260813020000 +0800" stop="20260813050000 +0800">
-		<title lang="zh">⋗ Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813050000 +0800" stop="20260813070000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813070000 +0800" stop="20260813080000 +0800">
-		<title lang="zh">NFL Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813080000 +0800" stop="20260813090000 +0800">
-		<title lang="zh">⋗ The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813090000 +0800" stop="20260813120000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813120000 +0800" stop="20260813130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813130000 +0800" stop="20260813160000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813160000 +0800" stop="20260813190000 +0800">
-		<title lang="zh">Inside Training Camp</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813190000 +0800" stop="20260813200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813200000 +0800" stop="20260813210000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813210000 +0800" stop="20260813230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260813230000 +0800" stop="20260814010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260814010000 +0800" stop="20260814030000 +0800">
 		<title lang="zh">Good Morning Football</title>
 	</programme>
@@ -1423,7 +1387,7 @@
 		<title lang="zh">⋗ NFL GameDay Kickoff</title>
 	</programme>
 	<programme channel="NFL Network" start="20260815080000 +0800" stop="20260815110000 +0800">
-		<title lang="zh">NFL Network</title>
+		<title lang="zh">⋗ NFL Football: Tampa Bay Buccaneers at New York Jets (MetLife Stadium, East Rutherford, NJ, USA)</title>
 	</programme>
 	<programme channel="NFL Network" start="20260815110000 +0800" stop="20260815120000 +0800">
 		<title lang="zh">⋗ NFL GameDay Final</title>
@@ -1453,7 +1417,7 @@
 		<title lang="zh">⋗ NFL Football: Los Angeles Rams at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City</title>
 	</programme>
 	<programme channel="NFL Network" start="20260816080000 +0800" stop="20260816090000 +0800">
-		<title lang="zh">NFL Network</title>
+		<title lang="zh">⋗ NFL GameDay Kickoff</title>
 	</programme>
 	<programme channel="NFL Network" start="20260816090000 +0800" stop="20260816120000 +0800">
 		<title lang="zh">⋗ NFL Football: Dallas Cowboys at Seattle Seahawks (Lumen Field, Seattle, WA, USA)</title>
@@ -1480,92 +1444,17 @@
 		<title lang="zh">NFL Football: Dallas Cowboys at Seattle Seahawks (Lumen Field, Seattle, WA, USA)</title>
 	</programme>
 	<programme channel="NFL Network" start="20260817070000 +0800" stop="20260817100000 +0800">
-		<title lang="zh">NFL Network</title>
+		<title lang="zh">NFL Football: Cleveland Browns at Chicago Bears (Soldier Field, Chicago, IL, USA)</title>
 	</programme>
-	<programme channel="NFL Network" start="20260817100000 +0800" stop="20260818000000 +0800">
+	<programme channel="NFL Network" start="20260817100000 +0800" stop="20260817130000 +0800">
 		<title lang="zh">NFL Football: Arizona Cardinals at Las Vegas Raiders (Allegiant Stadium, Las Vegas, NV, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260817130000 +0800" stop="20260818000000 +0800">
+		<title lang="zh">NFL Football: Los Angeles Rams at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, </title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260813000000 +0800" stop="20260813010000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring, Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813010000 +0800" stop="20260813013000 +0800">
-		<title lang="zh">FEI Ride</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813013000 +0800" stop="20260813015000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813015000 +0800" stop="20260813040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Semifinal: Teams TBA (Prince Moulay Abdellah Olympic Annex Sta</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813040000 +0800" stop="20260813050000 +0800">
-		<title lang="zh">Archery Highlights: European Championships Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813050000 +0800" stop="20260813053000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Serbia vs. Latvia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813053000 +0800" stop="20260813060000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Men's First Semifinal: Germany vs. France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813060000 +0800" stop="20260813063000 +0800">
-		<title lang="zh">Nedbank Gravel Burn 2025: Stage 5</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813063000 +0800" stop="20260813065000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813065000 +0800" stop="20260813090000 +0800">
-		<title lang="zh">⋗ Copa Libertadores Soccer: Platense vs. Coquimbo Unido (Estadio Ciudad de Vicente López, Buenos Air</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813090000 +0800" stop="20260813093000 +0800">
-		<title lang="zh">ABSA Cape Epic: Stage 5</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813093000 +0800" stop="20260813113000 +0800">
-		<title lang="zh">Men's International Soccer Friendlies</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813113000 +0800" stop="20260813120000 +0800">
-		<title lang="zh">FEI Ride</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813120000 +0800" stop="20260813123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813123000 +0800" stop="20260813130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813130000 +0800" stop="20260813150000 +0800">
-		<title lang="zh">BRAVE – MMA: Origin of UFC Warriors</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813150000 +0800" stop="20260813153000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Serbia vs. Latvia</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813153000 +0800" stop="20260813160000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Men's First Semifinal: Germany vs. France</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813160000 +0800" stop="20260813170000 +0800">
-		<title lang="zh">Ferrari Challenge Racing Series: Suzuka</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813170000 +0800" stop="20260813180000 +0800">
-		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring, Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813180000 +0800" stop="20260813190000 +0800">
-		<title lang="zh">Archery Highlights: European Championships Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813190000 +0800" stop="20260813200000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Stop 2 from Hollywood Beach</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813200000 +0800" stop="20260813203000 +0800">
-		<title lang="zh">ABSA Cape Epic: Stage 6</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813203000 +0800" stop="20260813210000 +0800">
-		<title lang="zh">Nedbank Gravel Burn 2025: Stage 6</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813210000 +0800" stop="20260813230000 +0800">
-		<title lang="zh">Premier Padel Tennis: London, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260813230000 +0800" stop="20260814000000 +0800">
-		<title lang="zh">Ferrari Challenge Racing Series: Suzuka</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260814000000 +0800" stop="20260814010000 +0800">
 		<title lang="zh">Porsche Carrera Cup Series: Red Bull Ring, Race 2</title>
 	</programme>
@@ -1576,7 +1465,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260814015000 +0800" stop="20260814040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Play-in: Teams TBA (Moulay Rachid Stadium, Casablanca, MAR)</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Côte d'Ivoire vs. Ghana (Stade Larbi Zaouli, Casablanca, MAR)</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260814040000 +0800" stop="20260814043000 +0800">
 		<title lang="zh">Canoe Highlights: ICF Slalom World Cup: Stzeged, Hungary</title>
@@ -1756,7 +1645,7 @@
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816015000 +0800" stop="20260816040000 +0800">
-		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Third-place play-off: Teams TBA (Prince Moulay Abdellah Olympi</title>
+		<title lang="zh">⋗ 2026 Women's Africa Cup of Nations: Morocco vs. Algeria (Prince Moulay Abdellah Olympic Annex Stad</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816040000 +0800" stop="20260816050000 +0800">
 		<title lang="zh">Bentonville Bike Fest: Red Bull Double Down</title>
@@ -1780,10 +1669,10 @@
 		<title lang="zh">FIBA 3x3 Asia Cup 2026: Women's. Australia vs. Phillippines</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816080000 +0800" stop="20260816100000 +0800">
-		<title lang="zh">Copa Sudamericana Soccer: Boca Juniors vs. Recoleta FC (La Bombonera, Buenos Aires, ARG)</title>
+		<title lang="zh">Copa Sudamericana Soccer: Boca Juniors vs. Recoleta FC (Estadio Tomás Adolfo Ducó, Buenos Aires, ARG</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816100000 +0800" stop="20260816120000 +0800">
-		<title lang="zh">Copa Sudamericana Soccer: Independiente Santa Fe vs. River Plate (Estadio Nemesio Camacho 'El Campín</title>
+		<title lang="zh">Men's International Soccer Friendlies</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816120000 +0800" stop="20260816123000 +0800">
 		<title lang="zh">The Knockout Room</title>
@@ -1851,8 +1740,11 @@
 	<programme channel="beIN SPORTS XTRA" start="20260817030000 +0800" stop="20260817031000 +0800">
 		<title lang="zh">Best of beIN Sports</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260817031000 +0800" stop="20260817051500 +0800">
-		<title lang="zh">⋗ Ekstraklasa Soccer: Wisla Plock vs. Lech Poznan. Ekstraklasa Soccer (Orlen Stadion, Plock, POL)</title>
+	<programme channel="beIN SPORTS XTRA" start="20260817031000 +0800" stop="20260817050000 +0800">
+		<title lang="zh">Taça de Portugal: FC Porto vs. Sporting CP (Estádio do Dragão, Norte, PRT)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817050000 +0800" stop="20260817051500 +0800">
+		<title lang="zh">Outdoor Sports Show</title>
 	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260817051500 +0800" stop="20260817053000 +0800">
 		<title lang="zh">Best of beIN Sports</title>
@@ -1875,7 +1767,16 @@
 	<programme channel="beIN SPORTS XTRA" start="20260817080000 +0800" stop="20260817100000 +0800">
 		<title lang="zh">Copa Libertadores Soccer: Palmeiras vs. Cerro Porteño (Nubank Parque, São Paulo, São Paulo, BRA)</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260817100000 +0800" stop="20260818000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260817100000 +0800" stop="20260817120000 +0800">
 		<title lang="zh">Men's Club Soccer Friendlies: Birmingham City vs. FC Barcelona (St. Andrew's @ Knighthead Park, Birm</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817120000 +0800" stop="20260817123000 +0800">
+		<title lang="zh">The Knockout Room: Best of 2025</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817123000 +0800" stop="20260817130000 +0800">
+		<title lang="zh">The Knockout Room: Best of 2025</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817130000 +0800" stop="20260818000000 +0800">
+		<title lang="zh">BRAVE CF: Banger Alert, Part 1</title>
 	</programme>
 </tv>
