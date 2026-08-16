@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260815181907 +0800">
+<tv date="20260816005144 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -1323,36 +1323,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260815010000 +0800" stop="20260815040000 +0800">
-		<title lang="zh">NFL Football: Indianapolis Colts at New England Patriots (Gillette Stadium, Foxboro, MA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815040000 +0800" stop="20260815070000 +0800">
-		<title lang="zh">NFL Football: Arizona Cardinals at Las Vegas Raiders (Allegiant Stadium, Las Vegas, NV, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815070000 +0800" stop="20260815080000 +0800">
-		<title lang="zh">⋗ NFL GameDay Kickoff</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815080000 +0800" stop="20260815110000 +0800">
-		<title lang="zh">⋗ NFL Football: Tampa Bay Buccaneers at New York Jets (MetLife Stadium, East Rutherford, NJ, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815110000 +0800" stop="20260815120000 +0800">
-		<title lang="zh">⋗ NFL GameDay Final</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815120000 +0800" stop="20260815150000 +0800">
-		<title lang="zh">NFL Football: Denver Broncos at Atlanta Falcons (Mercedes-Benz Stadium, Atlanta, GA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815150000 +0800" stop="20260815180000 +0800">
-		<title lang="zh">NFL Football: Miami Dolphins at Washington Commanders (Northwest Stadium, Landover, MD, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815180000 +0800" stop="20260815190000 +0800">
-		<title lang="zh">Pro Football Hall of Fame: New Class</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815190000 +0800" stop="20260815220000 +0800">
-		<title lang="zh">NFL Football: Detroit Lions at Cincinnati Bengals (Paycor Stadium, Cincinnati, OH, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260815220000 +0800" stop="20260816010000 +0800">
-		<title lang="zh">NFL Football: Tampa Bay Buccaneers at New York Jets (MetLife Stadium, East Rutherford, NJ, USA)</title>
-	</programme>
 	<programme channel="NFL Network" start="20260816010000 +0800" stop="20260816020000 +0800">
 		<title lang="zh">⋗ NFL GameDay Kickoff</title>
 	</programme>
@@ -1395,102 +1365,18 @@
 	<programme channel="NFL Network" start="20260817100000 +0800" stop="20260817130000 +0800">
 		<title lang="zh">NFL Football: Arizona Cardinals at Las Vegas Raiders (Allegiant Stadium, Las Vegas, NV, USA)</title>
 	</programme>
-	<programme channel="NFL Network" start="20260817130000 +0800" stop="20260818000000 +0800">
+	<programme channel="NFL Network" start="20260817130000 +0800" stop="20260817160000 +0800">
 		<title lang="zh">NFL Football: Los Angeles Rams at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260817160000 +0800" stop="20260817183000 +0800">
+		<title lang="zh">NFL Football: Tampa Bay Buccaneers at New York Jets (MetLife Stadium, East Rutherford, NJ, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260817183000 +0800" stop="20260818000000 +0800">
+		<title lang="zh">NFL Football: Minnesota Vikings at New York Giants (MetLife Stadium, East Rutherford, NJ, USA)</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260815000000 +0800" stop="20260815010000 +0800">
-		<title lang="zh">Auto Racing: European Le Mans Series: Barcelona Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815010000 +0800" stop="20260815030000 +0800">
-		<title lang="zh">Men's International Soccer Friendlies</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815030000 +0800" stop="20260815033000 +0800">
-		<title lang="zh">Equestrian: Longines Global Champions Tour: Riesenbeck, Round 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815033000 +0800" stop="20260815034000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815034000 +0800" stop="20260815054500 +0800">
-		<title lang="zh">⋗ French Ligue 2 Soccer: AS Saint-Etienne vs. Clermont Foot (Stade Geoffroy-Guichard, Saint-Etienne,</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815054500 +0800" stop="20260815060000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815060000 +0800" stop="20260815073000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Dunk Contest</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815073000 +0800" stop="20260815080000 +0800">
-		<title lang="zh">GKA Kite World Tour: Episode 2 – Mexico</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815080000 +0800" stop="20260815090000 +0800">
-		<title lang="zh">Bentonville Bike Fest: Red Bull Double Down</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815090000 +0800" stop="20260815093000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Barcelona, Race</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815093000 +0800" stop="20260815100000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Le Castellet, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815100000 +0800" stop="20260815110000 +0800">
-		<title lang="zh">Auto Racing: European Le Mans Series: Barcelona Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815110000 +0800" stop="20260815113000 +0800">
-		<title lang="zh">Global Champions Tour: Riesenbeck</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815113000 +0800" stop="20260815120000 +0800">
-		<title lang="zh">Equestrian: Longines Global Champions Tour: Riesenbeck, Round 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815120000 +0800" stop="20260815123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815123000 +0800" stop="20260815130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815130000 +0800" stop="20260815140000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Riddle vs. Lee and the Southern Crown Reveal</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815140000 +0800" stop="20260815150000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Stars, Stripes &amp; the Southern Crown</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815150000 +0800" stop="20260815160000 +0800">
-		<title lang="zh">Bentonville Bike Fest: Red Bull Double Down</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815160000 +0800" stop="20260815163000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Barcelona, Race</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815163000 +0800" stop="20260815170000 +0800">
-		<title lang="zh">Le Mans Cup Motor Racing: Le Castellet, Race 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815170000 +0800" stop="20260815180000 +0800">
-		<title lang="zh">Auto Racing: European Le Mans Series: Barcelona Highlights</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815180000 +0800" stop="20260815183000 +0800">
-		<title lang="zh">Breakaway: Polo in the Palm Beaches</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815183000 +0800" stop="20260815190000 +0800">
-		<title lang="zh">Skateboarding: World Downhill Championships, Isle of Man</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815190000 +0800" stop="20260815200000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 12 – December 2022</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815200000 +0800" stop="20260815210000 +0800">
-		<title lang="zh">X-Games Reaction Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815210000 +0800" stop="20260815213000 +0800">
-		<title lang="zh">Skateboarding: World Downhill Championships, Isle of Man</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815213000 +0800" stop="20260815220000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Episode 5 – Germany</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815220000 +0800" stop="20260815222500 +0800">
-		<title lang="zh">GKA Kite World Tour: Episode 2 – Mexico</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260815222500 +0800" stop="20260816003000 +0800">
-		<title lang="zh">⋗ Men's Club Soccer Friendlies: Borussia Mönchengladbach vs. Aston Villa</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260816003000 +0800" stop="20260816010000 +0800">
 		<title lang="zh">90 in 30: Copa Libertadores 2026: Fluminense vs. Independiente Rivadavia</title>
 	</programme>
@@ -1638,7 +1524,25 @@
 	<programme channel="beIN SPORTS XTRA" start="20260817140000 +0800" stop="20260817150000 +0800">
 		<title lang="zh">BRAVE CF: Banger Alert, Part 2</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260817150000 +0800" stop="20260818000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260817150000 +0800" stop="20260817160000 +0800">
 		<title lang="zh">Ferrari Challenge UK: Brands Hatch – Race 1 (Brands Hatch, West Kingsdown, KEN, GBR)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817160000 +0800" stop="20260817170000 +0800">
+		<title lang="zh">Ferrari Challenge UK: Brands Hatch – Race 2 (Brands Hatch, West Kingsdown, KEN, GBR)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817170000 +0800" stop="20260817173000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Vienna, Final: Amsterdam Rabobank vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817173000 +0800" stop="20260817180000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Amsterdam, Final: Amsterdam Rabobank vs. Baskets Bonn</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817180000 +0800" stop="20260817183000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817183000 +0800" stop="20260817190000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille, Final: Raudondvaris Hoptrans vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260817190000 +0800" stop="20260818000000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 16 – April</title>
 	</programme>
 </tv>
