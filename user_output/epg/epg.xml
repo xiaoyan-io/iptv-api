@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260817004922 +0800">
+<tv date="20260817063916 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260817000000 +0800" stop="20260817004400 +0800">
-		<title lang="zh">三餐四季Ⅲ(9)北京</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260817004400 +0800" stop="20260817012800 +0800">
 		<title lang="zh">生活圈</title>
