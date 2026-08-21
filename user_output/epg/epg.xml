@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<tv date="20260821005318 +0800">
+<tv date="20260821063450 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
 	<programme channel="CCTV-1" start="20260821000000 +0800" stop="20260821005000 +0800">
-		<title lang="zh">山水间的家Ⅳ(3)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-1" start="20260821005000 +0800" stop="20260821012000 +0800">
 		<title lang="zh">今日说法</title>
@@ -637,7 +637,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260821000000 +0800" stop="20260821003100 +0800">
-		<title lang="zh">地球生命演化传奇(3)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260821003100 +0800" stop="20260821012700 +0800">
 		<title lang="zh">狂野五大湖(1)</title>
@@ -1311,48 +1311,6 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260820010000 +0800" stop="20260820033000 +0800">
-		<title lang="zh">NFL Football: Philadelphia Eagles at Baltimore Ravens (M&amp;T Bank Stadium, Baltimore, MD, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820033000 +0800" stop="20260820060000 +0800">
-		<title lang="zh">NFL Football: Minnesota Vikings at New York Giants (MetLife Stadium, East Rutherford, NJ, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820060000 +0800" stop="20260820070000 +0800">
-		<title lang="zh">NFL Fantasy Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820070000 +0800" stop="20260820080000 +0800">
-		<title lang="zh">NFL Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820080000 +0800" stop="20260820090000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820090000 +0800" stop="20260820120000 +0800">
-		<title lang="zh">NFL Football: Dallas Cowboys at Seattle Seahawks (Lumen Field, Seattle, WA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820120000 +0800" stop="20260820130000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820130000 +0800" stop="20260820140000 +0800">
-		<title lang="zh">NFL Fantasy Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820140000 +0800" stop="20260820163000 +0800">
-		<title lang="zh">NFL Football: Los Angeles Rams at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, </title>
-	</programme>
-	<programme channel="NFL Network" start="20260820163000 +0800" stop="20260820190000 +0800">
-		<title lang="zh">NFL Football: Tennessee Titans at San Francisco 49ers (Levi's Stadium, Santa Clara, CA, USA)</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820190000 +0800" stop="20260820200000 +0800">
-		<title lang="zh">The Insiders</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820200000 +0800" stop="20260820210000 +0800">
-		<title lang="zh">NFL Fantasy Live</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820210000 +0800" stop="20260820230000 +0800">
-		<title lang="zh">⋗ Good Morning Football</title>
-	</programme>
-	<programme channel="NFL Network" start="20260820230000 +0800" stop="20260821010000 +0800">
-		<title lang="zh">Good Morning Football</title>
-	</programme>
 	<programme channel="NFL Network" start="20260821010000 +0800" stop="20260821040000 +0800">
 		<title lang="zh">NFL Football: Green Bay Packers at Pittsburgh Steelers (Acrisure Stadium, Pittsburgh, PA, USA)</title>
 	</programme>
@@ -1455,84 +1413,6 @@
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260820000000 +0800" stop="20260820010000 +0800">
-		<title lang="zh">Ferrari Challenge Racing Series: Phillip Island: Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820010000 +0800" stop="20260820013000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820013000 +0800" stop="20260820020000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Zadar, Final: Amsterdamn Rabobank vs. Miami</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820020000 +0800" stop="20260820023000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Strzegom, Poland</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820023000 +0800" stop="20260820030000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Episode 8 – Switzerland</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820030000 +0800" stop="20260820040000 +0800">
-		<title lang="zh">Copa Sudamericana: Highlights: Round of 16 Playoffs (1st Leg)</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820040000 +0800" stop="20260820060000 +0800">
-		<title lang="zh">Rowing: World Cup: Plovdiv, Day 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820060000 +0800" stop="20260820063000 +0800">
-		<title lang="zh">FEI Ride</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820063000 +0800" stop="20260820065000 +0800">
-		<title lang="zh">Best of beIN Sports</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820065000 +0800" stop="20260820090000 +0800">
-		<title lang="zh">⋗ Copa Libertadores Soccer: Coquimbo Unido vs. Platense (Estadio Francisco Sánchez Rumoroso, Coquimb</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820090000 +0800" stop="20260820100000 +0800">
-		<title lang="zh">2026 Goodwood Festival of Speed</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820100000 +0800" stop="20260820110000 +0800">
-		<title lang="zh">Ferrari Challenge Racing Series: Phillip Island: Race 1</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820110000 +0800" stop="20260820113000 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820113000 +0800" stop="20260820120000 +0800">
-		<title lang="zh">FIBA 3x3 Basketball World Tour: Zadar, Final: Amsterdamn Rabobank vs. Miami</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820120000 +0800" stop="20260820123000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820123000 +0800" stop="20260820130000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820130000 +0800" stop="20260820133000 +0800">
-		<title lang="zh">The Knockout Room</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820133000 +0800" stop="20260820150000 +0800">
-		<title lang="zh">BRAVE CF: Battles of Grit and Glory</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820150000 +0800" stop="20260820160000 +0800">
-		<title lang="zh">2026 Goodwood Festival of Speed</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820160000 +0800" stop="20260820163000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Strzegom, Poland</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820163000 +0800" stop="20260820170000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Episode 8 – Switzerland</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820170000 +0800" stop="20260820190000 +0800">
-		<title lang="zh">Rowing: World Cup: Plovdiv, Day 2</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820190000 +0800" stop="20260820200000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 22 – October</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820200000 +0800" stop="20260820210000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 23 – November</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820210000 +0800" stop="20260820230000 +0800">
-		<title lang="zh">Premier Padel Tennis: FIP Platinum Albania, Women's Final</title>
-	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260820230000 +0800" stop="20260821000000 +0800">
-		<title lang="zh">2026 Goodwood Festival of Speed</title>
-	</programme>
 	<programme channel="beIN SPORTS XTRA" start="20260821000000 +0800" stop="20260821010000 +0800">
 		<title lang="zh">Ferrari Challenge Racing Series: Phillip Island: Race 2</title>
 	</programme>
@@ -1746,7 +1626,13 @@
 	<programme channel="beIN SPORTS XTRA" start="20260824080000 +0800" stop="20260824100000 +0800">
 		<title lang="zh">Copa Sudamericana Soccer: Recoleta FC vs. Boca Juniors (Estadio Roque Battilana, Asunción, Asunción,</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824100000 +0800" stop="20260825000000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260824100000 +0800" stop="20260824120000 +0800">
 		<title lang="zh">Copa Sudamericana Soccer: Independiente Santa Fe vs. River Plate (Estadio Nemesio Camacho 'El Campín</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260824120000 +0800" stop="20260824123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260824123000 +0800" stop="20260825000000 +0800">
+		<title lang="zh">The Knockout Room</title>
 	</programme>
 </tv>
