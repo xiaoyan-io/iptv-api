@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260825005007 +0800">
+<tv date="20260825063355 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -637,7 +637,7 @@
 		<display-name lang="zh">CCTV-9</display-name>
 	</channel>
 	<programme channel="CCTV-9" start="20260825000000 +0800" stop="20260825003100 +0800">
-		<title lang="zh">毒蛇三甲(2)</title>
+		<title lang="zh">开始</title>
 	</programme>
 	<programme channel="CCTV-9" start="20260825003100 +0800" stop="20260825012700 +0800">
 		<title lang="zh">岛屿上的小可爱(1)</title>
@@ -1320,100 +1320,745 @@
 	<channel id="NFL Network">
 		<display-name lang="zh">NFL Network</display-name>
 	</channel>
-	<programme channel="NFL Network" start="20260824010000 +0800" stop="20260824040000 +0800">
+	<programme channel="NFL Network" start="20260825010000 +0800" stop="20260825033000 +0800">
+		<title lang="zh">NFL Football: New York Giants at Miami Dolphins (Hard Rock Stadium, Miami Gardens, FL, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825033000 +0800" stop="20260825060000 +0800">
+		<title lang="zh">NFL Football: Philadelphia Eagles at New England Patriots (Gillette Stadium, Foxboro, MA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825060000 +0800" stop="20260825070000 +0800">
+		<title lang="zh">⋗ NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825070000 +0800" stop="20260825080000 +0800">
+		<title lang="zh">NFL Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825080000 +0800" stop="20260825090000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825090000 +0800" stop="20260825120000 +0800">
+		<title lang="zh">NFL Football: New York Jets at Pittsburgh Steelers (Acrisure Stadium, Pittsburgh, PA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825120000 +0800" stop="20260825130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825130000 +0800" stop="20260825140000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825140000 +0800" stop="20260825163000 +0800">
+		<title lang="zh">NFL Football: San Francisco 49ers at Los Angeles Chargers (SoFi Stadium, Inglewood, CA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825163000 +0800" stop="20260825190000 +0800">
 		<title lang="zh">NFL Football: Kansas City Chiefs at Tampa Bay Buccaneers (Raymond James Stadium, Tampa, FL, USA)</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824040000 +0800" stop="20260824070000 +0800">
-		<title lang="zh">NFL Football: Buffalo Bills at Cleveland Browns (Huntington Bank Field, Cleveland, OH, USA)</title>
+	<programme channel="NFL Network" start="20260825190000 +0800" stop="20260825200000 +0800">
+		<title lang="zh">The Insiders</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824070000 +0800" stop="20260824100000 +0800">
-		<title lang="zh">NFL Football: Dallas Cowboys at Arizona Cardinals (State Farm Stadium, Glendale, AZ, USA)</title>
+	<programme channel="NFL Network" start="20260825200000 +0800" stop="20260825210000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824100000 +0800" stop="20260824130000 +0800">
+	<programme channel="NFL Network" start="20260825210000 +0800" stop="20260825230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260825230000 +0800" stop="20260826010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826010000 +0800" stop="20260826033000 +0800">
+		<title lang="zh">NFL Football: Carolina Panthers at Jacksonville Jaguars (EverBank Stadium, Jacksonville, FL, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826033000 +0800" stop="20260826060000 +0800">
 		<title lang="zh">NFL Football: Green Bay Packers at Denver Broncos (Empower Field at Mile High, Denver, CO, USA)</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824130000 +0800" stop="20260824160000 +0800">
-		<title lang="zh">NFL Football: Seattle Seahawks at Tennessee Titans (Nissan Stadium, Nashville, TN, USA)</title>
+	<programme channel="NFL Network" start="20260826060000 +0800" stop="20260826070000 +0800">
+		<title lang="zh">⋗ NFL Fantasy Live</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824160000 +0800" stop="20260824183000 +0800">
-		<title lang="zh">NFL Football: Baltimore Ravens at Minnesota Vikings (U.S. Bank Stadium, Minneapolis, MN, USA)</title>
+	<programme channel="NFL Network" start="20260826070000 +0800" stop="20260826080000 +0800">
+		<title lang="zh">NFL Live</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824183000 +0800" stop="20260824210000 +0800">
+	<programme channel="NFL Network" start="20260826080000 +0800" stop="20260826090000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826090000 +0800" stop="20260826120000 +0800">
 		<title lang="zh">NFL Football: Buffalo Bills at Cleveland Browns (Huntington Bank Field, Cleveland, OH, USA)</title>
 	</programme>
-	<programme channel="NFL Network" start="20260824210000 +0800" stop="20260825000000 +0800">
+	<programme channel="NFL Network" start="20260826120000 +0800" stop="20260826130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826130000 +0800" stop="20260826140000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826140000 +0800" stop="20260826163000 +0800">
+		<title lang="zh">NFL Football: New Orleans Saints at Los Angeles Rams (SoFi Stadium, Inglewood, California, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826163000 +0800" stop="20260826190000 +0800">
+		<title lang="zh">NFL Football: Atlanta Falcons at Indianapolis Colts (Lucas Oil Stadium, Indianapolis, IN, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826190000 +0800" stop="20260826200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826200000 +0800" stop="20260826210000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826210000 +0800" stop="20260826230000 +0800">
 		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260826230000 +0800" stop="20260827010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827010000 +0800" stop="20260827033000 +0800">
+		<title lang="zh">NFL Football: Chicago Bears at Cincinnati Bengals (Paycor Stadium, Cincinnati, OH, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827033000 +0800" stop="20260827060000 +0800">
+		<title lang="zh">NFL Football: Baltimore Ravens at Minnesota Vikings (U.S. Bank Stadium, Minneapolis, MN, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827060000 +0800" stop="20260827070000 +0800">
+		<title lang="zh">⋗ NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827070000 +0800" stop="20260827080000 +0800">
+		<title lang="zh">NFL Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827080000 +0800" stop="20260827090000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827090000 +0800" stop="20260827120000 +0800">
+		<title lang="zh">NFL Football: Dallas Cowboys at Arizona Cardinals (State Farm Stadium, Glendale, AZ, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827120000 +0800" stop="20260827130000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827130000 +0800" stop="20260827140000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827140000 +0800" stop="20260827163000 +0800">
+		<title lang="zh">NFL Football: Seattle Seahawks at Tennessee Titans (Nissan Stadium, Nashville, TN, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827163000 +0800" stop="20260827190000 +0800">
+		<title lang="zh">NFL Football: Las Vegas Raiders at Houston Texans (NRG Stadium, Houston, TX, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827190000 +0800" stop="20260827200000 +0800">
+		<title lang="zh">The Insiders</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827200000 +0800" stop="20260827210000 +0800">
+		<title lang="zh">NFL Fantasy Live</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827210000 +0800" stop="20260827230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260827230000 +0800" stop="20260828010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828010000 +0800" stop="20260828040000 +0800">
+		<title lang="zh">NFL Football: Buffalo Bills at Cleveland Browns (Huntington Bank Field, Cleveland, OH, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828040000 +0800" stop="20260828070000 +0800">
+		<title lang="zh">NFL Football: New York Jets at Pittsburgh Steelers (Acrisure Stadium, Pittsburgh, PA, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828070000 +0800" stop="20260828080000 +0800">
+		<title lang="zh">⋗ NFL GameDay Kickoff</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828080000 +0800" stop="20260828110000 +0800">
+		<title lang="zh">⋗ NFL Football: Pittsburgh Steelers at Buffalo Bills (New Highmark Stadium, Orchard Park, New York, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260828110000 +0800" stop="20260828140000 +0800">
+		<title lang="zh">⋗ NFL Football: Los Angeles Rams at Los Angeles Chargers (SoFi Stadium, Inglewood, California, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828140000 +0800" stop="20260828170000 +0800">
+		<title lang="zh">NFL Football: San Francisco 49ers at Las Vegas Raiders (Allegiant Stadium, Las Vegas, NV, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828170000 +0800" stop="20260828180000 +0800">
+		<title lang="zh">Gold Jacket Celebration</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828180000 +0800" stop="20260828210000 +0800">
+		<title lang="zh">NFL Football: New England Patriots at Cleveland Browns (Huntington Bank Field, Cleveland, OH, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828210000 +0800" stop="20260828230000 +0800">
+		<title lang="zh">⋗ Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260828230000 +0800" stop="20260829010000 +0800">
+		<title lang="zh">Good Morning Football</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829010000 +0800" stop="20260829033000 +0800">
+		<title lang="zh">NFL Football: Pittsburgh Steelers at Buffalo Bills (New Highmark Stadium, Orchard Park, New York, US</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829033000 +0800" stop="20260829060000 +0800">
+		<title lang="zh">NFL Football: San Francisco 49ers at Las Vegas Raiders (Allegiant Stadium, Las Vegas, NV, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829060000 +0800" stop="20260829070000 +0800">
+		<title lang="zh">⋗ NFL GameDay Kickoff</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829070000 +0800" stop="20260829100000 +0800">
+		<title lang="zh">⋗ NFL Football: Washington Commanders at Baltimore Ravens (M&amp;T Bank Stadium, Baltimore, MD, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829100000 +0800" stop="20260829130000 +0800">
+		<title lang="zh">⋗ NFL Football: Minnesota Vikings at Denver Broncos (Empower Field at Mile High, Denver, CO, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829130000 +0800" stop="20260829140000 +0800">
+		<title lang="zh">⋗ NFL GameDay Final</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829140000 +0800" stop="20260829163000 +0800">
+		<title lang="zh">NFL Football: Seattle Seahawks at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260829163000 +0800" stop="20260829190000 +0800">
+		<title lang="zh">NFL Football: Tampa Bay Buccaneers at Jacksonville Jaguars (EverBank Stadium, Jacksonville, FL, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829190000 +0800" stop="20260829220000 +0800">
+		<title lang="zh">NFL Football: Arizona Cardinals at Green Bay Packers (Lambeau Field, Green Bay, WI, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260829220000 +0800" stop="20260830010000 +0800">
+		<title lang="zh">NFL Football: New Orleans Saints at Dallas Cowboys (AT&amp;T Stadium, Arlington, Texas, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830010000 +0800" stop="20260830020000 +0800">
+		<title lang="zh">⋗ NFL GameDay Kickoff</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830020000 +0800" stop="20260830050000 +0800">
+		<title lang="zh">⋗ NFL Football: Detroit Lions at Indianapolis Colts (Lucas Oil Stadium, Indianapolis, IN, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830050000 +0800" stop="20260830053000 +0800">
+		<title lang="zh">⋗ NFL GameDay Final</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830053000 +0800" stop="20260830060000 +0800">
+		<title lang="zh">NFL GameDay Final</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830060000 +0800" stop="20260830063000 +0800">
+		<title lang="zh">NFL GameDay Final</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830063000 +0800" stop="20260830070000 +0800">
+		<title lang="zh">⋗ NFL GameDay Kickoff</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830070000 +0800" stop="20260830100000 +0800">
+		<title lang="zh">⋗ NFL Football: Chicago Bears at Tennessee Titans (Nissan Stadium, Nashville, TN, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830100000 +0800" stop="20260830110000 +0800">
+		<title lang="zh">⋗ NFL GameDay Final</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830110000 +0800" stop="20260830120000 +0800">
+		<title lang="zh">America's Game: 2025 Seattle Seahawks</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830120000 +0800" stop="20260830150000 +0800">
+		<title lang="zh">NFL Football: Seattle Seahawks at Kansas City Chiefs (GEHA Field at Arrowhead Stadium, Kansas City, </title>
+	</programme>
+	<programme channel="NFL Network" start="20260830150000 +0800" stop="20260830160000 +0800">
+		<title lang="zh">America's Game: 2025 Seattle Seahawks</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830160000 +0800" stop="20260830190000 +0800">
+		<title lang="zh">NFL Football: Houston Texans at Carolina Panthers (Bank of America Stadium, Charlotte, NC, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830190000 +0800" stop="20260830220000 +0800">
+		<title lang="zh">NFL Football: Atlanta Falcons at Miami Dolphins (Hard Rock Stadium, Miami Gardens, Florida, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260830220000 +0800" stop="20260831010000 +0800">
+		<title lang="zh">NFL Football: Washington Commanders at Baltimore Ravens (M&amp;T Bank Stadium, Baltimore, MD, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260831010000 +0800" stop="20260831040000 +0800">
+		<title lang="zh">NFL Football: Cincinnati Bengals at Philadelphia Eagles (Lincoln Financial Field, Philadelphia, Penn</title>
+	</programme>
+	<programme channel="NFL Network" start="20260831040000 +0800" stop="20260831070000 +0800">
+		<title lang="zh">NFL Football: New York Giants at New York Jets (MetLife Stadium, East Rutherford, New Jersey, USA)</title>
+	</programme>
+	<programme channel="NFL Network" start="20260831070000 +0800" stop="20260901000000 +0800">
+		<title lang="zh">NFL Football: New Orleans Saints at Dallas Cowboys (AT&amp;T Stadium, Arlington, Texas, USA)</title>
 	</programme>
 	<channel id="beIN SPORTS XTRA">
 		<display-name lang="zh">beIN SPORTS XTRA</display-name>
 	</channel>
-	<programme channel="beIN SPORTS XTRA" start="20260824000000 +0800" stop="20260824003000 +0800">
-		<title lang="zh">Gearing Up</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825010000 +0800" stop="20260825013000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824003000 +0800" stop="20260824005500 +0800">
-		<title lang="zh">World Downhill Skateboarding Championships</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825013000 +0800" stop="20260825020000 +0800">
+		<title lang="zh">Inside Sailing</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824005500 +0800" stop="20260824030000 +0800">
-		<title lang="zh">⋗ Turkish Super Lig Soccer: Trabzonspor vs. Istanbul Basaksehir (Senol Günes Spor Kompleksi, TUR)</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825020000 +0800" stop="20260825023000 +0800">
+		<title lang="zh">FEI Ride</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824030000 +0800" stop="20260824040000 +0800">
-		<title lang="zh">Archery Highlights: European Championships Highlights</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825023000 +0800" stop="20260825030000 +0800">
+		<title lang="zh">FEI Eventing Nations Cup: Episode 5 – Germany</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824040000 +0800" stop="20260824043000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Strzegom, Poland</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825030000 +0800" stop="20260825033000 +0800">
+		<title lang="zh">This is Paris</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824043000 +0800" stop="20260824050000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Episode 8 – Switzerland</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825033000 +0800" stop="20260825034000 +0800">
+		<title lang="zh">Best of beIN Sports</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824050000 +0800" stop="20260824053000 +0800">
-		<title lang="zh">Gearing Up</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825034000 +0800" stop="20260825054500 +0800">
+		<title lang="zh">⋗ French Ligue 2 Soccer: Stade de Reims vs. FC Annecy (Stade Auguste Delaune, Reims, Champagne-Arden</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824053000 +0800" stop="20260824063000 +0800">
-		<title lang="zh">Footvolley: Pro Tour: Stop 3 from Hollywood Beach, Fla</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825054500 +0800" stop="20260825060000 +0800">
+		<title lang="zh">Best of beIN Sports</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824063000 +0800" stop="20260824080000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Dunk Contest</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825060000 +0800" stop="20260825073000 +0800">
+		<title lang="zh">Bentonville Bike Fest: UCI Trials</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824080000 +0800" stop="20260824100000 +0800">
-		<title lang="zh">Copa Sudamericana Soccer: Recoleta FC vs. Boca Juniors (Estadio Roque Battilana, Asunción, Asunción,</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825073000 +0800" stop="20260825080000 +0800">
+		<title lang="zh">Triathlon Highlights: 2026 Challenge Roth</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824100000 +0800" stop="20260824120000 +0800">
-		<title lang="zh">Copa Sudamericana Soccer: Independiente Santa Fe vs. River Plate (Estadio Nemesio Camacho 'El Campín</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825080000 +0800" stop="20260825090000 +0800">
+		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's First Semifinal</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824120000 +0800" stop="20260824123000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260825090000 +0800" stop="20260825110000 +0800">
+		<title lang="zh">FIM World Supercross Championships: Canada</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825110000 +0800" stop="20260825113000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825113000 +0800" stop="20260825120000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825120000 +0800" stop="20260825123000 +0800">
 		<title lang="zh">The Knockout Room</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824123000 +0800" stop="20260824130000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260825123000 +0800" stop="20260825130000 +0800">
 		<title lang="zh">The Knockout Room</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824130000 +0800" stop="20260824140000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: A New ERA Begins</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825130000 +0800" stop="20260825140000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Kross vs. Riddle II</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824140000 +0800" stop="20260824150000 +0800">
-		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825140000 +0800" stop="20260825150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Stars, Stripes &amp; the Southern Crown</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824150000 +0800" stop="20260824153000 +0800">
-		<title lang="zh">FEI Eventing Nations Cup: Strzegom, Poland</title>
+	<programme channel="beIN SPORTS XTRA" start="20260825150000 +0800" stop="20260825163000 +0800">
+		<title lang="zh">Bentonville Bike Fest: UCI Trials</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824153000 +0800" stop="20260824160000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260825163000 +0800" stop="20260825170000 +0800">
+		<title lang="zh">Triathlon Highlights: 2026 Challenge Roth</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825170000 +0800" stop="20260825190000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825190000 +0800" stop="20260825200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 31 – July</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825200000 +0800" stop="20260825210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 32 – August 2024</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825210000 +0800" stop="20260825223000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825223000 +0800" stop="20260825230000 +0800">
+		<title lang="zh">Porsche Carrera Cup Germany Highlights: Spa</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260825230000 +0800" stop="20260826000000 +0800">
+		<title lang="zh">European Le Mans Series Motor Racing: Imola</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826000000 +0800" stop="20260826010000 +0800">
+		<title lang="zh">European Le Mans Series Highlights: Le Castellet</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826010000 +0800" stop="20260826013000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826013000 +0800" stop="20260826020000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826020000 +0800" stop="20260826023000 +0800">
+		<title lang="zh">FEI Ride</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826023000 +0800" stop="20260826030000 +0800">
+		<title lang="zh">FEI Eventing Nations Cup: Episode 6 – Great Britain</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826030000 +0800" stop="20260826033000 +0800">
+		<title lang="zh">90 in 30: Ligue 1 2025-26: Stade Rennais vs. Paris Saint-Germain</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826033000 +0800" stop="20260826040000 +0800">
+		<title lang="zh">Ligue 1 – Highlight Show: 2026-27: Matchday 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826040000 +0800" stop="20260826053000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826053000 +0800" stop="20260826060000 +0800">
+		<title lang="zh">Porsche Carrera Cup Germany Highlights: Spa</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826060000 +0800" stop="20260826080000 +0800">
+		<title lang="zh">Skateboarding: Jackalope, Men's Final</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826080000 +0800" stop="20260826090000 +0800">
+		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Second Semifinal</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826090000 +0800" stop="20260826100000 +0800">
+		<title lang="zh">European Le Mans Series Motor Racing: Imola</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826100000 +0800" stop="20260826110000 +0800">
+		<title lang="zh">European Le Mans Series Highlights: Le Castellet</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826110000 +0800" stop="20260826113000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826113000 +0800" stop="20260826120000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826120000 +0800" stop="20260826123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826123000 +0800" stop="20260826130000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826130000 +0800" stop="20260826150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Choose Violence 200th Episode Special</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826150000 +0800" stop="20260826170000 +0800">
+		<title lang="zh">Skateboarding: Jackalope, Men's Final</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826170000 +0800" stop="20260826183000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826183000 +0800" stop="20260826190000 +0800">
+		<title lang="zh">Porsche Carrera Cup Germany Highlights: Spa</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826190000 +0800" stop="20260826200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 33 – September 2024</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826200000 +0800" stop="20260826210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 34 – October 2024</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826210000 +0800" stop="20260826223000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 3</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826223000 +0800" stop="20260826230000 +0800">
+		<title lang="zh">Porsche Carrera Cup Series</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260826230000 +0800" stop="20260827000000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: The Bend, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827000000 +0800" stop="20260827010000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: The Bend, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827010000 +0800" stop="20260827013000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827013000 +0800" stop="20260827020000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827020000 +0800" stop="20260827023000 +0800">
 		<title lang="zh">FEI Ride: Season 7 – Episode 3</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824160000 +0800" stop="20260824163000 +0800">
+	<programme channel="beIN SPORTS XTRA" start="20260827023000 +0800" stop="20260827030000 +0800">
+		<title lang="zh">FEI Eventing Nations Cup: Strzegom, Poland</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827030000 +0800" stop="20260827040000 +0800">
+		<title lang="zh">Copa Libertadores Highlights: Round of 16, 2nd Leg</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827040000 +0800" stop="20260827053000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 3</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827053000 +0800" stop="20260827060000 +0800">
+		<title lang="zh">Porsche Carrera Cup Series</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827060000 +0800" stop="20260827070000 +0800">
+		<title lang="zh">X-Games Reaction Sports: June 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827070000 +0800" stop="20260827080000 +0800">
+		<title lang="zh">X-Games Reaction Sports: July 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827080000 +0800" stop="20260827090000 +0800">
+		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Semifinal C (Active City Arena, Hambur</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827090000 +0800" stop="20260827100000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: The Bend, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827100000 +0800" stop="20260827110000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: The Bend, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827110000 +0800" stop="20260827113000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827113000 +0800" stop="20260827120000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827120000 +0800" stop="20260827123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827123000 +0800" stop="20260827130000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827130000 +0800" stop="20260827140000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827140000 +0800" stop="20260827150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Riddle vs. Lee and the Southern Crown Reveal</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827150000 +0800" stop="20260827160000 +0800">
+		<title lang="zh">X-Games Reaction Sports: June 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827160000 +0800" stop="20260827170000 +0800">
+		<title lang="zh">X-Games Reaction Sports: July 2026</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827170000 +0800" stop="20260827183000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 3</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827183000 +0800" stop="20260827190000 +0800">
+		<title lang="zh">Porsche Carrera Cup Series</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827190000 +0800" stop="20260827200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 35 – November 2024</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827200000 +0800" stop="20260827210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 36 – December 2024</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827210000 +0800" stop="20260827223000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 4</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827223000 +0800" stop="20260827230000 +0800">
+		<title lang="zh">Powerboat Racing Highlights: Grand Prix of Italy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260827230000 +0800" stop="20260828000000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828000000 +0800" stop="20260828010000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 2 (Queensland Raceway, Amberley, Quee</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828010000 +0800" stop="20260828013000 +0800">
+		<title lang="zh">ABSA Cape Epic: Episode 4</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828013000 +0800" stop="20260828020000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828020000 +0800" stop="20260828023000 +0800">
 		<title lang="zh">FEI Ride: Season 7 – Episode 4</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824163000 +0800" stop="20260824173000 +0800">
-		<title lang="zh">2026 Goodwood Festival of Speed</title>
+	<programme channel="beIN SPORTS XTRA" start="20260828023000 +0800" stop="20260828030000 +0800">
+		<title lang="zh">FEI Eventing Nations Cup: Episode 8 – Switzerland</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824173000 +0800" stop="20260824190000 +0800">
-		<title lang="zh">2026 FIBA 3x3 World Cup: Dunk Contest</title>
+	<programme channel="beIN SPORTS XTRA" start="20260828030000 +0800" stop="20260828040000 +0800">
+		<title lang="zh">Copa Sudamericana: Highlights: Round of 16 Playoffs (2nd Leg)</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824190000 +0800" stop="20260824200000 +0800">
-		<title lang="zh">X-Games Reaction Sports: May</title>
+	<programme channel="beIN SPORTS XTRA" start="20260828040000 +0800" stop="20260828053000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 4</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824200000 +0800" stop="20260824210000 +0800">
-		<title lang="zh">X-Games Reaction Sports: Episode 30 – June</title>
+	<programme channel="beIN SPORTS XTRA" start="20260828053000 +0800" stop="20260828060000 +0800">
+		<title lang="zh">Powerboat Racing Highlights: Grand Prix of Italy</title>
 	</programme>
-	<programme channel="beIN SPORTS XTRA" start="20260824210000 +0800" stop="20260825000000 +0800">
-		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 1</title>
+	<programme channel="beIN SPORTS XTRA" start="20260828060000 +0800" stop="20260828080000 +0800">
+		<title lang="zh">FIM World Supercross Championships: Canada</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828080000 +0800" stop="20260828090000 +0800">
+		<title lang="zh">Beach Volleyball: Queen &amp; King of the Court: Hamburg, Women's Final</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828090000 +0800" stop="20260828100000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828100000 +0800" stop="20260828110000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 2 (Queensland Raceway, Amberley, Quee</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828110000 +0800" stop="20260828113000 +0800">
+		<title lang="zh">ABSA Cape Epic: Episode 4</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828113000 +0800" stop="20260828120000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828120000 +0800" stop="20260828123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828123000 +0800" stop="20260828130000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828130000 +0800" stop="20260828140000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Center Stage Warfare</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828140000 +0800" stop="20260828150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: FantasticaMania USA Comes Home</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828150000 +0800" stop="20260828170000 +0800">
+		<title lang="zh">FIM World Supercross Championships: Canada</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828170000 +0800" stop="20260828183000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 4</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828183000 +0800" stop="20260828190000 +0800">
+		<title lang="zh">Powerboat Racing Highlights: Grand Prix of Italy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828190000 +0800" stop="20260828200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 37 – Janurary</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828200000 +0800" stop="20260828210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 38 – Feb</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828210000 +0800" stop="20260828223000 +0800">
+		<title lang="zh">Bentonville Bike Fest: UCI Trials</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828223000 +0800" stop="20260828230000 +0800">
+		<title lang="zh">Triathlon Highlights: 2026 Challenge Roth</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260828230000 +0800" stop="20260829000000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Snetterton, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829000000 +0800" stop="20260829010000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Snetterton, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829010000 +0800" stop="20260829013000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829013000 +0800" stop="20260829020000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829020000 +0800" stop="20260829023000 +0800">
+		<title lang="zh">USPA Polo: Breakaway, Polo IN College</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829023000 +0800" stop="20260829030000 +0800">
+		<title lang="zh">Breakaway: Polo in the Palm Beaches</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829030000 +0800" stop="20260829032500 +0800">
+		<title lang="zh">90 in 30: Ligue 1 2026-27: Toulouse vs. Lyon</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829032500 +0800" stop="20260829053000 +0800">
+		<title lang="zh">⋗ Ekstraklasa Soccer: Legia Warszawa vs. Slask Wroclaw. Ekstraklasa Soccer (Wojska Polskiego, Warsaw</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829053000 +0800" stop="20260829060000 +0800">
+		<title lang="zh">Ligue 1 Show</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829060000 +0800" stop="20260829063000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Vienna, Final: Amsterdam Rabobank vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829063000 +0800" stop="20260829070000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Amsterdam, Final: Amsterdam Rabobank vs. Baskets Bonn</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829070000 +0800" stop="20260829073000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829073000 +0800" stop="20260829080000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille, Final: Raudondvaris Hoptrans vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829080000 +0800" stop="20260829090000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Stop 3 from Hollywood Beach, Fla</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829090000 +0800" stop="20260829100000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Snetterton, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829100000 +0800" stop="20260829110000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Snetterton, Race 2</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829110000 +0800" stop="20260829113000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829113000 +0800" stop="20260829120000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829120000 +0800" stop="20260829123000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829123000 +0800" stop="20260829130000 +0800">
+		<title lang="zh">The Knockout Room</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829130000 +0800" stop="20260829150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Battle Riot 8</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829150000 +0800" stop="20260829153000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Vienna, Final: Amsterdam Rabobank vs. Liman</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829153000 +0800" stop="20260829160000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Amsterdam, Final: Amsterdam Rabobank vs. Baskets Bonn</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829160000 +0800" stop="20260829163000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Ulaanbaatur, Final: Liman vs. Ulaanbaatar MMC Energy</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829163000 +0800" stop="20260829170000 +0800">
+		<title lang="zh">FIBA 3x3 Basketball World Tour: Marseille, Final: Raudondvaris Hoptrans vs. Ub</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829170000 +0800" stop="20260829183000 +0800">
+		<title lang="zh">Bentonville Bike Fest: UCI Trials</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829183000 +0800" stop="20260829190000 +0800">
+		<title lang="zh">Triathlon Highlights: 2026 Challenge Roth</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829190000 +0800" stop="20260829200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 24 – December</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829200000 +0800" stop="20260829210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 25 – Janurary</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829210000 +0800" stop="20260829220000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 1</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260829220000 +0800" stop="20260830000000 +0800">
+		<title lang="zh">FIM World Supercross Championships: Canada</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830000000 +0800" stop="20260830002500 +0800">
+		<title lang="zh">ABSA Cape Epic: Episode 4</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830002500 +0800" stop="20260830023000 +0800">
+		<title lang="zh">⋗ Ekstraklasa Soccer: Wisla Kraków vs. Wieczysta Kraków. Ekstraklasa Soccer (Synerise Arena Kraków, </title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830023000 +0800" stop="20260830033000 +0800">
+		<title lang="zh">Copa Libertadores Highlights: Round of 16, 2nd Leg</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830033000 +0800" stop="20260830033500 +0800">
+		<title lang="zh">Best of beIN Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830033500 +0800" stop="20260830054500 +0800">
+		<title lang="zh">⋗ French Ligue 1 Soccer: Stade Brestois vs. Toulouse FC (Stade Francis-Le Blé, Brest, 29, FRA)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830054500 +0800" stop="20260830060000 +0800">
+		<title lang="zh">Best of beIN Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830060000 +0800" stop="20260830070000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Stop 3 from Hollywood Beach, Fla</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830070000 +0800" stop="20260830083000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 5</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830083000 +0800" stop="20260830090000 +0800">
+		<title lang="zh">ICF Canoe Sprint World Cup: Poznan Highlights</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830090000 +0800" stop="20260830110000 +0800">
+		<title lang="zh">French Ligue 1 Soccer: Stade Rennais vs. Paris Saint-Germain (Parc des Princes, Paris, FRA)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830110000 +0800" stop="20260830130000 +0800">
+		<title lang="zh">French Ligue 1 Soccer: Olympique de Marseille vs. RC Strasbourg Alsace (Orange Vélodrome, Provence-A</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830130000 +0800" stop="20260830140000 +0800">
+		<title lang="zh">BRAVE – MMA: Most Brutal Finishes Ever</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830140000 +0800" stop="20260830150000 +0800">
+		<title lang="zh">MLW Fusion: ALPHA: Two Title Fights, One Violent Night</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830150000 +0800" stop="20260830163000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 5</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830163000 +0800" stop="20260830170000 +0800">
+		<title lang="zh">ICF Canoe Sprint World Cup: Poznan Highlights</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830170000 +0800" stop="20260830190000 +0800">
+		<title lang="zh">FIM World Supercross Championships: Canada</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830190000 +0800" stop="20260830200000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 26 – February</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830200000 +0800" stop="20260830210000 +0800">
+		<title lang="zh">X-Games Reaction Sports: Episode 27 – March</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830210000 +0800" stop="20260830220000 +0800">
+		<title lang="zh">Ferrari Challenge Racing Series: Australasia: Queensland, Race 2 (Queensland Raceway, Amberley, Quee</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830220000 +0800" stop="20260830230000 +0800">
+		<title lang="zh">European Le Mans Series Motor Racing: Imola</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830230000 +0800" stop="20260830233000 +0800">
+		<title lang="zh">ABSA Cape Epic</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260830233000 +0800" stop="20260831000000 +0800">
+		<title lang="zh">Inside Sailing</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831000000 +0800" stop="20260831002500 +0800">
+		<title lang="zh">USPA Polo: Breakaway, Polo IN College</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831002500 +0800" stop="20260831023000 +0800">
+		<title lang="zh">⋗ Ekstraklasa Soccer: Górnik Zabrze vs. GKS Katowice. Ekstraklasa Soccer (Stadion im. Ernesta Pohla,</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831023000 +0800" stop="20260831030000 +0800">
+		<title lang="zh">90 in 30: Ligue 1 2025-26: Stade Rennais vs. Paris Saint-Germain</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831030000 +0800" stop="20260831031000 +0800">
+		<title lang="zh">Best of beIN Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831031000 +0800" stop="20260831051500 +0800">
+		<title lang="zh">⋗ Ekstraklasa Soccer: Widzew Lódz vs. Lech Poznan. Ekstraklasa Soccer (Stadion Widzewa, POL)</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831051500 +0800" stop="20260831053000 +0800">
+		<title lang="zh">Best of beIN Sports</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831053000 +0800" stop="20260831060000 +0800">
+		<title lang="zh">90 in 30: Ligue 1 2026-27: Toulouse vs. Lyon</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831060000 +0800" stop="20260831070000 +0800">
+		<title lang="zh">Footvolley: Pro Tour: Stop 3 from Hollywood Beach, Fla</title>
+	</programme>
+	<programme channel="beIN SPORTS XTRA" start="20260831070000 +0800" stop="20260901000000 +0800">
+		<title lang="zh">Canoeing: ICF Slalom World Championships, Day 6</title>
 	</programme>
 </tv>
