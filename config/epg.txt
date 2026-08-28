@@ -7,7 +7,7 @@
 # EPG PW（全球频道，包含亚洲）
 # https://weareblahs.github.io/epg/astro.xml.gz
 # https://weareblahs.github.io/epg/unifitv.xml.gz
-http://e.erw.cc/e.xml.gz
+# http://epg.51zmt.top:8000/e.xml
 https://epg.pw/xmltv/epg.xml.gz
 
-# http://epg.51zmt.top:8000/e.xml
+# http://e.erw.cc/e.xml.gz
